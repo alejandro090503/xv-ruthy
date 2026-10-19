@@ -7,17 +7,17 @@
 <title>Mis XV Años · Shelsy Arabella · 20 Diciembre 2026</title>
 <meta name="description" content="Mis XV Años · Shelsy Arabella Cruz · Domingo 20 de diciembre de 2026 · San Miguel, El Salvador.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://xv-ruthy.vercel.app/">
+<meta property="og:url" content="https://xv-shelsy-arabella.vercel.app/">
 <meta property="og:title" content="Mis XV Años · Shelsy Arabella">
 <meta property="og:description" content="Te invito a celebrar mis XV años · Domingo 20 de diciembre de 2026 · San Miguel, El Salvador.">
-<meta property="og:image" content="https://xv-ruthy.vercel.app/og.jpg">
+<meta property="og:image" content="https://xv-shelsy-arabella.vercel.app/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mis XV Años · Shelsy Arabella">
 <meta name="twitter:description" content="Te invito a celebrar mis XV años · Domingo 20 de diciembre de 2026 · San Miguel, El Salvador.">
-<meta name="twitter:image" content="https://xv-ruthy.vercel.app/og.jpg">
+<meta name="twitter:image" content="https://xv-shelsy-arabella.vercel.app/og.jpg">
 <link rel="preload" as="image" href="libro.jpg">
 <link rel="preload" as="video" href="libro.mp4">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1709,6 +1709,155 @@ body{font-weight:500}
 .itinerary .bb-candle{top:-96px}
 @media (max-width:480px){.itinerary .bb-candle{top:-132px;width:38px}}
 
+/* ===== MESA DE REGALOS — el banquete del castillo (Yenisei) ===== */
+/* ============ MESA DE REGALOS — caja que se abre (diseño paola-e-ivan) ============ */
+.giftbox-stage{position:relative;margin:48px auto 0;max-width:560px;min-height:260px;display:flex;align-items:center;justify-content:center}
+.giftbox-holder{opacity:1;position:relative;z-index:1;text-align:center}
+.giftbox{position:relative;width:min(190px,52vw);cursor:pointer;background:none;border:none;padding:0;
+  transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.giftbox:hover{transform:translateY(-8px) scale(1.03)}
+.giftbox:focus-visible{outline:2px solid var(--gold-deep);outline-offset:10px;border-radius:6px}
+.giftbox.is-open{pointer-events:none}
+.giftbox svg{width:100%;height:auto;display:block;filter:drop-shadow(0 18px 34px rgba(10,10,82,.3))}
+.giftbox-lid{transform-origin:50% 100%;transition:transform .6s cubic-bezier(.34,1.4,.5,1),opacity .55s ease}
+.giftbox.is-open .giftbox-lid{transform:translateY(-52px) rotate(-14deg);opacity:0}
+.giftbox-cta{display:block;margin-top:22px;font-family:var(--italiana);font-size:12px;font-weight:600;
+  letter-spacing:.36em;text-transform:uppercase;padding-left:.36em;color:var(--gold-deep);
+  animation:giftPulse 2.6s ease-in-out infinite;transition:opacity .4s}
+@keyframes giftPulse{0%,100%{opacity:.6}50%{opacity:1}}
+.giftbox-cta.is-hidden{opacity:0;animation:none}
+#confetti-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:5}
+/* ===== EL BANQUETE DEL CASTILLO: bandeja de plata con tapa + cojin de terciopelo ===== */
+.giftbox-stage{min-height:300px}
+.giftbox-holder{padding-top:74px}
+.giftbox.banq{display:block;width:min(300px,76vw);aspect-ratio:760/531;margin:0 auto}
+.giftbox.banq:focus-visible{outline:none}
+.giftbox.banq:focus-visible .banq-dish{filter:drop-shadow(0 0 6px rgba(201,162,75,.95))}
+.banq-ground{position:absolute;left:3%;right:3%;bottom:-7%;height:20%;pointer-events:none;
+  background:radial-gradient(closest-side,rgba(10,10,60,.36),rgba(10,10,60,.14) 58%,transparent 100%)}
+/* interior de la bandeja (lo que se ve al levantar la tapa) */
+.banq-inside{position:absolute;left:5.85%;top:55.97%;width:88.14%;height:29.62%;border-radius:50%;overflow:hidden;z-index:1;
+  background:radial-gradient(ellipse at 50% 68%,#f1f2f6 0%,#b9bcc8 42%,#6b6f80 78%,#3d4052 100%);
+  box-shadow:inset 0 5px 10px rgba(12,12,50,.5)}
+.banq-glow{position:absolute;inset:-10%;opacity:0;
+  background:radial-gradient(ellipse at 50% 60%,rgba(255,244,206,1) 0%,rgba(236,201,120,.85) 34%,rgba(201,162,75,.25) 62%,transparent 80%)}
+.banq-dish{position:absolute;inset:0;z-index:2;display:block;width:100%;height:100%;pointer-events:none;
+  filter:drop-shadow(0 12px 16px rgba(10,10,60,.3))}
+.banq-lid{position:absolute;inset:0;z-index:4;display:block;pointer-events:none;transform-origin:50% 78%}
+.banq-lid img{display:block;width:100%;height:100%}
+/* brillo que recorre la plata en reposo, recortado a la silueta de la tapa */
+.banq-shine{position:absolute;inset:0;overflow:hidden;
+  -webkit-mask:url('banquete-tapa.webp') center/100% 100% no-repeat;mask:url('banquete-tapa.webp') center/100% 100% no-repeat}
+.banq-shine b{position:absolute;top:-10%;bottom:-10%;left:0;width:34%;
+  background:linear-gradient(102deg,transparent,rgba(255,255,255,.14) 30%,rgba(255,255,255,.78) 50%,rgba(255,255,255,.14) 70%,transparent);
+  transform:translateX(-130%) skewX(-14deg);animation:banqShine 6.4s ease-in-out infinite}
+@keyframes banqShine{0%,52%{transform:translateX(-130%) skewX(-14deg)}84%,100%{transform:translateX(430%) skewX(-14deg)}}
+.giftbox.is-open .banq-shine b{animation:none}
+/* vapor dorado */
+.banq-steam{position:absolute;left:18%;right:18%;top:14%;height:56%;z-index:3;pointer-events:none}
+.banq-steam i{position:absolute;bottom:0;width:38%;aspect-ratio:1;border-radius:50%;opacity:0;
+  background:radial-gradient(closest-side,rgba(255,246,214,.95),rgba(236,201,120,.5) 46%,rgba(201,162,75,0) 74%)}
+.banq-steam i:nth-child(1){left:6%}.banq-steam i:nth-child(2){left:30%;width:46%}
+.banq-steam i:nth-child(3){left:56%}.banq-steam i:nth-child(4){left:22%;width:30%}
+@media (prefers-reduced-motion:reduce){ .banq-shine b{animation:none;opacity:0} }
+
+
+.gift-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:900;height:100vh;height:100dvh;
+  background:rgba(10,10,82,.58);
+  backdrop-filter:blur(16px) saturate(1.05);-webkit-backdrop-filter:blur(16px) saturate(1.05);
+  opacity:0;pointer-events:none;transition:opacity .45s ease;
+  display:flex;align-items:center;justify-content:center;padding:clamp(16px,4vw,40px);
+  -webkit-transform:translateZ(0);transform:translateZ(0)}
+.gift-backdrop.is-open{opacity:1;pointer-events:auto}
+body.gift-locked{overflow:hidden;overscroll-behavior:none}
+.gift-reveal{position:relative;width:100%;max-width:480px;max-height:calc(100dvh - 32px);overflow-y:auto;
+  background:#FBFCF2;border:1px solid color-mix(in srgb,var(--gold) 55%,transparent);
+  padding:clamp(34px,5vw,46px) 0 clamp(28px,4vw,36px);
+  box-shadow:0 34px 90px rgba(10,10,82,.45),inset 0 0 0 1px rgba(255,255,255,.5);
+  opacity:0;transform:translateY(26px) scale(.94);
+  transition:opacity .5s ease,transform .55s cubic-bezier(.2,.7,.2,1)}
+.gift-backdrop.is-open .gift-reveal{opacity:1;transform:none}
+.gift-reveal::before{content:"";position:absolute;inset:9px;border:1px solid color-mix(in srgb,var(--gold) 28%,transparent);pointer-events:none}
+.gift-reveal-eyebrow{font-family:var(--italiana);font-size:12px;font-weight:600;letter-spacing:.36em;
+  text-transform:uppercase;padding-left:.36em;color:var(--gold-deep);margin-bottom:6px;text-align:center}
+.gift-close{position:absolute;top:12px;right:12px;z-index:3;width:38px;height:38px;border-radius:50%;
+  border:1px solid color-mix(in srgb,var(--gold) 55%,transparent);background:rgba(251,252,242,.92);
+  color:var(--accent-deep);display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:background .3s,color .3s,transform .3s;padding:0;
+  -webkit-appearance:none;appearance:none;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.gift-close:hover{background:var(--accent-deep);color:#F8FAE9;transform:rotate(90deg)}
+.gift-close:focus-visible{outline:2px solid var(--gold-deep);outline-offset:3px}
+.gift-close svg{width:16px;height:16px}
+.gr-slide{padding:18px clamp(24px,5vw,40px) 4px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.gr-logo{height:48px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.gr-logo img{max-height:48px;max-width:210px;width:auto;height:auto;display:block}
+.gr-title{font-family:var(--display);font-size:clamp(22px,3vw,26px);color:var(--accent-deep);margin-bottom:10px}
+.gr-desc{font-family:var(--serif);font-size:16px;font-weight:400;color:var(--ink-soft);line-height:1.75;margin-bottom:26px}
+.gr-desc b{font-weight:600;color:var(--accent-deep);font-variant-numeric:tabular-nums;letter-spacing:.06em}
+.gr-btn{display:inline-block;padding:15px 34px;border:1px solid var(--accent-deep);background:transparent;
+  font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.4em;text-transform:uppercase;
+  padding-left:calc(34px + .4em);color:var(--accent-deep);text-decoration:none;cursor:pointer;min-height:48px;
+  position:relative;overflow:hidden;z-index:0;transition:color .5s cubic-bezier(.2,.7,.2,1);
+  -webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.gr-btn::before{content:"";position:absolute;inset:0;background:var(--accent-deep);
+  transform:translateY(101%);transition:transform .5s cubic-bezier(.2,.7,.2,1);z-index:-1}
+.gr-btn:hover{color:#F8FAE9}
+.gr-btn:hover::before{transform:translateY(0)}
+.gr-ico{width:58px;height:58px;margin:0 auto 16px;color:var(--gold-deep)}
+.gr-desc{font-size:17px!important;font-weight:500!important;color:var(--ink)!important}
+.giftbox-cta{font-size:13px!important}
+.gr-btn{font-size:12px!important;font-weight:600!important}
+
+/* ---- Vestimenta: figuras simétricas ---- */
+.dc-figures{align-items:flex-start!important}
+.dc-fig img{height:clamp(190px,36vw,240px)!important;width:auto}
+.dc-fig-sub{white-space:nowrap;letter-spacing:.16em!important;padding-left:.16em!important}
+
+/* ---- Botón "Toca para abrir": dorado con brillo suave ---- */
+.cv-tap{position:relative;overflow:hidden;color:#3A2A08!important;
+  background:linear-gradient(100deg,#B8892E 0%,#E3C47A 28%,#FFF1C4 46%,#E3C47A 64%,#B8892E 100%)!important;
+  background-size:220% 100%!important;border:1px solid #FFF1C4!important;
+  box-shadow:0 0 0 1px rgba(140,104,30,.55),0 8px 26px rgba(120,86,20,.38),0 0 22px rgba(255,226,150,.45)!important;
+  text-shadow:0 1px 0 rgba(255,248,224,.6);animation:cvGold 5s ease-in-out infinite,cvTap 2.6s ease-in-out infinite!important}
+.cv-tap::after{content:"";position:absolute;top:-20%;bottom:-20%;left:0;width:38%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.75),transparent);transform:translateX(-160%) skewX(-18deg);
+  animation:cvShine 3.8s ease-in-out infinite}
+@keyframes cvGold{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@keyframes cvShine{0%,55%{transform:translateX(-160%) skewX(-18deg)}85%,100%{transform:translateX(320%) skewX(-18deg)}}
+
+/* ---- Álbum: el QR encantado ---- */
+.qr-magic{position:relative;display:inline-block;padding:24px;margin-top:6px;max-width:100%}
+.qr-magic .album-qr img{width:min(230px,56vw)!important}
+.qr-magic .qc{width:64px!important}
+.qr-magic .qc{position:absolute;width:76px;height:auto;z-index:4;pointer-events:none;filter:drop-shadow(0 3px 6px rgba(10,10,82,.25))}
+.qc-tl{top:0;left:0}.qc-tr{top:0;right:0;transform:scaleX(-1)}
+.qc-bl{bottom:0;left:0;transform:scaleY(-1)}.qc-br{bottom:0;right:0;transform:scale(-1,-1)}
+.qr-magic .album-qr{position:relative;z-index:2;box-shadow:0 0 0 1px rgba(201,162,75,.7),0 0 0 6px #fff,0 0 0 7px rgba(201,162,75,.45),0 22px 46px rgba(10,10,82,.18);
+  animation:qrGlow 4.5s ease-in-out infinite}
+@keyframes qrGlow{0%,100%{box-shadow:0 0 0 1px rgba(201,162,75,.7),0 0 0 6px #fff,0 0 0 7px rgba(201,162,75,.45),0 22px 46px rgba(10,10,82,.18)}
+  50%{box-shadow:0 0 0 1px rgba(201,162,75,.9),0 0 0 6px #fff,0 0 0 7px rgba(201,162,75,.7),0 0 34px 6px rgba(230,203,133,.5),0 22px 46px rgba(10,10,82,.18)}}
+.qr-mist{position:absolute;inset:18px;z-index:3;pointer-events:none;border-radius:4px;
+  background:radial-gradient(circle at 50% 45%,#FFFBEA 0%,#F3E1A9 38%,#D9B865 70%,#B8892E 100%)}
+.qr-mist::before{content:"";position:absolute;inset:0;
+  background:url('bb-rosa.webp') center/auto 62% no-repeat;opacity:.9;filter:drop-shadow(0 6px 10px rgba(90,60,10,.35))}
+.qr-mist::after{content:"Toca para revelar";position:absolute;left:0;right:0;bottom:9%;text-align:center;
+  font-family:var(--sans);font-weight:700;font-size:12px;letter-spacing:.3em;padding-left:.3em;text-transform:uppercase;color:#4A3508}
+.qr-sheen{position:absolute;inset:24px;z-index:3;overflow:hidden;pointer-events:none}
+.qr-sheen::before{content:"";position:absolute;top:-30%;bottom:-30%;left:0;width:30%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:translateX(-200%) skewX(-16deg);
+  animation:qrSheen 6s ease-in-out infinite}
+@keyframes qrSheen{0%,60%{transform:translateX(-200%) skewX(-16deg)}90%,100%{transform:translateX(450%) skewX(-16deg)}}
+.qr-sparks{position:absolute;inset:0;z-index:5;pointer-events:none}
+.qr-sparks i{position:absolute;width:12px;height:12px;opacity:0;
+  background:radial-gradient(circle,#FFF6DA 0 1.3px,transparent 1.8px),
+    linear-gradient(0deg,transparent 45%,rgba(255,226,150,.95) 50%,transparent 55%),
+    linear-gradient(90deg,transparent 45%,rgba(255,226,150,.95) 50%,transparent 55%);
+  animation:qrTwinkle 3.4s ease-in-out infinite}
+@keyframes qrTwinkle{0%,100%{opacity:0;transform:scale(.4) rotate(0)}45%{opacity:1;transform:scale(1.15) rotate(45deg)}70%{opacity:0;transform:scale(.5) rotate(90deg)}}
+.qr-magic.revealed .qr-mist{cursor:default}
+.qr-magic:not(.revealed){cursor:pointer}
+@media (prefers-reduced-motion:reduce){.qr-mist{display:none}.qr-sheen::before,.qr-sparks i,.qr-magic .album-qr,.cv-tap,.cv-tap::after{animation:none!important}}
+
 /* ===== PORTADA LIBRO · Bella y Bestia (imagen + video a pantalla completa) ===== */
 #envelope-screen{background:#EEF0EE!important;overflow:hidden}
 .cv-stage{position:absolute;left:50%;top:50%;aspect-ratio:768/1376;width:max(100vw,calc(100vh*.5581));
@@ -2153,8 +2302,25 @@ body{font-weight:500}
       <div class="gifts-head">
         <div class="eyebrow">Mesa de regalos</div>
         <h2>Lo más <em>importante</em> es tu presencia</h2>
-        <p class="gifts-sub">Mi mayor regalo es que estés conmigo, pero si deseas tener un detalle, habrá lluvia de sobres</p>
+        <p class="gifts-sub">Mi mayor regalo es que estés conmigo, pero si deseas tener un detalle, aquí te dejo las opciones</p>
       </div>
+      <div class="giftbox-stage">
+        <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+        <div class="giftbox-holder">
+          <button class="giftbox banq" id="giftbox" type="button" aria-label="Levantar la tapa: mesa de regalos de la recepción" aria-expanded="false" aria-controls="gift-reveal">
+            <span class="banq-ground" aria-hidden="true"></span>
+            <span class="banq-inside" aria-hidden="true"><span class="banq-glow" id="banq-glow"></span></span>
+            <img class="banq-dish" src="banquete-bandeja.webp" alt="" width="760" height="531" decoding="async">
+            <span class="banq-steam" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            <span class="banq-lid" id="banq-lid" aria-hidden="true">
+              <img src="banquete-tapa.webp" alt="" width="760" height="531" decoding="async">
+              <span class="banq-shine"><b></b></span>
+            </span>
+          </button>
+          <span class="giftbox-cta" id="giftbox-cta">Toca para descubrir</span>
+        </div>
+      </div>
+
             <div class="env-zone" id="env-zone">
         <div class="env-rain" id="envRain" aria-hidden="true"></div>
         <div class="env-stage">
@@ -2220,11 +2386,18 @@ body{font-weight:500}
       <div class="eyebrow">Álbum compartido</div>
       <h2>Comparte <em>tus</em> fotos conmigo</h2>
       <p class="album-text">Escanea el código QR con tu cámara para subir tus fotos al álbum del evento. Quiero vivir la noche desde tus ojos también.</p>
-      <div class="album-qr" id="qr-wrap">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&color=10107A&bgcolor=FCFBF8&margin=4&data=https%3A%2F%2Fxv-ruthy.vercel.app" alt="Código QR para álbum compartido" width="300" height="300" loading="lazy">
+      <div class="qr-magic" id="qr-magic" role="button" tabindex="0" aria-label="Revelar el código QR del álbum">
+        <img class="qc qc-tl" src="bb-esquina.webp" alt="" aria-hidden="true"><img class="qc qc-tr" src="bb-esquina.webp" alt="" aria-hidden="true">
+        <img class="qc qc-bl" src="bb-esquina.webp" alt="" aria-hidden="true"><img class="qc qc-br" src="bb-esquina.webp" alt="" aria-hidden="true">
+        <div class="album-qr" id="qr-wrap">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&color=10107A&bgcolor=FFFFFF&margin=4&data=https%3A%2F%2Fxv-shelsy-arabella.vercel.app" alt="Código QR para álbum compartido" width="300" height="300" decoding="async">
+        </div>
+        <span class="qr-sheen" aria-hidden="true"></span>
+        <span class="qr-mist" id="qr-mist" aria-hidden="true"></span>
+        <span class="qr-sparks" id="qr-sparks" aria-hidden="true"></span>
       </div>
       <br>
-      <a class="album-link" href="https://xv-ruthy.vercel.app" target="_blank" rel="noopener">Álbum disponible el día del evento</a>
+      <a class="album-link" href="https://xv-shelsy-arabella.vercel.app" target="_blank" rel="noopener">Álbum disponible el día del evento</a>
     </div>
   </section>
 
@@ -2366,6 +2539,25 @@ body{font-weight:500}
 
 </div>
 
+<!-- Modal de la mesa de regalos: fuera de .wrap (contain:paint rompe el position:fixed) -->
+<div class="gift-backdrop" id="gift-backdrop" role="dialog" aria-modal="true" aria-label="Mesa de regalos">
+  <div class="gift-reveal" id="gift-reveal">
+    <button class="gift-close" id="gift-close" type="button" aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="gift-reveal-eyebrow">Mesa de regalos</div>
+    <div class="gr-slide">
+      <svg class="gr-ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="7" y="19" width="34" height="23" rx="2"/><rect x="4" y="12" width="40" height="8" rx="2"/><path d="M24 12v30"/>
+        <path d="M24 12c-3-6-12-7-12-1 0 3 6 2 12 1zM24 12c3-6 12-7 12-1 0 3-6 2-12 1z"/>
+      </svg>
+      <div class="gr-title">Regalos en la recepción</div>
+      <div class="gr-desc">Si deseas obsequiarme algo, el día de la fiesta habrá una <b>mesa de regalos</b> a la entrada del salón, donde con mucho cariño recibiremos tu detalle.</div>
+      <button class="gr-btn" type="button" id="gr-ok">Entendido</button>
+    </div>
+  </div>
+</div>
+
 <!-- LIGHTBOX -->
 <div id="lightbox" aria-hidden="true" role="dialog">
   <button id="lightbox-close" aria-label="Cerrar">&times;</button>
@@ -2445,12 +2637,15 @@ function launchInvitation(){
   const music = document.getElementById('bg-music');
   const musicBtn = document.getElementById('music-btn');
   if(music && musicBtn){
-    music.currentTime = 0;
-    music.volume = 0;
-    music.play().then(()=>{
+    if(!music.paused){
       musicBtn.removeAttribute('hidden');
-      gsap.to(music,{volume:.55,duration:3,ease:'power2.out'});
-    }).catch(()=>{});
+    } else {
+      music.volume = 0;
+      music.play().then(()=>{
+        musicBtn.removeAttribute('hidden');
+        gsap.to(music,{volume:.55,duration:3,ease:'power2.out'});
+      }).catch(()=>{ musicBtn.removeAttribute('hidden'); });
+    }
 
     musicBtn.addEventListener('click',()=>{
       gsap.killTweensOf(music);
@@ -2507,7 +2702,12 @@ document.body.style.overflow = 'hidden';
     if(opened) return;
     opened = true;
     const music = document.getElementById('bg-music');
-    if(music){ music.volume = 0; music.play().then(()=>{ music.pause(); music.currentTime = 0; }).catch(()=>{}); }
+    if(music){
+      try{ music.currentTime = 0; }catch(e){}
+      music.volume = 0;
+      const mp = music.play();
+      if(mp && mp.then) mp.then(()=>{ gsap.to(music,{volume:.55,duration:2.5,ease:'power2.out'}); }).catch(()=>{});
+    }
     gsap.to([envHint].concat(textos),{opacity:0,duration:.35,ease:'power2.out'});
     const p = envVideo.play();
     if(p && typeof p.catch === 'function') p.catch(()=>{ triggerFlash(); });
@@ -2805,7 +3005,7 @@ gsap.fromTo('.dc-fig',{opacity:0,y:24},{opacity:1,y:0,duration:.9,stagger:.14,ea
 (function levitar(){
   if(prefersReduced) return;
   var figs = document.querySelectorAll('.dc-figwrap');
-  var dur = [4.8, 6.1], dly = [0, 1.15];
+  var dur = [5.2, 5.2], dly = [0, 0];
   figs.forEach(function(w, i){
     var im = w.querySelector('img'), sh = w.querySelector('.dc-shadow');
     var d = dur[i % dur.length], t = dly[i % dly.length];
@@ -2989,6 +3189,122 @@ gsap.fromTo('.kids-policy .eyebrow, .kids-policy h2, .kids-text',{opacity:0,y:18
 
 // ------ GIFTS ------
 gsap.fromTo('.gifts-head > *',{opacity:0,y:18},{opacity:1,y:0,duration:1,stagger:.1,scrollTrigger:{trigger:'.gifts-head',start:'top 80%'}});
+/* ---- Mesa de regalos: la caja se abre y expande la card de Liverpool ---- */
+(function(){
+  var box    = document.getElementById('giftbox');
+  var cta    = document.getElementById('giftbox-cta');
+  var back   = document.getElementById('gift-backdrop');
+  var closeB = document.getElementById('gift-close');
+  var canvas = document.getElementById('confetti-canvas');
+  if(!box || !back) return;
+
+  /* --- Confeti dorado/navy/vino: burst corto al abrir --- */
+  var ctx = canvas ? canvas.getContext('2d') : null;
+  var parts = [], raf = 0, COLORS = ['#C9A24B','#E6CB85','#FFF3CF','#E6CB85','#dfe1ea'];
+  function sizeCanvas(){
+    if(!canvas) return;
+    var r = canvas.getBoundingClientRect();
+    canvas.width = Math.max(1, r.width); canvas.height = Math.max(1, r.height);
+  }
+  function burst(){
+    if(!ctx) return;
+    sizeCanvas();
+    var cx = canvas.width/2, cy = canvas.height*.66;
+    parts = [];
+    for(var i=0;i<64;i++){
+      var ang = -Math.PI/2 + (Math.random()-.5)*2.4, sp = 1.8 + Math.random()*5;
+      parts.push({x:cx,y:cy,vx:Math.cos(ang)*sp,vy:Math.sin(ang)*sp-2.4,
+        w:2+Math.random()*3,h:2+Math.random()*3,rot:Math.random()*Math.PI,
+        vr:(Math.random()-.5)*.3,c:COLORS[(Math.random()*COLORS.length)|0],life:1});
+    }
+    if(raf) cancelAnimationFrame(raf);
+    tick();
+  }
+  function tick(){
+    if(!ctx) return;
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    var alive = 0;
+    for(var i=0;i<parts.length;i++){
+      var p = parts[i];
+      if(p.life <= 0) continue;
+      alive++;
+      p.vy += .16; p.x += p.vx; p.y += p.vy; p.rot += p.vr; p.life -= .011;
+      ctx.save();
+      ctx.globalAlpha = Math.max(0, p.life);
+      ctx.translate(p.x, p.y); ctx.rotate(p.rot);
+      ctx.fillStyle = p.c;
+      ctx.beginPath(); ctx.arc(0, 0, p.w/2, 0, 6.2832); ctx.fill();
+      ctx.restore();
+    }
+    if(alive) raf = requestAnimationFrame(tick);
+    else { ctx.clearRect(0,0,canvas.width,canvas.height); raf = 0; }
+  }
+
+  /* --- La tapa de plata se levanta con peso; sale vapor dorado --- */
+  var lid   = document.getElementById('banq-lid');
+  var glow  = document.getElementById('banq-glow');
+  var puffs = box.querySelectorAll('.banq-steam i');
+  var calm  = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var lidTl = null;
+  function liftLid(){
+    if(!lid || !window.gsap) return;
+    if(lidTl) lidTl.kill();
+    if(calm){ gsap.set(lid,{yPercent:-40,rotation:-8}); if(glow) gsap.set(glow,{opacity:1}); return; }
+    lidTl = gsap.timeline();
+    lidTl.to(lid,{yPercent:1.6,scaleY:.985,duration:.16,ease:'power2.in'},0)            // anticipacion
+         .to(lid,{yPercent:-46,xPercent:-3,rotation:-10,scaleY:1,duration:.72,ease:'power3.out'},.16)
+         .to(lid,{yPercent:-40,rotation:-8,duration:.9,ease:'sine.inOut'},.88);        // se asienta en el aire
+    if(glow) lidTl.fromTo(glow,{opacity:0},{opacity:1,duration:.5,ease:'power1.out'},.2);
+    lidTl.fromTo(puffs,{opacity:0,yPercent:30,scale:.5},
+        {opacity:.95,yPercent:-60,scale:1.15,duration:.7,stagger:.09,ease:'power1.out'},.24)
+         .to(puffs,{opacity:0,yPercent:-170,scale:1.7,duration:.95,stagger:.09,ease:'power1.in'},.84);
+  }
+  function dropLid(){
+    if(!lid || !window.gsap) return;
+    if(lidTl) lidTl.kill();
+    if(calm){ gsap.set(lid,{yPercent:0,xPercent:0,rotation:0}); if(glow) gsap.set(glow,{opacity:0}); return; }
+    gsap.set(puffs,{opacity:0});
+    lidTl = gsap.timeline();
+    lidTl.to(lid,{yPercent:0,xPercent:0,rotation:0,duration:.5,ease:'power2.in'},0)
+         .to(lid,{scaleY:.975,duration:.08,ease:'power1.out'},.5)
+         .to(lid,{scaleY:1,duration:.22,ease:'power2.out'},.58);
+    if(glow) lidTl.to(glow,{opacity:0,duration:.4},.1);
+  }
+
+  var scrollY = 0;
+  function open(){
+    if(back.classList.contains('is-open')) return;
+    box.classList.add('is-open');
+    box.setAttribute('aria-expanded','true');
+    if(cta) cta.classList.add('is-hidden');
+    liftLid();
+    setTimeout(burst, 260);
+    scrollY = window.scrollY;
+    setTimeout(function(){
+      back.classList.add('is-open');
+      document.body.classList.add('gift-locked');
+      if(closeB) closeB.focus();
+    }, 760);
+  }
+  function close(){
+    back.classList.remove('is-open');
+    document.body.classList.remove('gift-locked');
+    box.classList.remove('is-open');
+    box.setAttribute('aria-expanded','false');
+    if(cta) cta.classList.remove('is-hidden');
+    dropLid();
+    box.focus();
+  }
+  box.addEventListener('click', open);
+  if(closeB) closeB.addEventListener('click', close);
+  back.addEventListener('click', function(e){ if(e.target === back) close(); });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && back.classList.contains('is-open')) close();
+  });
+  window.addEventListener('resize', sizeCanvas);
+})();
+document.getElementById('gr-ok') && document.getElementById('gr-ok').addEventListener('click', function(){ document.getElementById('gift-close').click(); });
+
 /* ---- Lluvia de sobres: llueve hasta que la seccion se centra y aterriza uno ---- */
 (function(){
   var zone = document.getElementById('env-zone'),
@@ -3083,7 +3399,7 @@ gsap.fromTo('.album-link',{opacity:0,y:10},{opacity:1,y:0,duration:.9,scrollTrig
 // ------ RSVP — Panel de Invitados (X pases) ------
 (function(){
   var API = 'https://panel-invitados.vercel.app/api/confirmar';
-  var URL_BODA = 'https://xv-ruthy.vercel.app';
+  var URL_BODA = 'https://xv-shelsy-arabella.vercel.app';
   var DEADLINE = new Date('2026-12-01T23:59:59-06:00');
   var params = new URLSearchParams(location.search);
   var para = (params.get('para') || '').trim();
@@ -3409,6 +3725,43 @@ window.addEventListener('resize',()=>ScrollTrigger.refresh());
     gsap.fromTo('.bb-candle',{opacity:0},{opacity:.92,duration:1.6,stagger:.15,ease:'power2.out',immediateRender:false,
       scrollTrigger:{trigger:'.itinerary',start:'top 80%',once:true}});
   }
+})();
+
+// --- Candelabros: se mecen suavemente, como si flotaran en el castillo ---
+(function(){
+  if(prefersReduced || !window.gsap) return;
+  var l = document.querySelector('.bb-candle--l'), r = document.querySelector('.bb-candle--r');
+  if(l) gsap.fromTo(l,{rotation:-2.6,x:-2},{rotation:2.6,x:3,y:-4,duration:4.2,ease:'sine.inOut',repeat:-1,yoyo:true,transformOrigin:'50% 92%'});
+  if(r){ gsap.set(r,{scaleX:-1}); gsap.fromTo(r,{rotation:2.4,x:2},{rotation:-2.4,x:-3,y:-4,duration:5.1,delay:.9,ease:'sine.inOut',repeat:-1,yoyo:true,transformOrigin:'50% 92%'}); }
+})();
+// --- QR encantado: la niebla dorada con la rosa se disipa y revela el código ---
+(function(){
+  var box = document.getElementById('qr-magic'), mist = document.getElementById('qr-mist'), sp = document.getElementById('qr-sparks');
+  if(!box || !mist) return;
+  var pos = [[8,14],[86,10],[94,52],[78,92],[16,88],[4,48],[50,2],[50,97],[30,30],[70,70]];
+  pos.forEach(function(p,i){ var e=document.createElement('i'); e.style.left=p[0]+'%'; e.style.top=p[1]+'%'; e.style.animationDelay=(i*.34)+'s'; sp.appendChild(e); });
+  var done = false;
+  function reveal(){
+    if(done) return; done = true;
+    box.classList.add('revealed'); box.removeAttribute('role'); box.removeAttribute('tabindex');
+    if(prefersReduced || !window.gsap){ mist.style.display='none'; return; }
+    var tl = gsap.timeline();
+    tl.to(mist,{scale:1.04,duration:.18,ease:'power1.out'})
+      .to(mist,{opacity:0,scale:1.28,filter:'blur(14px)',duration:1.4,ease:'power2.inOut',onComplete:function(){ mist.style.display='none'; }})
+      .fromTo('#qr-wrap img',{scale:.92,opacity:.4},{scale:1,opacity:1,duration:1.1,ease:'back.out(1.6)'},'-=1.1');
+    var bits = [];
+    for(var k=0;k<18;k++){ var b=document.createElement('i'); b.style.cssText='left:50%;top:50%;opacity:1;animation:none'; sp.appendChild(b); bits.push(b); }
+    gsap.fromTo(bits,{x:0,y:0,scale:.5,opacity:1},{x:function(){return (Math.random()-.5)*300},y:function(){return (Math.random()-.5)*300},
+      scale:function(){return .6+Math.random()*1.2},opacity:0,duration:1.6,ease:'power2.out',stagger:.02,onComplete:function(){ bits.forEach(function(b){b.remove()}); }});
+  }
+  box.addEventListener('click', reveal);
+  box.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); reveal(); } });
+  // se revela solo al verlo (con verificación por posición: IntersectionObserver no siempre dispara)
+  var iv = setInterval(function(){
+    if(done){ clearInterval(iv); return; }
+    var r = box.getBoundingClientRect();
+    if(r.top < innerHeight*.55 && r.bottom > 0 && document.querySelector('.wrap').style.visibility === 'visible'){ setTimeout(reveal, 900); clearInterval(iv); }
+  }, 400);
 })();
 // --- Botón rosa: estados is-ready / is-playing con el reproductor de la plantilla ---
 (function(){
