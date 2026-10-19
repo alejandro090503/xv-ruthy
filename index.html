@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="color-scheme" content="light only">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Mis XV Años · Shelsy Arabella · 20 Diciembre 2026</title>
 <meta name="description" content="Mis XV Años · Shelsy Arabella Cruz · Domingo 20 de diciembre de 2026 · San Miguel, El Salvador.">
@@ -17,7 +18,8 @@
 <meta name="twitter:title" content="Mis XV Años · Shelsy Arabella">
 <meta name="twitter:description" content="Te invito a celebrar mis XV años · Domingo 20 de diciembre de 2026 · San Miguel, El Salvador.">
 <meta name="twitter:image" content="https://xv-ruthy.vercel.app/og.jpg">
-<link rel="preload" as="image" href="img/f1.jpg">
+<link rel="preload" as="image" href="libro.jpg">
+<link rel="preload" as="video" href="libro.mp4">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Pinyon+Script&family=Italiana&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -25,19 +27,19 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <style>
 :root{
-  --bg:#FFFFFF;
-  --surface:#F2F6FA;
-  --paper:#FCFBF8;
-  --accent:#5F7FA6;
-  --accent-soft:#A9C1DA;
-  --accent-deep:#24395A;
+  --bg:#FFFDF8;
+  --surface:#F5F2E7;
+  --paper:#FFFFFF;
+  --accent:#2B3A9A;
+  --accent-soft:#B7C0EA;
+  --accent-deep:#10107A;
   --gold:#C9A456;
   --gold-soft:#E8D5A0;
   --gold-deep:#735A22;
-  --rose:#B25466;
-  --rose-soft:#E7C3C9;
-  --ink:#1C2638;
-  --ink-soft:#3F4B60;
+  --rose:#B3001B;
+  --rose-soft:#EBB9C1;
+  --ink:#14143A;
+  --ink-soft:#3D3D70;
   --hair:color-mix(in srgb, var(--accent-deep) 14%, transparent);
   --hair-gold:color-mix(in srgb, var(--gold-deep) 22%, transparent);
   --display:'Playfair Display',Georgia,serif;
@@ -47,7 +49,7 @@
   --sans:'Inter Tight',system-ui,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;background:#1C2A44}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;background:#0A0A52}
 body{
   font-family:var(--sans);
   font-size:16px;line-height:1.8;
@@ -169,12 +171,12 @@ h1 em,h2 em,h3 em{font-style:italic;font-weight:500;color:var(--accent)}
 .hero-bg-overlay{
   position:absolute;inset:0;z-index:-1;
   background:
-    radial-gradient(ellipse at center top, transparent 20%, rgba(20,32,52,.45) 70%),
+    radial-gradient(ellipse at center top, transparent 20%, rgba(10,10,82,.45) 70%),
     linear-gradient(180deg,
-      rgba(20,32,52,.55) 0%,
-      rgba(20,32,52,.12) 35%,
-      rgba(20,32,52,.12) 55%,
-      rgba(20,32,52,.75) 100%);
+      rgba(10,10,82,.55) 0%,
+      rgba(10,10,82,.12) 35%,
+      rgba(10,10,82,.12) 55%,
+      rgba(10,10,82,.75) 100%);
 }
 .hero-frame{
   position:absolute;inset:clamp(28px,4vw,56px);z-index:-1;
@@ -326,7 +328,7 @@ h1 em,h2 em,h3 em{font-style:italic;font-weight:500;color:var(--accent)}
 /* ============ FECHA HERO ============ */
 .date-hero{
   position:relative;padding:min(22vh,220px) 0;
-  background:#24395A;
+  background:#10107A;
   color:#F8F5EC;text-align:center;isolation:isolate;overflow:hidden;
 }
 /* Capa de imagen con mask — difumina top/bottom */
@@ -334,9 +336,9 @@ h1 em,h2 em,h3 em{font-style:italic;font-weight:500;color:var(--accent)}
   content:"";position:absolute;inset:0;z-index:0;
   background:
     linear-gradient(to bottom,
-      rgba(36,57,90,.45) 0%,
-      rgba(36,57,90,.18) 50%,
-      rgba(36,57,90,.45) 100%);
+      rgba(16,16,122,.45) 0%,
+      rgba(16,16,122,.18) 50%,
+      rgba(16,16,122,.45) 100%);
   mask-image:linear-gradient(to bottom,
     transparent 0%,
     rgba(0,0,0,.15) 15%,
@@ -448,9 +450,9 @@ h1 em,h2 em,h3 em{font-style:italic;font-weight:500;color:var(--accent)}
   position:relative;background:linear-gradient(180deg,#FFFFFF 0%,#EEF3F9 100%);
   padding:34px 30px 36px;text-align:center;border-radius:2px;
   box-shadow:
-    0 1px 2px rgba(36,57,90,.06),
-    0 14px 36px -10px rgba(36,57,90,.22),
-    0 50px 110px -40px rgba(36,57,90,.32);
+    0 1px 2px rgba(16,16,122,.06),
+    0 14px 36px -10px rgba(16,16,122,.22),
+    0 50px 110px -40px rgba(16,16,122,.32);
   isolation:isolate;
 }
 /* Marco doble exterior */
@@ -481,7 +483,7 @@ h1 em,h2 em,h3 em{font-style:italic;font-weight:500;color:var(--accent)}
   border-radius:2px;display:flex;align-items:center;justify-content:center;
   font-family:var(--display);font-style:italic;font-size:20px;color:var(--gold-deep);
   z-index:3;
-  box-shadow:0 4px 14px rgba(36,57,90,.2);
+  box-shadow:0 4px 14px rgba(16,16,122,.2);
 }
 .loc-crest::before,.loc-crest::after{
   content:"";position:absolute;top:50%;width:42px;height:1px;
@@ -528,7 +530,7 @@ h1 em,h2 em,h3 em{font-style:italic;font-weight:500;color:var(--accent)}
 .loc-map{
   position:relative;margin:14px auto 24px;width:100%;aspect-ratio:4/3;
   border:1px solid color-mix(in srgb,var(--gold) 55%,transparent);
-  background:#1E2C46;overflow:hidden;
+  background:#10107A;overflow:hidden;
   box-shadow:inset 0 0 0 4px var(--paper),inset 0 0 0 5px color-mix(in srgb,var(--gold) 35%,transparent);
 }
 .loc-map iframe{
@@ -579,9 +581,9 @@ h1 em,h2 em,h3 em{font-style:italic;font-weight:500;color:var(--accent)}
 .countdown::after{
   content:"";position:absolute;inset:0;z-index:0;
   background:linear-gradient(to bottom,
-    rgba(36,57,90,.82) 0%,
-    rgba(36,57,90,.6) 50%,
-    rgba(36,57,90,.82) 100%);
+    rgba(16,16,122,.82) 0%,
+    rgba(16,16,122,.6) 50%,
+    rgba(16,16,122,.82) 100%);
   pointer-events:none;
 }
 .countdown > .container{position:relative;z-index:2}
@@ -619,7 +621,7 @@ h1 em,h2 em,h3 em{font-style:italic;font-weight:500;color:var(--accent)}
   border:1px solid color-mix(in srgb,var(--gold) 45%,transparent);border-radius:2px;
   padding:clamp(32px,3.4vw,44px) clamp(22px,2.6vw,32px);
   text-align:center;
-  box-shadow:0 4px 20px rgba(36,57,90,.08),0 1px 0 rgba(255,255,255,.6) inset;
+  box-shadow:0 4px 20px rgba(16,16,122,.08),0 1px 0 rgba(255,255,255,.6) inset;
 }
 .fam-card::before{
   content:"";position:absolute;inset:8px;
@@ -755,7 +757,7 @@ h1 em,h2 em,h3 em{font-style:italic;font-weight:500;color:var(--accent)}
   border-radius:14px;
   overflow:hidden;
   border:1.5px solid color-mix(in srgb,var(--gold) 40%,transparent);
-  box-shadow:0 12px 40px rgba(36,57,90,.20);
+  box-shadow:0 12px 40px rgba(16,16,122,.20);
   user-select:none;
   -webkit-user-select:none;
   cursor:zoom-in;
@@ -986,9 +988,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
   padding:clamp(40px,5vw,72px) clamp(28px,4vw,56px) clamp(48px,6vw,80px);
   text-align:center;
   box-shadow:
-    0 1px 2px rgba(36,57,90,.06),
-    0 16px 48px -12px rgba(36,57,90,.24),
-    0 60px 130px -50px rgba(36,57,90,.4);
+    0 1px 2px rgba(16,16,122,.06),
+    0 16px 48px -12px rgba(16,16,122,.24),
+    0 60px 130px -50px rgba(16,16,122,.4);
 }
 /* Doble marco art-déco */
 .program-card::before{
@@ -1124,10 +1126,10 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
   position:absolute;inset:0;z-index:3;
   background:linear-gradient(
     to bottom,
-    rgba(20,32,52,.18) 0%,
-    rgba(20,32,52,.08) 30%,
-    rgba(20,32,52,.58) 62%,
-    rgba(20,32,52,.93) 100%
+    rgba(10,10,82,.18) 0%,
+    rgba(10,10,82,.08) 30%,
+    rgba(10,10,82,.58) 62%,
+    rgba(10,10,82,.93) 100%
   );
 }
 #env-hint{
@@ -1198,7 +1200,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
   width:54px;height:54px;
   border:1px solid rgba(201,164,86,.65);
   border-radius:50%;
-  background:rgba(20,32,52,.5);
+  background:rgba(10,10,82,.5);
   backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
   display:flex;align-items:center;justify-content:center;
   color:#C9A456;
@@ -1219,13 +1221,13 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
   z-index:9000;
   width:44px;height:44px;border-radius:50%;
   border:1px solid rgba(201,164,86,.55);
-  background:rgba(20,32,52,.55);
+  background:rgba(10,10,82,.55);
   backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
   color:#C9A456;cursor:pointer;
   display:flex;align-items:center;justify-content:center;
   transition:transform .2s ease,background .2s ease,border-color .2s ease;
 }
-#music-btn:hover{transform:scale(1.1);background:rgba(20,32,52,.75);border-color:rgba(201,164,86,.85)}
+#music-btn:hover{transform:scale(1.1);background:rgba(10,10,82,.75);border-color:rgba(201,164,86,.85)}
 #music-btn.muted{color:rgba(201,164,86,.45);border-color:rgba(201,164,86,.25)}
 @keyframes musicPulse{
   0%,100%{box-shadow:0 0 0 0 rgba(201,164,86,.35)}
@@ -1282,90 +1284,501 @@ body{font-weight:500}
 .credit-label{font-size:12px!important;font-weight:500!important}
 .story-body p,.fam-names{font-weight:500!important}
 .locs-sub{font-size:15px!important;font-weight:500!important}
-/* ===== PORTADA LIBRO · Bella y Bestia ===== */
-#envelope-screen{background:radial-gradient(ellipse at 50% 40%,#FFFFFF 0%,#EEF3F9 55%,#DCE6F1 100%)!important;display:flex;align-items:center;justify-content:center;perspective:2000px;overflow:hidden}
-.bk{position:relative;width:min(84vw,380px);aspect-ratio:3/4.25;max-height:84vh;transform-style:preserve-3d}
-.bk-page,.bk-cover{position:absolute;inset:0;border-radius:3px 10px 10px 3px}
-.bk-page{background:#FCFBF8;box-shadow:0 30px 70px -25px rgba(20,32,52,.45),inset 10px 0 18px -10px rgba(20,32,52,.25);padding:18px;display:flex;flex-direction:column;align-items:center;gap:12px}
-.bk-photo{flex:1;width:100%;border:1px solid var(--gold);padding:6px;min-height:0}
-.bk-photo img{width:100%;height:100%;object-fit:cover;object-position:center 22%;display:block}
-.bk-cap{font-family:var(--display);font-style:italic;font-size:22px;color:var(--accent-deep);line-height:1.3;text-align:center}
-.bk-cap small{display:block;font-family:var(--sans);font-style:normal;font-size:12px;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:4px;padding-left:.35em}
-.bk-cover{transform-origin:left center;transform-style:preserve-3d;z-index:3;cursor:pointer}
-.bk-face,.bk-back{position:absolute;inset:0;border-radius:3px 10px 10px 3px;backface-visibility:hidden;-webkit-backface-visibility:hidden}
-.bk-face{background:linear-gradient(90deg,rgba(20,32,52,.16) 0,rgba(20,32,52,.03) 5%,transparent 9%),radial-gradient(ellipse at 50% 35%,#FFFFFF 0%,#F7F4EC 70%,#EFE9DC 100%);box-shadow:0 34px 80px -28px rgba(20,32,52,.55),0 2px 6px rgba(20,32,52,.12);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px 26px 26px}
-.bk-face::before{content:"";position:absolute;inset:12px;border:1px solid var(--gold);pointer-events:none}
-.bk-face::after{content:"";position:absolute;inset:17px;border:1px solid var(--gold-soft);pointer-events:none}
-.bk-back{transform:rotateY(180deg);background:linear-gradient(270deg,rgba(20,32,52,.14),transparent 12%),#F4F0E6}
-.bk-eyebrow{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.42em;text-transform:uppercase;color:var(--gold-deep);padding-left:.42em}
-.bk-rose{width:96px;height:auto;margin:10px 0 6px}
-.bk-xv{font-family:var(--italiana);font-size:15px;letter-spacing:.38em;text-transform:uppercase;color:var(--accent);padding-left:.38em}
-.bk-name{font-family:var(--display);font-weight:500;font-size:clamp(28px,8vw,36px);line-height:1.15;color:var(--accent-deep);margin:4px 0 10px}
-.bk-rule{width:120px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:2px auto 12px}
-.bk-for{font-family:var(--serif);font-style:italic;font-size:17px;font-weight:500;color:var(--ink-soft)}
-.bk-guest{font-family:var(--display);font-weight:600;font-size:clamp(20px,5.6vw,24px);color:var(--ink);line-height:1.25;margin:2px 0 10px;max-width:100%;overflow-wrap:anywhere}
-.bk-pases{display:inline-flex;align-items:baseline;gap:8px;border-top:1px solid var(--gold-soft);border-bottom:1px solid var(--gold-soft);padding:6px 16px;font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--accent-deep)}
-.bk-pases b{font-family:var(--display);font-size:24px;letter-spacing:0;color:var(--gold-deep)}
-.bk-tap{margin-top:16px;font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:var(--accent);padding-left:.35em;animation:bkTap 2.2s ease-in-out infinite}
-@keyframes bkTap{0%,100%{opacity:.55}50%{opacity:1}}
+/* ======== LA BELLA Y LA BESTIA — portado de boda-yenisei-y-juan-carlos ======== */
+/* ============ COUNTDOWN — el jardin de la rosa ============ */
+.countdown{text-align:center;padding:min(14vh,120px) 0}
+.countdown h2{font-size:clamp(32px,4.5vw,52px);margin-bottom:20px}
+.countdown-sub{font-family:var(--script);color:var(--gold);font-size:32px;margin-bottom:44px;line-height:1}
+.cd-garden{position:relative;padding-bottom:clamp(86px,13vw,148px)}
+.cd-canvas{position:absolute;left:0;top:0;width:100%;height:100%;z-index:3;pointer-events:none}
+.countdown-grid{position:relative;z-index:1;display:flex;justify-content:center;align-items:flex-start;
+  gap:clamp(9px,3.2vw,38px);flex-wrap:nowrap;font-variant-numeric:tabular-nums;perspective:1000px}
+.cd-flower{position:relative;flex:0 0 auto;display:flex;flex-direction:column;align-items:center;
+  width:clamp(70px,18.6vw,128px)}
+.cd-corola{position:relative;width:100%;aspect-ratio:1}
+.cd-corola .pt{position:absolute;z-index:1;left:50%;top:50%;width:25%;height:40%;margin:-40% 0 0 -12.5%;
+  transform:rotate(var(--rot)) translateY(-30%);transform-origin:50% 100%}
+.cd-corola .pt b{display:block;width:100%;height:100%;
+  border-radius:56% 56% 44% 44%/80% 80% 28% 28%;
+  background:linear-gradient(168deg,#f8ded6 0%,#e0959f 20%,#b23a4d 56%,#6d0b1d 100%);
+  box-shadow:0 2px 5px -2px rgba(10,10,82,.35),inset 0 1px 2px rgba(255,255,255,.45);
+  opacity:.9}
+.cd-corola .pt:nth-child(odd) b{opacity:.74;filter:saturate(.9)}
+.cd-corola .pt:nth-child(odd){height:33%;margin-top:-33%}
+.cd-medal{position:absolute;z-index:2;left:17%;right:17%;top:17%;bottom:17%;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
+  background:radial-gradient(circle at 34% 26%,#fffdf5 0%,var(--paper) 55%,#f2ead7 100%);
+  box-shadow:0 0 0 1px rgba(201,162,75,.6),0 0 0 4px rgba(255,255,255,.92),
+    0 0 0 5px rgba(201,162,75,.38),0 14px 28px -14px rgba(15,31,63,.45),
+    inset 0 -6px 14px -8px rgba(140,111,42,.35)}
+.cd-medal.late{animation:cdLate .9s ease-out}
+@keyframes cdLate{0%{box-shadow:0 0 0 1px rgba(201,162,75,.6),0 0 0 4px rgba(255,255,255,.92),
+    0 0 0 5px rgba(201,162,75,.38),0 0 22px 6px rgba(230,203,133,.75),0 14px 28px -14px rgba(15,31,63,.45)}
+  100%{box-shadow:0 0 0 1px rgba(201,162,75,.6),0 0 0 4px rgba(255,255,255,.92),
+    0 0 0 5px rgba(201,162,75,.38),0 0 0 0 rgba(230,203,133,0),0 14px 28px -14px rgba(15,31,63,.45)}}
+.cd-num{font-family:var(--display);font-style:italic;font-weight:400;line-height:1;
+  font-size:clamp(25px,6.2vw,49px);color:var(--accent-deep);display:block;transform-origin:center;
+  letter-spacing:-.01em}
+.cd-flower.dias .cd-num{font-size:clamp(21px,5.2vw,41px)}
+.cd-lbl{font-family:var(--sans);font-size:9px;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--gold-deep);margin-top:clamp(14px,3.4vw,22px);padding-left:.3em;font-weight:600;white-space:nowrap}
+@media (min-width:700px){ .cd-lbl{font-size:10px;letter-spacing:.45em;padding-left:.45em} }
+@media (prefers-reduced-motion:reduce){ .cd-canvas{display:none} .cd-medal.late{animation:none} }
+/* ====== GALERIA — EL ESPEJO MAGICO ====== */
+.mirror-stage{position:relative;width:100%;max-width:560px;margin:30px auto 0;padding:0 18px;
+  display:flex;flex-direction:column;align-items:center;text-align:center}
+.mirror-ask{font-family:var(--script);font-size:clamp(30px,6.4vw,44px);line-height:1;color:var(--gold);
+  margin:0 0 14px;opacity:.92;animation:mirrorAsk 5.6s ease-in-out infinite}
+@keyframes mirrorAsk{0%,100%{opacity:.58}50%{opacity:1;text-shadow:0 0 24px rgba(201,162,75,.45)}}
+.mirror-hit{position:relative;display:block;padding:6px 8px 12px;border:0;background:none;
+  cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:pan-y;border-radius:28px}
+.mirror-hit:focus-visible{outline:none;box-shadow:0 0 0 2px rgba(201,162,75,.85)}
+.mirror-body{position:relative;width:clamp(312px,92vw,452px);margin:0 auto;
+  animation:mirrorFloat 9s ease-in-out infinite}
+@keyframes mirrorFloat{0%,100%{transform:translateY(0) rotate(-.45deg)}50%{transform:translateY(-9px) rotate(.45deg)}}
+.mirror-frame{position:relative;z-index:4;display:block;width:100%;height:auto;pointer-events:none;
+  filter:drop-shadow(0 24px 40px rgba(10,10,82,.34))}
+/* el cristal es el hueco ovalado del marco: la foto manda */
+.mirror-glass{position:absolute;z-index:2;left:13.84%;top:20.48%;width:72.33%;height:63.78%;
+  overflow:hidden;border-radius:50%;background:#cfd6e2;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.35),inset 0 14px 28px rgba(10,10,82,.22)}
+.m-photos{position:absolute;inset:0}
+.m-photos img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 32%}
+.m-tint{position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(130% 90% at 50% 2%,rgba(255,247,226,.34),transparent 58%),
+    linear-gradient(180deg,rgba(255,255,255,.16),transparent 34%,rgba(10,10,82,.22));}
+.m-sheen{position:absolute;inset:-24%;pointer-events:none;
+  background:linear-gradient(116deg,transparent 30%,rgba(255,255,255,.32) 43%,rgba(255,255,255,.07) 51%,transparent 60%);
+  animation:mirrorSheen 11s ease-in-out infinite}
+@keyframes mirrorSheen{0%,100%{transform:translateX(-14%) rotate(0deg)}50%{transform:translateX(14%) rotate(2deg)}}
+.m-fog{position:absolute;inset:-36%;pointer-events:none;opacity:0;will-change:transform,opacity}
+.m-fog.f1{filter:blur(13px);
+  background:radial-gradient(closest-side at 34% 66%,rgba(255,243,212,.96),rgba(255,243,212,0) 72%),
+    radial-gradient(closest-side at 68% 56%,rgba(232,203,133,.92),rgba(232,203,133,0) 74%);
+  background-size:74% 74%,62% 62%;background-repeat:no-repeat}
+.m-fog.f2{filter:blur(19px);
+  background:radial-gradient(closest-side at 52% 40%,rgba(255,251,234,.92),rgba(255,251,234,0) 72%),
+    radial-gradient(closest-side at 26% 34%,rgba(201,162,75,.82),rgba(201,162,75,0) 74%);
+  background-size:86% 86%,58% 58%;background-repeat:no-repeat}
+.m-fog.f3{filter:blur(26px);
+  background:radial-gradient(closest-side at 62% 74%,rgba(140,111,42,.55),rgba(140,111,42,0) 74%),
+    radial-gradient(closest-side at 40% 20%,rgba(255,238,196,.75),rgba(255,238,196,0) 76%);
+  background-size:96% 96%,70% 70%;background-repeat:no-repeat}
+.m-spark{position:absolute;inset:0;pointer-events:none}
+.m-spark i{position:absolute;width:4px;height:4px;border-radius:50%;background:#FFF6DC;
+  box-shadow:0 0 8px 2px rgba(255,236,186,.9);opacity:0}
+.mirror-meter{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:6px}
+.mirror-dots{display:flex;align-items:center;gap:8px}
+.mirror-dots i{width:6px;height:6px;border-radius:50%;display:block;
+  background:color-mix(in srgb,var(--gold) 34%,transparent);transition:all .45s ease}
+.mirror-dots i.on{background:var(--gold);transform:scale(1.5);box-shadow:0 0 0 3px rgba(201,162,75,.16)}
+.mirror-count{font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:.26em;
+  text-transform:uppercase;color:var(--ink-soft);padding-left:.26em;opacity:.75}
+.mirror-hint{font-family:var(--serif);font-style:italic;font-size:14px;letter-spacing:2.6px;
+  color:var(--accent);text-align:center;margin-top:16px;opacity:.72}
+@media (max-width:420px){
+  .mirror-hit{padding:4px 2px 10px}
+  .mirror-body{width:min(336px,94vw)}
+}
+@media (prefers-reduced-motion:reduce){
+  .mirror-body,.m-sheen,.mirror-ask{animation:none}
+}
+/* ============ MUSIC PLAYER (flotante) — estilo samantha-alexander ============ */
+/* ===== BOTON DE MUSICA — la rosa encantada: solo la campana, sin marco ni fondo ===== */
+.vinyl-btn{
+  position:fixed;bottom:14px;right:14px;z-index:50;
+  width:66px;aspect-ratio:294/542;padding:0;margin:0;
+  border:none;cursor:pointer;background:none;border-radius:0;box-shadow:none;
+  -webkit-appearance:none;appearance:none;
+  opacity:0;transform:scale(.6);pointer-events:none;
+  -webkit-tap-highlight-color:transparent;
+  transition:transform .4s cubic-bezier(.2,.7,.2,1),opacity .4s ease;
+}
+.vinyl-btn.is-ready{opacity:1;transform:scale(1);pointer-events:auto}
+.vinyl-btn:hover{transform:scale(1.06)}
+.vinyl-btn:active{transform:scale(.97)}
+.vinyl-btn:focus-visible{outline:none}
+.rose-jar{position:absolute;inset:0;display:block}
+/* sombra de contacto difusa bajo la base */
+.rose-ground{position:absolute;left:4%;right:4%;bottom:-5%;height:13%;pointer-events:none;
+  background:radial-gradient(closest-side,rgba(6,6,40,.42),rgba(6,6,40,.16) 55%,transparent 100%)}
+/* capas recortadas con la silueta real de la campana */
+.rose-in{position:absolute;inset:0;pointer-events:none;overflow:hidden;
+  -webkit-mask:url('bb-rosa.webp') center/100% 100% no-repeat;mask:url('bb-rosa.webp') center/100% 100% no-repeat}
+.rose-in--back{z-index:1}
+.rose-in--front{z-index:3}
+/* resplandor calido que nace dentro del cristal */
+.rose-glow{position:absolute;left:-12%;right:-12%;top:12%;height:66%;opacity:.3;
+  background:radial-gradient(closest-side at 50% 46%,rgba(255,236,186,.95),rgba(236,196,112,.5) 46%,transparent 78%);
+  transition:opacity .8s ease}
+.vinyl-btn.is-playing .rose-glow{opacity:.7;animation:roseGlow 4.2s ease-in-out infinite}
+@keyframes roseGlow{0%,100%{opacity:.5;transform:scale(.94)}50%{opacity:.95;transform:scale(1.06)}}
+.rose-cloche{position:absolute;inset:0;z-index:2;display:block;width:100%;height:100%;pointer-events:none;
+  filter:drop-shadow(0 5px 6px rgba(6,6,40,.36)) drop-shadow(0 0 1.2px rgba(255,246,222,.85))}
+.vinyl-btn:focus-visible .rose-cloche{
+  filter:drop-shadow(0 0 3px rgba(230,203,133,1)) drop-shadow(0 0 7px rgba(201,162,75,.9))}
+/* la rosa respira: segunda copia recortada solo a la flor */
+.rose-bloom{position:absolute;inset:0;z-index:2;display:block;width:100%;height:100%;pointer-events:none;
+  -webkit-clip-path:ellipse(21% 11% at 45% 39%);clip-path:ellipse(21% 11% at 45% 39%);
+  transform-origin:45% 42%}
+.vinyl-btn.is-playing .rose-bloom{animation:roseBreath 4.2s ease-in-out infinite}
+@keyframes roseBreath{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+/* reflejo especular que recorre el cristal */
+.rose-sweep{position:absolute;top:-10%;bottom:-10%;left:0;width:46%;opacity:.85;
+  background:linear-gradient(100deg,transparent 0%,rgba(255,255,255,.08) 30%,rgba(255,255,255,.62) 50%,rgba(255,255,255,.08) 70%,transparent 100%);
+  transform:translateX(-140%) skewX(-12deg);animation:roseSweep 7.5s ease-in-out infinite}
+@keyframes roseSweep{0%,58%{transform:translateX(-140%) skewX(-12deg)}86%,100%{transform:translateX(330%) skewX(-12deg)}}
+/* leve refraccion en el borde izquierdo del domo */
+.rose-rim{position:absolute;left:9%;top:20%;width:9%;height:52%;border-radius:50%;opacity:.55;
+  background:linear-gradient(180deg,transparent,rgba(255,255,255,.75) 30%,rgba(255,255,255,.35) 70%,transparent)}
+/* base: brillo metalico dorado */
+.rose-gild{position:absolute;left:0;right:0;bottom:0;height:17%;opacity:.5;
+  background:linear-gradient(100deg,rgba(140,111,42,.2) 0%,rgba(230,203,133,.95) 34%,rgba(255,244,210,1) 46%,rgba(201,162,75,.85) 60%,rgba(140,111,42,.25) 100%)}
+/* chispas doradas diminutas dentro del cristal */
+.rose-spark{position:absolute;width:2px;height:2px;border-radius:50%;opacity:0;
+  background:#FFF3CF;box-shadow:0 0 3px 1px rgba(255,226,150,.9)}
+.rose-spark.s1{left:27%;top:30%}.rose-spark.s2{left:68%;top:36%}
+.rose-spark.s3{left:58%;top:58%}.rose-spark.s4{left:33%;top:66%}
+.vinyl-btn.is-playing .rose-spark{animation:roseSpark 3.6s ease-in-out infinite}
+.vinyl-btn.is-playing .rose-spark.s2{animation-delay:.9s}
+.vinyl-btn.is-playing .rose-spark.s3{animation-delay:1.8s}
+.vinyl-btn.is-playing .rose-spark.s4{animation-delay:2.7s}
+@keyframes roseSpark{0%,100%{opacity:0;transform:translateY(3px) scale(.4)}40%{opacity:1;transform:translateY(-2px) scale(1.25)}70%{opacity:0;transform:translateY(-6px) scale(.5)}}
+/* petalo que cae de vez en cuando */
+.rose-petal{position:absolute;left:50%;top:42%;width:5px;height:6.5px;opacity:0;
+  border-radius:70% 0 70% 0;background:linear-gradient(140deg,#e06a5c,#a3202a)}
+.vinyl-btn.is-playing .rose-petal{animation:rosePetal 11s ease-in infinite 2s}
+@keyframes rosePetal{
+  0%{opacity:0;transform:translate(0,0) rotate(0)}
+  4%{opacity:.95}
+  30%{opacity:.9;transform:translate(-7px,30px) rotate(150deg)}
+  38%{opacity:0;transform:translate(-5px,40px) rotate(215deg)}
+  100%{opacity:0;transform:translate(-5px,40px) rotate(215deg)}
+}
+/* indicador fino, solo trazo dorado sobre la base */
+.rose-state{position:absolute;left:50%;bottom:3.5%;width:11px;height:11px;margin-left:-5.5px;z-index:4;
+  pointer-events:none;filter:drop-shadow(0 0 1.5px rgba(6,6,40,.95))}
+.rose-state svg{width:100%;height:100%;display:block;fill:#F3DFA4}
+.rose-state .rose-ico-pause{display:none;opacity:.8}
+.vinyl-btn.is-playing .rose-state .rose-ico-play{display:none}
+.vinyl-btn.is-playing .rose-state .rose-ico-pause{display:block}
+@media (max-width:480px){ .vinyl-btn{width:58px;bottom:12px;right:10px} }
+@media (prefers-reduced-motion:reduce){
+  .rose-sweep,.vinyl-btn.is-playing .rose-glow,.vinyl-btn.is-playing .rose-bloom,
+  .vinyl-btn.is-playing .rose-spark,.vinyl-btn.is-playing .rose-petal{animation:none}
+  .rose-sweep{opacity:0}
+}
+/* ===================== LA BELLA Y LA BESTIA · capa de diseño ===================== */
+:root{--bb-royal:#0a0a52;--bb-rose:#b3001b}
+@keyframes goldSweep{0%{background-position:200% center}100%{background-position:-200% center}}
+
+/* Brillo en letras (receta goldSweep de bautizo-jayden) */
+.bb-shine-light,.hero-and,.date-num,.footer-names,.date-h em{
+  background-image:linear-gradient(100deg,#9A7830 0%,#C9A04E 10%,#E8D5A3 20%,#F5E6B8 27%,#FFFBEA 32%,#F5E6B8 37%,#E8D5A3 46%,#C9A04E 58%,#E8D5A3 70%,#F5E6B8 80%,#C9A04E 90%,#9A7830 100%);
+  background-size:300% 100%;
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+  animation:goldSweep 14s linear infinite;
+  text-shadow:none;
+  filter:drop-shadow(0 2px 10px rgba(0,0,0,.35)) drop-shadow(0 0 14px rgba(230,203,133,.28));
+  padding-left:.3em;padding-right:.3em;margin-left:-.3em;margin-right:-.3em;
+}
+.itinerary-sub,.countdown-sub,.hair-word span,.story-initials,.section-paper h2 em,.section-surface h2 em,.section-bg h2 em{
+  background-image:linear-gradient(100deg,#6B4F1C 0%,#7A5C22 10%,#8A6A28 20%,#A8822F 27%,#C9A04E 32%,#A8822F 37%,#9A7830 46%,#6B4F1C 58%,#8A6A28 70%,#B98F3C 80%,#7A5C22 90%,#6B4F1C 100%);
+  background-size:300% 100%;
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+  animation:goldSweep 16s linear infinite;
+  padding-left:.25em;padding-right:.25em;margin-left:-.25em;margin-right:-.25em;
+}
+.section-paper h2 em,.section-surface h2 em,.section-bg h2 em{display:inline-block}
+/* contraste >=4.5:1 sobre #EEF3D2/#F8FAE9/#FFF: el barrido dorado no baja de #85662A */
+.section-paper h2 em,.section-surface h2 em,.section-bg h2 em{background-image:linear-gradient(100deg,#5E4416 0%,#6B4F1C 18%,#7A5C22 34%,#85662A 46%,#7A5C22 58%,#6B4F1C 76%,#5E4416 100%)}
+
+/* Brillo cayendo */
+#bb-glitter{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:3}
+
+/* Esquinas barrocas en portada */
+.bb-corner{position:absolute;z-index:2;width:clamp(78px,17vw,150px);height:auto;pointer-events:none;
+  filter:drop-shadow(0 4px 10px rgba(0,0,0,.45));opacity:.95}
+.bb-corner--tl{top:clamp(14px,2.4vw,34px);left:clamp(14px,2.4vw,34px)}
+.bb-corner--br{bottom:clamp(14px,2.4vw,34px);right:clamp(14px,2.4vw,34px);transform:rotate(180deg)}
+
+/* Rosa encantada */
+.bb-rose{position:relative;width:min(230px,58vw);margin:-28px auto 40px;aspect-ratio:520/700}
+.bb-rose img{position:relative;z-index:1;width:100%;height:100%;object-fit:contain;
+  filter:drop-shadow(0 18px 26px rgba(10,10,82,.22))}
+.bb-rose-glow{position:absolute;left:50%;top:40%;width:120%;aspect-ratio:1;transform:translate(-50%,-50%);
+  background:radial-gradient(circle,rgba(230,203,133,.55) 0%,rgba(179,0,27,.10) 38%,transparent 66%);
+  animation:bbGlow 5s ease-in-out infinite;z-index:0;border-radius:50%}
+@keyframes bbGlow{0%,100%{opacity:.55;transform:translate(-50%,-50%) scale(.92)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.05)}}
+.bb-music .bb-rose-glow{animation-duration:2.6s}
+.bb-petal{position:absolute;z-index:2;left:44%;top:30%;width:11px;height:14px;opacity:0;
+  background:radial-gradient(circle at 35% 30%,#e0314a,#b3001b 60%,#6e0011);
+  border-radius:70% 0 70% 0;animation:bbPetal 26s ease-in infinite}
+.bb-petal--b{left:52%;top:28%;width:9px;height:12px;animation-delay:13s}
+@keyframes bbPetal{
+  0%,58%{opacity:0;transform:translate(0,0) rotate(0)}
+  62%{opacity:1}
+  80%{transform:translate(-14px,38px) rotate(120deg)}
+  96%{opacity:1;transform:translate(8px,86px) rotate(230deg)}
+  100%{opacity:0;transform:translate(8px,88px) rotate(240deg)}}
+
+/* Itinerario */
+.itinerary{position:relative}
+.bb-candles{position:relative;height:0;max-width:780px;margin:0 auto}
+.bb-candle{position:absolute;top:-190px;width:clamp(62px,15vw,120px);height:auto;opacity:.92;
+  filter:drop-shadow(0 10px 16px rgba(10,10,82,.18))}
+.bb-candle--l{left:0}
+.bb-candle--r{right:0;transform:scaleX(-1)}
+.itv3-item{padding:34px 16px 6px}
+.itv3-card{position:relative;width:min(100%,420px);padding:26px 22px 24px;border-radius:22px;
+  background:linear-gradient(180deg,#fff 0%,#fbfcf1 100%);
+  border:1px solid rgba(201,162,75,.55);
+  box-shadow:0 0 0 5px rgba(255,255,255,.9),0 0 0 6px rgba(201,162,75,.28),0 18px 40px rgba(10,10,82,.10)}
+.itv3-ico{display:block;width:58px;height:58px;margin:0 auto 12px}
+.itv3-time{font-family:var(--display);font-size:clamp(46px,12vw,58px);font-weight:500;letter-spacing:1px;text-indent:0;
+  color:var(--bb-royal);margin-bottom:10px}
+.itv3-time small{font-family:var(--serif);font-size:.42em;font-weight:600;letter-spacing:.12em;color:var(--bb-rose)}
+.itv3-ev{font-family:var(--serif);font-style:normal;font-weight:600;font-size:17px;letter-spacing:.22em;color:var(--bb-royal)}
+.itv3-sub{font-family:var(--serif);font-style:italic;font-weight:500;font-size:17px;color:#3d3d70;opacity:1;letter-spacing:.02em;margin-top:6px}
+
+/* Poses de fotos */
+.bb-poses{display:flex;justify-content:center;align-items:center;margin:34px auto 22px;max-width:620px;padding:0 6px}
+.bb-pose{flex:0 1 33%;margin:0 -10px;padding:7px;border-radius:6px;background:#fff;
+  box-shadow:0 0 0 1px rgba(201,162,75,.65),0 0 0 4px #fff,0 0 0 5px rgba(201,162,75,.45),0 16px 30px rgba(10,10,82,.18);
+  transform:rotate(var(--r));transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.bb-pose:nth-child(2){z-index:2;margin-top:-26px}
+.bb-pose img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:3px}
+.bb-pose:hover{transform:rotate(0) scale(1.05);z-index:3}
+
+/* Leyendas */
+.bb-note{max-width:440px;margin:22px auto 0;padding:14px 20px;border-radius:14px;text-align:center;
+  font-family:var(--serif);font-style:italic;font-weight:500;font-size:18px;line-height:1.45;color:var(--bb-royal);
+  background:rgba(255,255,255,.7);border:1px solid rgba(201,162,75,.5)}
+.bb-note-orn{display:block;color:#b3001b;font-style:normal;font-size:13px;margin-bottom:4px}
+
+/* Etiqueta canción */
+.bb-song{position:fixed;right:98px;bottom:42px;z-index:50;pointer-events:none;
+  font-family:var(--serif);font-style:italic;font-weight:600;font-size:16px;color:#F8F5EC;white-space:nowrap;
+  padding:6px 14px;border-radius:999px;background:rgba(10,10,82,.82);border:1px solid rgba(230,203,133,.6);
+  box-shadow:0 6px 18px rgba(0,0,0,.25);opacity:0;transform:translateX(8px);transition:opacity .6s,transform .6s}
+.bb-song span{color:#E6CB85}
+.bb-song.is-on{opacity:1;transform:none}
+
+@media (max-width:480px){
+  .bb-candle{top:-160px;width:48px}
+  .hero-date{letter-spacing:.22em;gap:10px;flex-wrap:nowrap;font-size:19px}
+  .bb-song{font-size:15px;right:92px;bottom:40px}
+}
+@media (prefers-reduced-motion:reduce){
+  .bb-petal{display:none}
+  .bb-shine-light,.hero-and,.date-num,.footer-names,.itinerary-sub,.countdown-sub,.hair-word span,.story-initials,h2 em{animation:none!important}
+}
+/* ============ DRESS CODE (diseño fabiola-y-fernando, portado de Yenisei) ============ */
+.dress{text-align:center}
+.dress h2{font-size:clamp(40px,6vw,66px);margin-bottom:6px}
+.dc-divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:6px auto 22px;max-width:320px;color:var(--gold)}
+.dc-rule{flex:1;height:1px;background:linear-gradient(to right,transparent,color-mix(in srgb,var(--gold) 65%,transparent),transparent)}
+.dc-rose{width:34px;height:34px;flex-shrink:0;opacity:.9}
+.dc-note{font-family:var(--serif);font-size:clamp(17px,2.2vw,20px);font-style:italic;font-weight:400;
+  color:var(--ink-soft);margin-bottom:40px}
+.dc-figures{display:flex;align-items:center;justify-content:center;gap:clamp(18px,4vw,34px);
+  margin:6px auto 34px;max-width:420px}
+.dc-fig{display:flex;flex-direction:column;align-items:center;gap:12px;flex:1;min-width:0}
+.dc-figwrap{position:relative;display:flex;flex-direction:column;align-items:center;padding-bottom:16px}
+.dc-fig img{position:relative;z-index:2;height:clamp(180px,34vw,236px);width:auto;max-width:100%;display:block;
+  filter:drop-shadow(0 10px 16px rgba(10,10,82,.16))}
+.dc-shadow{position:absolute;z-index:1;left:50%;margin-left:-28%;bottom:2px;width:56%;height:11px;border-radius:50%;
+  background:radial-gradient(ellipse at center,rgba(10,10,82,.34),rgba(10,10,82,0) 70%);
+  filter:blur(2.5px);opacity:.62}
+.dc-fig-label{font-family:var(--serif);font-size:clamp(18px,2.4vw,21px);font-style:italic;
+  letter-spacing:.02em;color:var(--accent)}
+.dc-fig-sub{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--ink-soft);margin-top:-6px;padding-left:.28em}
+.dc-sep-line{width:1px;align-self:stretch;min-height:150px;flex-shrink:0;
+  background:linear-gradient(180deg,transparent,color-mix(in srgb,var(--gold) 55%,transparent) 18%,color-mix(in srgb,var(--gold) 55%,transparent) 82%,transparent)}
+.dc-avoid-block{margin-top:14px}
+.dc-avoid{font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--gold-deep);padding-left:.16em}
+.dc-swatches{display:inline-flex;gap:clamp(26px,6vw,44px);justify-content:center;align-items:flex-start;margin:20px auto 0}
+.dc-swatch{display:flex;flex-direction:column;align-items:center;gap:10px}
+.dc-swatch-dot{width:38px;height:38px;border-radius:50%;display:block;position:relative;
+  border:1.5px solid var(--gold-deep);
+  box-shadow:0 4px 14px rgba(10,10,82,.18), inset 0 0 0 1px rgba(255,255,255,.25)}
+.dc-swatch-dot::after{content:'';position:absolute;inset:-6px;border-radius:50%;
+  border:1px dashed color-mix(in srgb,var(--rose) 55%,transparent);pointer-events:none}
+.dc-swatch-n{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--ink-soft);padding-left:.22em}
+@media (max-width:480px){
+  .dc-figures{gap:14px}
+  .dc-sep-line{min-height:130px}
+}
+.env-rest{--cw:min(340px,100vw - 96px);position:relative;display:flex;flex-direction:column;align-items:center;
+  width:var(--cw);margin:22px auto 0;padding-top:30px}
+.env-cushion{position:absolute;top:calc(30px + var(--cw)*.035);left:0;width:100%;height:auto;z-index:0;pointer-events:none;
+  transform-origin:50% 100%;filter:drop-shadow(0 9px 8px rgba(10,10,60,.28))}
+.env-rest .env-interactive{position:relative;z-index:1;margin-top:0}
+.env-rest .env-body{width:calc(var(--cw)*.5);margin-bottom:calc(var(--cw)*.2 + 12px);
+  filter:drop-shadow(0 8px 10px rgba(4,4,36,.5))}
+.env-rest .env-tap-hint{position:relative;z-index:1}
+@media (prefers-reduced-motion:reduce){ .banq-shine b{animation:none;opacity:0} }
+/* ============ LLUVIA DE SOBRES (diseño jeffersson-y-vanessa) ============ */
+.env-zone{position:relative;margin:clamp(70px,11vh,120px) auto 0;padding:clamp(40px,7vw,64px) 0 10px;
+  max-width:640px;text-align:center;overflow:hidden}
+.env-zone::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:min(300px,70%);height:1px;
+  background:linear-gradient(to right,transparent,color-mix(in srgb,var(--gold) 70%,transparent),transparent)}
+.env-rain{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.env-rain-item{position:absolute;top:-46px;will-change:transform;opacity:0}
+.env-zone .env-stage{position:relative;z-index:1}
+.env-h2{font-size:clamp(32px,4.6vw,48px);margin:8px 0 4px}
+.env-interactive{display:flex;flex-direction:column;align-items:center;cursor:pointer;
+  -webkit-tap-highlight-color:transparent;touch-action:manipulation;outline:none;border:none;background:none;
+  padding:0;margin:26px auto 0;opacity:0}
+.env-body{perspective:700px;position:relative;width:min(260px,74vw);aspect-ratio:260/200;
+  filter:drop-shadow(0 10px 26px rgba(10,10,82,.2))}
+.env-body svg.env-svg{width:100%;height:100%;display:block}
+.env-flap-wrap{position:absolute;top:23%;left:6.9%;width:86.2%;height:43%;transform-origin:top center;
+  transform-style:preserve-3d;backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  transition:transform .65s cubic-bezier(.4,0,.2,1);pointer-events:none;z-index:2}
+.env-interactive.open .env-flap-wrap{transform:rotateX(-175deg)}
+.env-open-content{overflow:hidden;max-height:0;opacity:0;
+  transition:max-height .55s .3s ease,opacity .4s .38s ease;
+  display:flex;flex-direction:column;align-items:center;gap:8px;padding:0 16px;text-align:center;pointer-events:none}
+.env-interactive.open .env-open-content{max-height:320px;opacity:1;pointer-events:auto;margin-top:20px}
+.env-mailbox-icon{width:42px;height:42px;color:var(--gold);margin-top:6px}
+.env-title{font-family:var(--script);font-size:clamp(28px,7vw,36px);color:var(--accent-deep);
+  line-height:1.4;padding:.1em .2em}
+.env-desc{font-family:var(--serif);font-size:16px;font-weight:400;font-style:italic;color:var(--ink-soft);
+  line-height:1.75;max-width:320px}
+.env-tap-hint{font-family:var(--italiana);font-size:12px;letter-spacing:.3em;text-transform:uppercase;
+  padding-left:.3em;color:var(--gold-deep);margin-top:18px;opacity:0;transition:opacity .5s ease;
+  position:relative;z-index:1}
+.env-tap-hint.show{opacity:.9;animation:envHintPulse 2.4s ease-in-out infinite}
+.env-interactive.open~.env-tap-hint{opacity:0!important;animation:none;pointer-events:none}
+@keyframes envHintPulse{0%,100%{opacity:.55}50%{opacity:1}}
+.env-body.landed{animation:envBreathe 3.6s ease-in-out infinite}
+@keyframes envBreathe{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
+@media(prefers-reduced-motion:reduce){
+  .env-body.landed,.env-tap-hint.show,.giftbox-cta{animation:none!important}
+  .env-interactive{opacity:1!important}
+}
+/* ===== Itinerario: linea de tiempo compacta ===== */
+.tl{list-style:none;max-width:440px;margin:6px auto 0;padding:0 14px;text-align:left}
+.tl-row{position:relative;display:grid;grid-template-columns:104px 54px 1fr;column-gap:12px;align-items:center;padding:13px 0}
+.tl-row::before{content:'';position:absolute;left:calc(104px + 12px + 27px);top:0;bottom:0;width:1px;
+  background:linear-gradient(to bottom,rgba(201,162,75,.2),rgba(201,162,75,.75) 30%,rgba(201,162,75,.75) 70%,rgba(201,162,75,.2))}
+.tl-row:first-child::before{top:50%}.tl-row:last-child::before{bottom:50%}
+.tl-time{font-family:var(--serif);font-weight:700;font-size:22px;line-height:1;color:var(--bb-royal);text-align:right;white-space:nowrap;font-variant-numeric:lining-nums tabular-nums}
+.tl-time small{font-size:1em;font-weight:700;letter-spacing:.04em;color:var(--gold-deep)}
+.tl-ico{position:relative;z-index:1;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(180deg,#fff,#fbfcf1);border:1px solid rgba(201,162,75,.7);
+  box-shadow:0 0 0 4px rgba(255,255,255,.9),0 0 0 5px rgba(201,162,75,.3),0 8px 18px rgba(10,10,82,.10)}
+.tl-ico img{width:30px;height:30px;display:block}
+.tl-ev{font-family:var(--serif);font-weight:700;font-size:19px;line-height:1.2;color:var(--bb-royal)}
+.tl-sub{font-family:var(--serif);font-style:italic;font-weight:600;font-size:16px;line-height:1.25;color:#3d3d70;margin-top:3px}
+@media (max-width:380px){.tl{padding:0 8px}.tl-row{grid-template-columns:98px 50px 1fr;column-gap:10px}.tl-row::before{left:calc(98px + 10px + 25px)}.tl-ico{width:50px;height:50px}.tl-ev{font-size:18px}}
+/* ---- ajustes XV Ruthy ---- */
+.countdown{background:none!important;color:inherit}
+.countdown::after{display:none!important}
+.countdown h2{color:var(--accent-deep)!important}
+.countdown .eyebrow{color:var(--gold-deep)!important}
+.cd-lbl{font-size:12px!important;font-weight:700!important;color:var(--gold-deep)!important}
+.mirror-count{font-size:13px;opacity:1}
+.mirror-hint{font-size:16px;opacity:1;font-weight:500}
+.dc-fig-sub{font-size:13px}
+.env-tap-hint{font-size:13px;font-weight:600}
+.env-desc{font-size:17px;font-weight:500;color:var(--ink)}
+.bb-shine-light{display:inline-block}
+.hero-name .bb-shine-light{font-style:italic}
+.footer-names{display:inline-block}
+.tl-sub{color:var(--ink-soft)}
+
+/* ---- correcciones verificación ---- */
+#music-btn.vinyl-btn{width:58px!important;height:auto!important;aspect-ratio:294/542;border:none!important;background:none!important;border-radius:0!important;
+  box-shadow:none!important;animation:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;color:inherit;bottom:12px!important;right:10px!important}
+#music-btn.vinyl-btn[hidden]{display:block!important;opacity:0;pointer-events:none}
+@media (min-width:481px){#music-btn.vinyl-btn{width:66px!important;bottom:14px!important;right:14px!important}}
+.cd-lbl{letter-spacing:.14em!important;padding-left:.14em!important;font-size:11px!important}
+@media (min-width:700px){.cd-lbl{letter-spacing:.3em!important;font-size:12px!important}}
+.story-initials,.footer-names{font-family:var(--display)!important;font-style:italic!important;font-weight:500!important}
+.story-initials{font-size:clamp(34px,9vw,52px)!important;line-height:1.25!important}
+.footer-names{font-size:clamp(34px,9vw,54px)!important;line-height:1.25!important}
+.itinerary .bb-candles{max-width:none;margin:0 -8px}
+.itinerary .bb-candle{top:-96px}
+@media (max-width:480px){.itinerary .bb-candle{top:-132px;width:38px}}
+
+/* ===== PORTADA LIBRO · Bella y Bestia (imagen + video a pantalla completa) ===== */
+#envelope-screen{background:#EEF0EE!important;overflow:hidden}
+.cv-stage{position:absolute;left:50%;top:50%;aspect-ratio:768/1376;width:max(100vw,calc(100vh*.5581));
+  transform:translate(-50%,-50%);container-type:inline-size}
+@media (min-aspect-ratio:62/100){
+  #envelope-screen{background:radial-gradient(ellipse at 50% 45%,#FFFDF6 0%,#ECEDEA 55%,#D9DCE6 100%)!important}
+  .cv-stage{width:auto;height:100vh;box-shadow:0 30px 90px -20px rgba(10,10,82,.45)}
+}
+.cv-stage #env-image,.cv-stage #env-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cv-pass{position:absolute;z-index:3;left:24%;right:24%;top:63.2%;height:17%;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;pointer-events:none}
+.cv-for{font-family:var(--serif);font-style:italic;font-weight:600;font-size:3.2cqw;line-height:1.2;color:#5A4517}
+.cv-guest{font-family:var(--display);font-weight:600;font-size:4.4cqw;line-height:1.2;color:#10107A;
+  margin:3px 0 4px;max-width:100%;overflow-wrap:anywhere}
+.cv-pases{font-family:var(--sans);font-weight:700;font-size:2.5cqw;letter-spacing:.2em;text-transform:uppercase;color:#5A4517;padding-left:.2em}
+.cv-pases b{font-family:var(--display);font-size:1.7em;letter-spacing:0;color:#B3001B;vertical-align:-.12em;margin-right:.25em}
+.cv-top{position:absolute;z-index:3;left:18%;right:18%;top:51.3%;text-align:center;pointer-events:none}
+.cv-eyebrow{font-family:var(--sans);font-weight:700;font-size:2.5cqw;letter-spacing:.42em;text-transform:uppercase;color:#5A4517;padding-left:.42em}
+.cv-name{font-family:var(--display);font-style:italic;font-weight:500;font-size:5.4cqw;line-height:1.15;color:#10107A;margin-top:4px}
+#env-hint{position:absolute!important;z-index:4;left:0!important;right:0!important;top:auto!important;bottom:max(4.5%,26px)!important;transform:none!important;width:auto!important;padding:0!important;flex-direction:row!important;align-items:flex-end!important;display:flex;justify-content:center;pointer-events:none}
+.cv-tap{font-family:var(--sans);font-weight:700;font-size:13px;letter-spacing:.34em;text-transform:uppercase;padding:11px 20px 11px calc(20px + .34em);
+  color:#FFFDF6;background:rgba(16,16,122,.78);border:1px solid rgba(230,203,133,.75);border-radius:999px;
+  box-shadow:0 8px 24px rgba(10,10,82,.3);animation:cvTap 2.4s ease-in-out infinite}
+@keyframes cvTap{0%,100%{opacity:.82;transform:scale(1)}50%{opacity:1;transform:scale(1.04)}}
 </style>
 </head>
 <body>
 
 <!-- PORTADA LIBRO · PASE DIGITAL -->
 <div id="envelope-screen" role="button" aria-label="Toca para abrir la invitación" tabindex="0">
-  <div class="bk" id="bk">
-    <div class="bk-page">
-      <div class="bk-photo"><img src="img/f1.jpg" alt="Shelsy Arabella"></div>
-      <div class="bk-cap"><small>Mis XV años</small>Shelsy Arabella</div>
+  <div class="cv-stage">
+    <img id="env-image" src="libro.jpg" alt="">
+    <video id="env-video" muted playsinline preload="auto"><source src="libro.mp4" type="video/mp4"></video>
+    <div class="cv-top" id="cv-top">
+      <div class="cv-eyebrow">Mis XV años</div>
+      <div class="cv-name">Shelsy Arabella</div>
     </div>
-    <div class="bk-cover" id="bk-cover">
-      <div class="bk-face">
-        <div class="bk-eyebrow">Pase digital</div>
-        <svg class="bk-rose" viewBox="0 0 120 150" fill="none" aria-hidden="true">
-  <g stroke="var(--gold)" stroke-width="1.1" fill="none" stroke-linecap="round">
-    <path d="M24 122 L24 62 Q24 18 60 14 Q96 18 96 62 L96 122"/>
-    <path d="M60 14 L60 8"/><circle cx="60" cy="6" r="2.4" fill="var(--gold)" stroke="none"/>
-    <ellipse cx="60" cy="124" rx="44" ry="6"/>
-    <path d="M14 132 Q60 142 106 132 L102 140 Q60 148 18 140 Z" fill="var(--gold)" fill-opacity=".12"/>
-    <path d="M34 40 Q38 28 48 22" opacity=".45"/>
-  </g>
-  <g stroke-linecap="round" stroke-linejoin="round">
-    <path d="M60 118 Q58 96 60 72" stroke="#5E7F62" stroke-width="1.4"/>
-    <path d="M60 98 Q48 92 44 82 Q54 84 60 94" fill="#7E9C80" fill-opacity=".5" stroke="#5E7F62" stroke-width="1"/>
-    <path d="M60 88 Q72 82 76 74 Q66 76 60 84" fill="#7E9C80" fill-opacity=".5" stroke="#5E7F62" stroke-width="1"/>
-    <path d="M60 72 Q46 70 46 56 Q46 44 60 42 Q74 44 74 56 Q74 70 60 72 Z" fill="var(--rose)" fill-opacity=".85" stroke="#8A3446" stroke-width="1"/>
-    <path d="M52 56 Q54 48 60 48 Q66 48 68 56 Q64 62 60 60 Q56 62 52 56 Z" fill="#C46A7A" stroke="#8A3446" stroke-width=".9"/>
-    <path d="M56 54 Q60 50 64 54" stroke="#8A3446" stroke-width=".9"/>
-    <path d="M78 110 Q82 106 86 110 Q82 114 78 110 Z" fill="var(--rose)" fill-opacity=".8"/>
-  </g>
-</svg>
-        <div class="bk-xv">Mis XV años</div>
-        <div class="bk-name">Shelsy Arabella</div>
-        <div class="bk-rule"></div>
-        <div class="bk-for" id="bk-for">Invitación especial para</div>
-        <div class="bk-guest" id="bk-guest"></div>
-        <div class="bk-pases" id="bk-pases" style="display:none"><b id="bk-pases-n">1</b><span id="bk-pases-l">pase</span></div>
-        <div class="bk-tap">Toca para abrir</div>
-      </div>
-      <div class="bk-back"></div>
+    <div class="cv-pass" id="cv-pass">
+      <div class="cv-for" id="bk-for">Pase digital para</div>
+      <div class="cv-guest" id="bk-guest"></div>
+      <div class="cv-pases" id="bk-pases" style="display:none"><b id="bk-pases-n">1</b><span id="bk-pases-l">pase</span></div>
     </div>
   </div>
+  <div id="env-hint" aria-hidden="true"><span class="cv-tap">Toca para abrir</span></div>
 </div>
 <div id="env-flash" aria-hidden="true"></div>
 
 <!-- MÚSICA -->
 <audio id="bg-music" src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/audio/xv-ruthy/cancion.mp3" preload="none" loop></audio>
-<button id="music-btn" aria-label="Silenciar música" hidden>
-  <svg id="music-icon-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" width="18" height="18">
-    <path d="M9 18V5l12-2v13"/>
-    <circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
-  </svg>
-  <svg id="music-icon-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" width="18" height="18" style="display:none">
-    <path d="M9 18V5l12-2v13"/>
-    <circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
-    <line x1="2" y1="2" x2="22" y2="22" stroke-width="1.6"/>
-  </svg>
+<div class="bb-song" id="bb-song" aria-hidden="true"><span>Mi canción</span> · La Bella y la Bestia</div>
+<button class="vinyl-btn" id="music-btn" type="button" aria-label="Silenciar música" hidden>
+  <svg id="music-icon-on" style="display:none"></svg><svg id="music-icon-off" style="display:none"></svg>
+  <span class="rose-jar" aria-hidden="true">
+    <span class="rose-ground"></span>
+    <span class="rose-in rose-in--back"><span class="rose-glow"></span></span>
+    <img class="rose-cloche" src="bb-rosa.webp" alt="" width="294" height="542" decoding="async">
+    <img class="rose-bloom" src="bb-rosa.webp" alt="" width="294" height="542" decoding="async">
+    <span class="rose-in rose-in--front">
+      <span class="rose-gild"></span>
+      <span class="rose-rim"></span>
+      <span class="rose-spark s1"></span><span class="rose-spark s2"></span>
+      <span class="rose-spark s3"></span><span class="rose-spark s4"></span>
+      <span class="rose-petal"></span>
+      <span class="rose-sweep"></span>
+    </span>
+    <span class="rose-state">
+      <svg class="rose-ico-play" viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5z"/></svg>
+      <svg class="rose-ico-pause" viewBox="0 0 24 24"><path d="M6.5 5h3.4v14H6.5zM14.1 5h3.4v14h-3.4z"/></svg>
+    </span>
+  </span>
 </button>
 
 <!-- LOADER -->
@@ -1385,6 +1798,7 @@ body{font-weight:500}
 
 <!-- PARTÍCULAS -->
 <div id="particles"></div>
+<canvas id="bb-glitter" aria-hidden="true"></canvas>
 
 <div class="wrap">
 
@@ -1396,6 +1810,8 @@ body{font-weight:500}
     <div class="hero-bg-overlay"></div>
     <div class="hero-frame"></div>
     <div class="hero-frame-corners"></div>
+    <img class="bb-corner bb-corner--tl" src="bb-esquina.webp" alt="" aria-hidden="true" width="140" height="140">
+    <img class="bb-corner bb-corner--br" src="bb-esquina.webp" alt="" aria-hidden="true" width="140" height="140">
     <div class="hero-content">
       <svg class="hero-ornament-top" viewBox="0 0 200 40" fill="none" aria-hidden="true">
         <g stroke="var(--gold-soft)" stroke-width=".7" fill="none" opacity=".85">
@@ -1425,16 +1841,45 @@ body{font-weight:500}
   <div class="seam" style="--from:transparent;--to:var(--surface)" aria-hidden="true"></div>
 
   <!-- COUNTDOWN -->
-  <section class="section-surface countdown">
+    <section class="section-surface countdown">
     <div class="container">
       <div class="eyebrow">Cuenta regresiva</div>
       <h2>Contamos <em>los</em> días</h2>
       <div class="countdown-sub">hasta mi gran noche</div>
-      <div class="countdown-grid" id="cd">
-        <div class="cd-block"><div class="cd-num" id="cd-d">000</div><div class="cd-lbl">Días</div></div>
-        <div class="cd-block"><div class="cd-num" id="cd-h">00</div><div class="cd-lbl">Horas</div></div>
-        <div class="cd-block"><div class="cd-num" id="cd-m">00</div><div class="cd-lbl">Minutos</div></div>
-        <div class="cd-block"><div class="cd-num" id="cd-s">00</div><div class="cd-lbl">Segundos</div></div>
+      <figure class="bb-rose" aria-hidden="true">
+        <span class="bb-rose-glow"></span>
+        <img src="bb-rosa.webp" alt="" width="520" height="700" decoding="async">
+        <span class="bb-petal bb-petal--a"></span>
+        <span class="bb-petal bb-petal--b"></span>
+      </figure>
+      <div class="cd-garden" id="cd-garden">
+        <canvas class="cd-canvas" id="cd-canvas" aria-hidden="true"></canvas>
+        <div class="countdown-grid" id="cd">
+          <div class="cd-flower dias" id="cdf-d">
+            <div class="cd-corola">
+              <div class="cd-medal"><span class="cd-num" id="cd-d">000</span></div>
+            </div>
+            <div class="cd-lbl">Días</div>
+          </div>
+          <div class="cd-flower" id="cdf-h">
+            <div class="cd-corola">
+              <div class="cd-medal"><span class="cd-num" id="cd-h">00</span></div>
+            </div>
+            <div class="cd-lbl">Horas</div>
+          </div>
+          <div class="cd-flower" id="cdf-m">
+            <div class="cd-corola">
+              <div class="cd-medal"><span class="cd-num" id="cd-m">00</span></div>
+            </div>
+            <div class="cd-lbl">Minutos</div>
+          </div>
+          <div class="cd-flower" id="cdf-s">
+            <div class="cd-corola">
+              <div class="cd-medal"><span class="cd-num" id="cd-s">00</span></div>
+            </div>
+            <div class="cd-lbl">Segundos</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1458,6 +1903,11 @@ body{font-weight:500}
           <p data-reveal="line">Hoy llega uno de los capítulos más especiales de mi vida y quiero vivirlo junto a quienes más quiero.</p>
           <div class="story-sep" aria-hidden="true"><span class="story-sep-star">✦</span></div>
           <p data-reveal="line"><em>Tu presencia hará de esta noche un recuerdo para siempre.</em></p>
+        </div>
+        <div class="bb-poses" aria-label="Fotos de Shelsy Arabella">
+          <figure class="bb-pose" style="--r:-7deg"><img src="img/f6.jpg" alt="Shelsy Arabella" decoding="async" style="object-position:50% 20%"></figure>
+          <figure class="bb-pose" style="--r:4deg"><img src="img/f1.jpg" alt="Shelsy Arabella" decoding="async" style="object-position:50% 18%"></figure>
+          <figure class="bb-pose" style="--r:-3deg"><img src="img/f7.jpg" alt="Shelsy Arabella" decoding="async" style="object-position:60% 25%"></figure>
         </div>
         <div class="story-initials">Shelsy Arabella</div>
       </div>
@@ -1576,114 +2026,20 @@ body{font-weight:500}
     <div class="container">
       <div class="eyebrow">Programa de la velada</div>
       <h2>El <em>recorrido</em> de la noche</h2>
+      <div class="bb-candles" aria-hidden="true">
+        <img class="bb-candle bb-candle--l" src="bb-candelabro.webp" alt="" width="300" height="420" decoding="async">
+        <img class="bb-candle bb-candle--r" src="bb-candelabro.webp" alt="" width="300" height="420" decoding="async">
+      </div>
       <div class="itinerary-sub">una noche para recordar</div>
       <div class="itin-intro">20 · Diciembre · MMXXVI</div>
 
-      <div class="program-card">
-        <svg class="program-corner program-corner--tl" viewBox="0 0 62 62" fill="none" aria-hidden="true">
-          <g stroke="currentColor" stroke-width="1" fill="none">
-            <path d="M2 28 L2 2 L28 2"/>
-            <path d="M8 32 L8 8 L32 8" opacity=".55"/>
-            <path d="M14 8 Q10 8 10 12 Q10 18 16 18 Q22 18 22 12 Q22 8 18 8 Q14 8 14 12" fill="currentColor" fill-opacity=".15"/>
-            <circle cx="16" cy="13" r="2" fill="currentColor"/>
-            <path d="M30 8 Q38 16 30 24" opacity=".55"/>
-            <path d="M8 30 Q16 38 24 30" opacity=".55"/>
-            <path d="M2 38 Q8 42 14 38" opacity=".4"/>
-            <path d="M38 2 Q42 8 38 14" opacity=".4"/>
-            <path d="M48 8 L52 8 L52 12" opacity=".4"/>
-            <path d="M8 48 L8 52 L12 52" opacity=".4"/>
-            <circle cx="42" cy="42" r="1.4" fill="currentColor" opacity=".55"/>
-          </g>
-        </svg>
-        <svg class="program-corner program-corner--tr" viewBox="0 0 62 62" fill="none" aria-hidden="true">
-          <g stroke="currentColor" stroke-width="1" fill="none">
-            <path d="M2 28 L2 2 L28 2"/>
-            <path d="M8 32 L8 8 L32 8" opacity=".55"/>
-            <path d="M14 8 Q10 8 10 12 Q10 18 16 18 Q22 18 22 12 Q22 8 18 8 Q14 8 14 12" fill="currentColor" fill-opacity=".15"/>
-            <circle cx="16" cy="13" r="2" fill="currentColor"/>
-            <path d="M30 8 Q38 16 30 24" opacity=".55"/>
-            <path d="M8 30 Q16 38 24 30" opacity=".55"/>
-            <circle cx="42" cy="42" r="1.4" fill="currentColor" opacity=".55"/>
-          </g>
-        </svg>
-        <svg class="program-corner program-corner--bl" viewBox="0 0 62 62" fill="none" aria-hidden="true">
-          <g stroke="currentColor" stroke-width="1" fill="none">
-            <path d="M2 28 L2 2 L28 2"/>
-            <path d="M8 32 L8 8 L32 8" opacity=".55"/>
-            <path d="M14 8 Q10 8 10 12 Q10 18 16 18 Q22 18 22 12 Q22 8 18 8 Q14 8 14 12" fill="currentColor" fill-opacity=".15"/>
-            <circle cx="16" cy="13" r="2" fill="currentColor"/>
-            <path d="M30 8 Q38 16 30 24" opacity=".55"/>
-            <path d="M8 30 Q16 38 24 30" opacity=".55"/>
-            <circle cx="42" cy="42" r="1.4" fill="currentColor" opacity=".55"/>
-          </g>
-        </svg>
-        <svg class="program-corner program-corner--br" viewBox="0 0 62 62" fill="none" aria-hidden="true">
-          <g stroke="currentColor" stroke-width="1" fill="none">
-            <path d="M2 28 L2 2 L28 2"/>
-            <path d="M8 32 L8 8 L32 8" opacity=".55"/>
-            <path d="M14 8 Q10 8 10 12 Q10 18 16 18 Q22 18 22 12 Q22 8 18 8 Q14 8 14 12" fill="currentColor" fill-opacity=".15"/>
-            <circle cx="16" cy="13" r="2" fill="currentColor"/>
-            <path d="M30 8 Q38 16 30 24" opacity=".55"/>
-            <path d="M8 30 Q16 38 24 30" opacity=".55"/>
-            <circle cx="42" cy="42" r="1.4" fill="currentColor" opacity=".55"/>
-          </g>
-        </svg>
-
-        <div class="program-header">
-          <div class="program-eyebrow">Programa</div>
-          <h3 class="program-title">Una noche para recordar</h3>
-        </div>
-        <div class="program-flourish" aria-hidden="true">
-          <svg viewBox="0 0 34 34" fill="none">
-            <g stroke="currentColor" stroke-width="1" fill="none">
-              <circle cx="17" cy="17" r="6"/>
-              <circle cx="17" cy="17" r="11" opacity=".5"/>
-              <path d="M17 4 L17 10 M17 24 L17 30 M4 17 L10 17 M24 17 L30 17"/>
-              <path d="M17 12 Q14 14 14 17 Q14 20 17 22 Q20 20 20 17 Q20 14 17 12 Z" fill="currentColor" fill-opacity=".25"/>
-            </g>
-          </svg>
-        </div>
-
-        <ol class="program-list">
-          <li class="program-row">
-            <div class="program-time"><span>6:30<small>PM</small></span></div>
-            <div class="program-detail">
-              <div class="program-roman">— I —</div>
-              <div class="program-name">Cóctel</div>
-              <div class="program-desc">Te recibimos con una copa de bienvenida para comenzar la velada.</div>
-            </div>
-          </li>
-          <li class="program-row">
-            <div class="program-time"><span>7:00<small>PM</small></span></div>
-            <div class="program-detail">
-              <div class="program-roman">— II —</div>
-              <div class="program-name">Recepción</div>
-              <div class="program-desc">Abrimos las puertas del salón y empieza la celebración.</div>
-            </div>
-          </li>
-          <li class="program-row">
-            <div class="program-time"><span>8:00<small>PM</small></span></div>
-            <div class="program-detail">
-              <div class="program-roman">— III —</div>
-              <div class="program-name">Cena</div>
-              <div class="program-desc">Compartimos la mesa con las personas que más quiero.</div>
-            </div>
-          </li>
-          <li class="program-row">
-            <div class="program-time"><span>10:00<small>PM</small></span></div>
-            <div class="program-detail">
-              <div class="program-roman">— IV —</div>
-              <div class="program-name">Fiesta</div>
-              <div class="program-desc">Se abre la pista: a bailar hasta que el reloj marque la medianoche y más.</div>
-            </div>
-          </li>
-        </ol>
-
-        <div class="program-footer">
-          <div class="program-monogram">XV</div>
-          <div class="program-tagline">Gracias por acompañarme</div>
-        </div>
-      </div>
+      
+      <ol class="tl" id="itin">
+        <li class="tl-row"><time class="tl-time">6:30 <small>pm</small></time><span class="tl-ico"><img src="ico-cocktail.png" alt="" width="30" height="30" decoding="async"></span><div class="tl-txt"><div class="tl-ev">Cóctel</div><div class="tl-sub">Copa de bienvenida</div></div></li>
+        <li class="tl-row"><time class="tl-time">7:00 <small>pm</small></time><span class="tl-ico"><img src="ico-door-opened.png" alt="" width="30" height="30" decoding="async"></span><div class="tl-txt"><div class="tl-ev">Recepción</div><div class="tl-sub">Hotel Trópico Inn</div></div></li>
+        <li class="tl-row"><time class="tl-time">8:00 <small>pm</small></time><span class="tl-ico"><img src="ico-restaurant.png" alt="" width="30" height="30" decoding="async"></span><div class="tl-txt"><div class="tl-ev">Cena</div></div></li>
+        <li class="tl-row"><time class="tl-time">10:00 <small>pm</small></time><span class="tl-ico"><img src="ico-disco-ball.png" alt="" width="30" height="30" decoding="async"></span><div class="tl-txt"><div class="tl-ev">Fiesta</div></div></li>
+      </ol>
     </div>
   </section>
 
@@ -1691,37 +2047,42 @@ body{font-weight:500}
   <div class="seam" style="--from:var(--paper);--to:var(--bg)" aria-hidden="true"></div>
 
   <!-- DRESS CODE -->
-  <section class="section-bg dress">
+    <section class="section-bg dress" id="dresscode" aria-label="Código de vestimenta">
     <div class="container">
       <div class="eyebrow">Código de vestimenta</div>
-      <h2><em>Formal</em></h2>
-      <div class="dress-sub">elegancia en cada detalle</div>
-      <div class="dress-cols">
-        <!-- Caballeros -->
-        <div class="dress-col">
-          <svg class="dress-col-icon" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-            <path d="M12 4 L18 10 L24 4 L28 8 L22 14 L22 32 L14 32 L14 14 L8 8 Z" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linejoin="round"/>
-            <path d="M18 10 L18 32" stroke="currentColor" stroke-width=".8" opacity=".5"/>
-            <path d="M14 18 L22 18" stroke="currentColor" stroke-width=".7" opacity=".4"/>
-          </svg>
-          <div class="dress-col-title">Caballeros</div>
-          <div class="dress-col-rule"></div>
-          <div class="dress-col-sub">Traje formal</div>
+      <h2>Formal</h2>
+
+      <div class="dc-divider" aria-hidden="true">
+        <span class="dc-rule"></span>
+        <svg class="dc-rose" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.1">
+          <circle cx="20" cy="20" r="4"/>
+          <circle cx="20" cy="20" r="2"/>
+          <path d="M12 20 Q15 13 20 16" stroke-linecap="round"/>
+          <path d="M28 20 Q25 13 20 16" stroke-linecap="round"/>
+          <path d="M12 20 Q15 27 20 24" stroke-linecap="round"/>
+          <path d="M28 20 Q25 27 20 24" stroke-linecap="round"/>
+        </svg>
+        <span class="dc-rule"></span>
+      </div>
+
+      <p class="dc-note">Acompáñanos vestido para la ocasión</p>
+
+      <div class="dc-figures">
+        <div class="dc-fig">
+          <div class="dc-figwrap"><img src="caballero.png" alt="Caballero, traje formal" width="300" height="610" decoding="async"><span class="dc-shadow" aria-hidden="true"></span></div>
+          <span class="dc-fig-label">Caballeros</span>
+          <span class="dc-fig-sub">traje formal</span>
         </div>
-        <!-- Divisor -->
-        <div class="dress-divider" aria-hidden="true"></div>
-        <!-- Damas -->
-        <div class="dress-col">
-          <svg class="dress-col-icon" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-            <path d="M18 4 C18 4 14 8 12 12 L8 32 L28 32 L24 12 C22 8 18 4 18 4 Z" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linejoin="round"/>
-            <path d="M12 12 Q18 16 24 12" stroke="currentColor" stroke-width=".9" opacity=".6"/>
-            <path d="M18 4 L18 32" stroke="currentColor" stroke-width=".6" opacity=".35"/>
-          </svg>
-          <div class="dress-col-title">Damas</div>
-          <div class="dress-col-rule"></div>
-          <div class="dress-col-sub">Vestido formal</div>
+
+        <div class="dc-sep-line" aria-hidden="true"></div>
+
+        <div class="dc-fig">
+          <div class="dc-figwrap"><img src="dama.png" alt="Dama, vestido formal" width="248" height="604" decoding="async"><span class="dc-shadow" aria-hidden="true"></span></div>
+          <span class="dc-fig-label">Damas</span>
+          <span class="dc-fig-sub">vestido formal</span>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -1729,31 +2090,38 @@ body{font-weight:500}
   <div class="seam" style="--from:var(--bg);--to:var(--surface)" aria-hidden="true"></div>
 
   <!-- GALLERY — RUEDA DE LA FORTUNA -->
-  <section class="section-surface gallery">
+    <section class="section-surface gallery" id="galeria">
     <div class="container gallery-head">
       <div class="eyebrow">Momentos</div>
       <h2>Mis <em>quince</em> años</h2>
-      <div class="gallery-sub">rueda de recuerdos</div>
+      <div class="gallery-sub">el espejo de los recuerdos</div>
     </div>
-    <div class="wheel-scene" id="wheel-scene">
-      <div class="wheel-ring" id="wheel-ring">
-                <div class="wheel-card"><img src="img/f1.jpg" alt="Shelsy Arabella" loading="eager" decoding="async"></div>
-        <div class="wheel-card"><img src="img/f2.jpg" alt="Shelsy Arabella" loading="eager" decoding="async"></div>
-        <div class="wheel-card"><img src="img/f3.jpg" alt="Shelsy Arabella" loading="eager" decoding="async"></div>
-        <div class="wheel-card"><img src="img/f4.jpg" alt="Shelsy Arabella" loading="eager" decoding="async"></div>
-        <div class="wheel-card"><img src="img/f5.jpg" alt="Shelsy Arabella" loading="eager" decoding="async"></div>
-        <div class="wheel-card"><img src="img/f6.jpg" alt="Shelsy Arabella" loading="eager" decoding="async"></div>
-        <div class="wheel-card"><img src="img/f7.jpg" alt="Shelsy Arabella" loading="eager" decoding="async"></div>
-        <div class="wheel-card"><img src="img/f1.jpg" alt="Shelsy Arabella" loading="eager" decoding="async"></div>
-        <div class="wheel-card"><img src="img/f2.jpg" alt="Shelsy Arabella" loading="eager" decoding="async"></div>
-        <div class="wheel-card"><img src="img/f3.jpg" alt="Shelsy Arabella" loading="eager" decoding="async"></div>
-        <div class="wheel-card"><img src="img/f4.jpg" alt="Shelsy Arabella" loading="eager" decoding="async"></div>
-        <div class="wheel-card"><img src="img/f5.jpg" alt="Shelsy Arabella" loading="eager" decoding="async"></div>
-        <div class="wheel-card"><img src="img/f6.jpg" alt="Shelsy Arabella" loading="eager" decoding="async"></div>
-        <div class="wheel-card"><img src="img/f7.jpg" alt="Shelsy Arabella" loading="eager" decoding="async"></div>
+
+    <div class="mirror-stage">
+      <p class="mirror-ask">Muéstrame&hellip;</p>
+
+      <div class="mirror-hit" id="mirror" role="button" tabindex="0"
+           aria-label="Espejo mágico: toca para revelar la siguiente fotografía">
+        <div class="mirror-body">
+          <div class="mirror-glass">
+            <div class="m-photos" id="m-photos"></div>
+            <span class="m-tint" aria-hidden="true"></span>
+            <span class="m-sheen" aria-hidden="true"></span>
+            <span class="m-fog f3" aria-hidden="true"></span>
+            <span class="m-fog f2" aria-hidden="true"></span>
+            <span class="m-fog f1" aria-hidden="true"></span>
+            <span class="m-spark" id="m-spark" aria-hidden="true"></span>
+          </div>
+          <img class="mirror-frame" src="espejo-barroco.webp" alt="" width="900" height="1297" decoding="async">
+        </div>
       </div>
+
+      <div class="mirror-meter">
+        <span class="mirror-dots" id="mirror-dots" aria-hidden="true"></span>
+        <span class="mirror-count" id="mirror-count" aria-live="polite">1 de 7</span>
+      </div>
+      <p class="mirror-hint">Toca el espejo o desliza</p>
     </div>
-    <p class="gal-hint" style="text-align:center">&#8592; arrastra para girar &#8594;</p>
   </section>
 
   <!-- DIVIDER: surface → paper -->
@@ -1787,21 +2155,58 @@ body{font-weight:500}
         <h2>Lo más <em>importante</em> es tu presencia</h2>
         <p class="gifts-sub">Mi mayor regalo es que estés conmigo, pero si deseas tener un detalle, habrá lluvia de sobres</p>
       </div>
-      <div class="gifts-grid" style="max-width:480px">
-        <article class="gift-card">
-          <div class="gift-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round">
-              <rect x="2" y="4" width="20" height="16" rx="2"/>
-              <path d="M2 8h20"/>
-              <path d="M12 4v16"/>
-              <path d="M8 4 Q12 8 16 4"/>
-            </svg>
+            <div class="env-zone" id="env-zone">
+        <div class="env-rain" id="envRain" aria-hidden="true"></div>
+        <div class="env-stage">
+          <div class="eyebrow">Celebra conmigo</div>
+          <h2 class="env-h2">Lluvia <em>de</em> sobres</h2>
+          <div class="env-rest">
+          <img class="env-cushion" id="envCushion" src="banquete-cojin.webp" alt="" width="760" height="525" decoding="async">
+          <button class="env-interactive" id="envGift" type="button" aria-label="Sobre — toca para abrir" aria-expanded="false">
+            <div class="env-body" id="envGiftBody">
+              <svg class="env-svg" viewBox="0 0 260 200" preserveAspectRatio="none" aria-hidden="true">
+                <defs>
+                  <linearGradient id="xv-env-fill" x1="0" y1="1" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#EAE6DC"/>
+                    <stop offset="100%" stop-color="#F8FAE9"/>
+                  </linearGradient>
+                </defs>
+                <rect x="18" y="52" width="224" height="132" rx="10"
+                      fill="url(#xv-env-fill)" stroke="rgba(201,162,75,.45)" stroke-width="1.4"/>
+                <path d="M18 184 L130 110 L242 184" stroke="rgba(201,162,75,.3)" stroke-width="1" fill="none"/>
+                <circle cx="130" cy="120" r="19" fill="#10107A"/>
+                <circle cx="130" cy="120" r="19" fill="none" stroke="#0A0A52" stroke-width="1.6" opacity=".7"/>
+                <circle cx="130" cy="120" r="14" fill="none" stroke="#E6CB85" stroke-width="1" opacity=".9"/>
+                <text x="130" y="126" text-anchor="middle" font-family="'Playfair Display',Georgia,serif" font-style="italic" font-size="15" fill="#E6CB85">XV</text>
+              </svg>
+              <div class="env-flap-wrap" aria-hidden="true">
+                <svg viewBox="0 0 224 86" preserveAspectRatio="none" style="width:100%;height:100%;display:block">
+                  <defs>
+                    <linearGradient id="xv-flap-fill" x1="0" y1="1" x2="1" y2="0">
+                      <stop offset="0%" stop-color="#E6CB85"/>
+                      <stop offset="100%" stop-color="#F8FAE9"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0 0 L112 86 L224 0 Z"
+                        fill="url(#xv-flap-fill)" stroke="rgba(201,162,75,.5)" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="env-open-content" aria-live="polite">
+              <svg class="env-mailbox-icon" viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <rect x="8" y="22" width="36" height="24" rx="5"/>
+                <path d="M8 30 Q26 38 44 30"/>
+                <rect x="18" y="8" width="16" height="16" rx="2"/>
+                <path d="M18 8 Q26 3 34 8"/>
+                <rect x="20" y="28" width="12" height="2.5" rx="1.25" fill="currentColor" stroke="none" opacity=".4"/>
+              </svg>
+              <p class="env-title">Tu presencia es mi regalo</p>
+              <p class="env-desc">El día de la celebración habrá un buzón donde podrás depositar tu sobre con todo el cariño.</p>
+            </div>
+          </button>
+          <p class="env-tap-hint" id="envGiftHint">Toca el sobre</p>
           </div>
-          <div class="gift-name">Lluvia de Sobres</div>
-          <div class="gift-desc">
-            <span class="bank-line">El día del evento habrá un espacio especial para recibir tu sobre.</span>
-          </div>
-        </article>
+        </div>
       </div>
     </div>
   </section>
@@ -1816,7 +2221,7 @@ body{font-weight:500}
       <h2>Comparte <em>tus</em> fotos conmigo</h2>
       <p class="album-text">Escanea el código QR con tu cámara para subir tus fotos al álbum del evento. Quiero vivir la noche desde tus ojos también.</p>
       <div class="album-qr" id="qr-wrap">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&color=24395A&bgcolor=FCFBF8&margin=4&data=https%3A%2F%2Fxv-ruthy.vercel.app" alt="Código QR para álbum compartido" width="300" height="300" loading="lazy">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&color=10107A&bgcolor=FCFBF8&margin=4&data=https%3A%2F%2Fxv-ruthy.vercel.app" alt="Código QR para álbum compartido" width="300" height="300" loading="lazy">
       </div>
       <br>
       <a class="album-link" href="https://xv-ruthy.vercel.app" target="_blank" rel="noopener">Álbum disponible el día del evento</a>
@@ -2024,6 +2429,7 @@ function launchInvitation(){
     .fromTo('.hero-scroll',{opacity:0},{opacity:.7,duration:.8},'-=.3');
 
   document.body.style.overflow = '';
+  setTimeout(function(){ if(window.__bbShineHero) window.__bbShineHero(); }, 5200);
   startParticles();
   if(window.ScrollTrigger) ScrollTrigger.refresh();
 
@@ -2067,15 +2473,18 @@ function launchInvitation(){
   }
 }
 
-// ------ APERTURA DEL LIBRO ------
+// ------ APERTURA DEL LIBRO (imagen → video → blanco) ------
 document.body.style.overflow = 'hidden';
 (function(){
   const envScreen = document.getElementById('envelope-screen');
-  const cover = document.getElementById('bk-cover');
-  const book = document.getElementById('bk');
-  const envFlash = document.getElementById('env-flash');
-  const wrap = document.querySelector('.wrap');
-  if(!envScreen || !cover || !envFlash || !wrap) return;
+  const envImage  = document.getElementById('env-image');
+  const envVideo  = document.getElementById('env-video');
+  const envHint   = document.getElementById('env-hint');
+  const envFlash  = document.getElementById('env-flash');
+  const wrap      = document.querySelector('.wrap');
+  const textos    = [document.getElementById('cv-top'), document.getElementById('cv-pass')];
+  if(!envScreen || !envImage || !envVideo || !envFlash || !wrap) return;
+
   const q = new URLSearchParams(location.search);
   const para = (q.get('para') || '').trim();
   const pases = parseInt(q.get('pases')) || 0;
@@ -2087,28 +2496,43 @@ document.body.style.overflow = 'hidden';
       document.getElementById('bk-pases').style.display = '';
     }
   } else {
-    document.getElementById('bk-for').textContent = 'Estás invitado a mi gran noche';
+    document.getElementById('bk-for').textContent = 'Te invito a mi gran noche';
   }
-  gsap.fromTo(book,{opacity:0,y:24,scale:.96},{opacity:1,y:0,scale:1,duration:1.1,ease:'power3.out',delay:.15});
-  let opened = false, done = false;
-  function finish(){
-    if(done) return; done = true;
-    gsap.to(envFlash,{opacity:1,duration:1.1,ease:'power2.inOut',onComplete:()=>{
+
+  let opened = false, flashed = false, failsafe = null;
+  gsap.fromTo(envImage,{opacity:0},{opacity:1,duration:1,ease:'power2.out',delay:.2});
+  gsap.fromTo(textos,{opacity:0,y:8},{opacity:1,y:0,duration:1,stagger:.15,ease:'power2.out',delay:.6});
+
+  function openBook(){
+    if(opened) return;
+    opened = true;
+    const music = document.getElementById('bg-music');
+    if(music){ music.volume = 0; music.play().then(()=>{ music.pause(); music.currentTime = 0; }).catch(()=>{}); }
+    gsap.to([envHint].concat(textos),{opacity:0,duration:.35,ease:'power2.out'});
+    const p = envVideo.play();
+    if(p && typeof p.catch === 'function') p.catch(()=>{ triggerFlash(); });
+    gsap.to(envImage,{opacity:0,duration:.6,ease:'power2.inOut',delay:.15,onComplete:()=>{envImage.style.display='none'}});
+    gsap.to(envVideo,{opacity:1,duration:.6,ease:'power2.inOut'});
+    envVideo.addEventListener('timeupdate', onTimeUpdate);
+    envVideo.addEventListener('ended', triggerFlash);
+    failsafe = setTimeout(triggerFlash, 11000);
+  }
+  function onTimeUpdate(){
+    if(flashed) return;
+    const dur = envVideo.duration;
+    if(!isFinite(dur) || dur <= 0) return;
+    if(envVideo.currentTime >= dur - 1.2) triggerFlash();
+  }
+  function triggerFlash(){
+    if(flashed) return;
+    flashed = true;
+    clearTimeout(failsafe);
+    gsap.to(envFlash,{opacity:1,duration:.9,ease:'power2.inOut',onComplete:()=>{
       envScreen.style.display = 'none';
       wrap.style.visibility = 'visible';
       launchInvitation();
       gsap.to(envFlash,{opacity:0,duration:1.2,ease:'power2.inOut',delay:.1,onComplete:()=>{envFlash.style.display='none'}});
     }});
-  }
-  function openBook(){
-    if(opened) return; opened = true;
-    const music = document.getElementById('bg-music');
-    if(music){ music.volume = 0; music.play().then(()=>{ music.pause(); music.currentTime = 0; }).catch(()=>{}); }
-    gsap.timeline({onComplete:finish})
-      .to(cover,{rotateY:-170,duration:1.6,ease:'power2.inOut'})
-      .to(cover,{opacity:0,duration:.4},'-=.35')
-      .to(book,{scale:1.06,duration:2.2,ease:'power1.out'},'-=.6')
-      .to({}, {duration:.2});
   }
   envScreen.addEventListener('click', openBook);
   envScreen.addEventListener('keydown', (e)=>{ if(e.key === 'Enter' || e.key === ' ') openBook(); });
@@ -2165,167 +2589,348 @@ if(!('ontouchstart' in window)){
   });
 }
 
-// ------ COUNTDOWN ------
-const countTarget = new Date('2026-12-20T18:30:00-06:00').getTime();
-const cdEls = {d:document.getElementById('cd-d'),h:document.getElementById('cd-h'),m:document.getElementById('cd-m'),s:document.getElementById('cd-s')};
-let lastVals = {d:'',h:'',m:'',s:''};
-function flipOn(el,newVal){
-  if(el.textContent === newVal) return;
-  gsap.fromTo(el,{rotateX:0},{rotateX:-90,duration:.24,ease:'power2.in',onComplete:()=>{
-    el.textContent = newVal;
-    gsap.fromTo(el,{rotateX:90},{rotateX:0,duration:.34,ease:'power3.out'});
-  }});
-}
-function tick(){
-  const d = Math.max(0, countTarget - Date.now());
-  const dd = String(Math.floor(d/86400000)).padStart(3,'0');
-  const hh = String(Math.floor(d%86400000/3600000)).padStart(2,'0');
-  const mm = String(Math.floor(d%3600000/60000)).padStart(2,'0');
-  const ss = String(Math.floor(d%60000/1000)).padStart(2,'0');
-  if(dd!==lastVals.d){flipOn(cdEls.d,dd);lastVals.d=dd}
-  if(hh!==lastVals.h){flipOn(cdEls.h,hh);lastVals.h=hh}
-  if(mm!==lastVals.m){flipOn(cdEls.m,mm);lastVals.m=mm}
-  if(ss!==lastVals.s){flipOn(cdEls.s,ss);lastVals.s=ss}
-}
-tick();setInterval(tick,1000);
-gsap.fromTo('.cd-block',{opacity:0,y:40,rotateX:-30},{opacity:1,y:0,rotateX:0,duration:1.1,stagger:.12,ease:'power4.out',scrollTrigger:{trigger:'.countdown-grid',start:'top 82%'}});
-gsap.fromTo('.countdown .eyebrow, .countdown h2, .countdown-sub',{opacity:0,y:14},{opacity:1,y:0,duration:.9,stagger:.1,scrollTrigger:{trigger:'.countdown',start:'top 78%'}});
-
-// ------ ITINERARIO — interactivo por fila ------
-(() => {
-  const card = document.querySelector('.program-card');
-  if(!card) return;
-
-  // Entrada de la tarjeta y esquinas
-  gsap.fromTo(card, {opacity:0, y:40, scale:.97}, {
-    opacity:1, y:0, scale:1, duration:1.1, ease:'power3.out',
-    scrollTrigger:{trigger:card, start:'top 80%'}
+// ------ COUNTDOWN — el jardin de la rosa (petalos que caen al cambiar la cifra) ------
+(function initCuentaFloral(){
+  var META  = new Date('2026-12-20T18:30:00-06:00').getTime();
+  var UNIS  = ['d','h','m','s'];
+  var nums  = {}, flores = {}, medals = {};
+  UNIS.forEach(function(u){
+    nums[u]   = document.getElementById('cd-' + u);
+    flores[u] = document.getElementById('cdf-' + u);
+    medals[u] = flores[u] ? flores[u].querySelector('.cd-medal') : null;
   });
-  gsap.fromTo('.program-corner', {opacity:0, scale:.6}, {
-    opacity:.9, scale:1, duration:.9, stagger:.08, ease:'back.out(1.6)',
-    scrollTrigger:{trigger:card, start:'top 78%'}
+  if(!nums.s || !flores.s) return;
+
+  // --- corolas: 8 petalos por flor (decorativos) ---
+  UNIS.forEach(function(u){
+    var c = flores[u].querySelector('.cd-corola');
+    if(!c) return;
+    for(var i = 0; i < 8; i++){
+      var p = document.createElement('span');
+      p.className = 'pt';
+      p.style.setProperty('--rot', (i * 45) + 'deg');
+      p.appendChild(document.createElement('b'));
+      c.appendChild(p);
+    }
   });
 
-  // Cada fila se anima individualmente al entrar al viewport
-  const circumference = 2 * Math.PI * 44;
-  document.querySelectorAll('.program-row').forEach((row) => {
-    const timeEl = row.querySelector('.program-time');
-    if(!timeEl) return;
+  // --- lienzo de petalos ---
+  var jardin = document.getElementById('cd-garden');
+  var cv = document.getElementById('cd-canvas');
+  var ctx = cv && cv.getContext ? cv.getContext('2d') : null;
+  var W = 0, H = 0, dpr = 1;
+  var MAX = 24;
+  var pool = [];
+  for(var k = 0; k < MAX; k++) pool.push({viva:false});
 
-    // Inyectar SVG de anillo en el medallón
-    const svgNS = 'http://www.w3.org/2000/svg';
-    const svg = document.createElementNS(svgNS, 'svg');
-    svg.setAttribute('viewBox','0 0 96 96');
-    svg.setAttribute('fill','none');
-    svg.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg);pointer-events:none;';
+  function medir(){
+    if(!ctx) return;
+    var r = jardin.getBoundingClientRect();
+    W = r.width; H = r.height;
+    dpr = Math.min(2, window.devicePixelRatio || 1);
+    cv.width  = Math.max(1, Math.round(W * dpr));
+    cv.height = Math.max(1, Math.round(H * dpr));
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  medir();
+  window.addEventListener('resize', medir);
 
-    const track = document.createElementNS(svgNS, 'circle');
-    track.setAttribute('cx','48'); track.setAttribute('cy','48'); track.setAttribute('r','44');
-    track.setAttribute('stroke','rgba(201,164,86,0.18)'); track.setAttribute('stroke-width','1.5');
+  function origen(u){
+    var c = flores[u].querySelector('.cd-corola');
+    var r = c.getBoundingClientRect(), g = jardin.getBoundingClientRect();
+    return {x: r.left - g.left + r.width / 2, y: r.top - g.top + r.height * 1.02};
+  }
 
-    const fill = document.createElementNS(svgNS, 'circle');
-    fill.setAttribute('cx','48'); fill.setAttribute('cy','48'); fill.setAttribute('r','44');
-    fill.setAttribute('stroke','rgba(201,164,86,0.8)'); fill.setAttribute('stroke-width','1.8');
-    fill.setAttribute('stroke-linecap','round');
-    fill.setAttribute('stroke-dasharray', circumference);
-    fill.setAttribute('stroke-dashoffset', circumference);
+  function soltar(u, grande){
+    if(!ctx || prefersReduced) return;
+    var libre = null;
+    for(var i = 0; i < pool.length; i++){ if(!pool[i].viva){ libre = pool[i]; break; } }
+    if(!libre) return;
+    var o = origen(u);
+    var vy = grande ? (9 + Math.random() * 6) : (15 + Math.random() * 10);   // px/s: caida lenta
+    var caida = Math.max(60, H - o.y);
+    libre.viva = true;
+    libre.x = o.x + (Math.random() * 18 - 9);
+    libre.y = o.y;
+    libre.vy = vy;
+    libre.vx = (Math.random() * 10 - 5);
+    libre.tam = grande ? (11 + Math.random() * 5) : (6.5 + Math.random() * 3);
+    libre.ang = Math.random() * Math.PI * 2;
+    libre.va = (Math.random() * 0.5 - 0.25);
+    libre.sf = 0.5 + Math.random() * 0.6;      // frecuencia del balanceo
+    libre.sa = 10 + Math.random() * 12;        // amplitud del balanceo
+    libre.fl = Math.random() * Math.PI;        // giro sobre su propio eje
+    libre.vf = 0.5 + Math.random() * 0.7;
+    libre.t = 0;
+    libre.aMax = grande ? 0.95 : 0.85;
+    libre.a = 0;
+    libre.vida = (caida * 0.86) / vy;
+  }
 
-    svg.appendChild(track);
-    svg.appendChild(fill);
-    timeEl.style.position = 'relative';
-    timeEl.insertBefore(svg, timeEl.firstChild);
+  function dibuja(p){
+    var w = p.tam, h = p.tam * 1.32;
+    ctx.save();
+    ctx.translate(p.x, p.y);
+    ctx.rotate(p.ang);
+    ctx.scale(0.42 + 0.58 * Math.abs(Math.cos(p.fl)), 1);
+    var g = ctx.createLinearGradient(0, -h / 2, 0, h / 2);
+    g.addColorStop(0,   'rgba(250,233,224,' + p.a + ')');
+    g.addColorStop(0.34,'rgba(214,100,116,' + p.a + ')');
+    g.addColorStop(1,   'rgba(142,16,38,'  + (p.a * 0.94) + ')');
+    ctx.beginPath();
+    ctx.moveTo(0, -h / 2);
+    ctx.bezierCurveTo(w * 0.62, -h * 0.32, w * 0.52, h * 0.34, 0, h / 2);
+    ctx.bezierCurveTo(-w * 0.52, h * 0.34, -w * 0.62, -h * 0.32, 0, -h / 2);
+    ctx.closePath();
+    ctx.fillStyle = g;
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(255,238,220,' + (p.a * 0.32) + ')';
+    ctx.lineWidth = 0.8;
+    ctx.beginPath();
+    ctx.moveTo(0, -h * 0.36);
+    ctx.lineTo(0, h * 0.38);
+    ctx.stroke();
+    ctx.restore();
+  }
 
-    // Timeline por fila
-    const tl = gsap.timeline({
-      scrollTrigger:{ trigger:row, start:'top 85%', once:true }
+  // pausa segura: por defecto SIEMPRE activo; el observer solo puede apagarlo si de verdad reporta
+  var enVista = true;
+  if('IntersectionObserver' in window){
+    try{
+      new IntersectionObserver(function(es){
+        es.forEach(function(e){ enVista = e.isIntersecting; });
+      }, {rootMargin:'160px 0px'}).observe(jardin);
+    }catch(err){ enVista = true; }
+  }
+
+  var ultimo = 0;
+  function bucle(ahora){
+    requestAnimationFrame(bucle);
+    if(!ctx) return;
+    var dt = ultimo ? Math.min(0.05, (ahora - ultimo) / 1000) : 0;
+    ultimo = ahora;
+    if(document.hidden || !enVista) return;
+    ctx.clearRect(0, 0, W, H);
+    for(var i = 0; i < pool.length; i++){
+      var p = pool[i];
+      if(!p.viva) continue;
+      p.t  += dt;
+      p.y  += p.vy * dt;
+      p.x  += (p.vx + Math.sin(p.t * p.sf) * p.sa) * dt;
+      p.ang += p.va * dt;
+      p.fl  += p.vf * dt;
+      var f = p.t / p.vida;
+      p.a = f < 0.14 ? (f / 0.14) * p.aMax
+          : (f > 0.70 ? p.aMax * Math.max(0, 1 - (f - 0.70) / 0.30) : p.aMax);
+      if(f >= 1 || p.y > H + 24 || p.a <= 0.01){ p.viva = false; continue; }
+      dibuja(p);
+    }
+  }
+  requestAnimationFrame(bucle);
+
+  // --- cifras ---
+  function voltea(el, val){
+    if(!el || el.textContent === val) return;
+    if(prefersReduced || !window.gsap){ el.textContent = val; return; }
+    if(el._volteando){                       // el volteo anterior no termino: cambio seco pero visible
+      gsap.killTweensOf(el);
+      el.textContent = val;
+      gsap.set(el, {opacity:1, rotateX:0});
+      el._volteando = false;
+      return;
+    }
+    el._volteando = true;
+    gsap.to(el, {rotateX:-70, opacity:0, duration:.22, ease:'power2.in', onComplete:function(){
+      el.textContent = val;
+      gsap.fromTo(el, {rotateX:70, opacity:0},
+        {rotateX:0, opacity:1, duration:.44, ease:'power3.out',
+         onComplete:function(){ el._volteando = false; }});
+    }});
+  }
+  function destella(u){
+    var m = medals[u];
+    if(!m) return;
+    m.classList.remove('late');
+    void m.offsetWidth;
+    m.classList.add('late');
+  }
+
+  var previo = {d:null, h:null, m:null, s:null};
+  function tick(){
+    var falta = Math.max(0, META - Date.now());
+    var v = {
+      d: String(Math.floor(falta / 86400000)).padStart(3,'0'),
+      h: String(Math.floor(falta % 86400000 / 3600000)).padStart(2,'0'),
+      m: String(Math.floor(falta % 3600000 / 60000)).padStart(2,'0'),
+      s: String(Math.floor(falta % 60000 / 1000)).padStart(2,'0')
+    };
+    UNIS.forEach(function(u){
+      if(v[u] === previo[u]) return;
+      var primero = previo[u] === null;
+      previo[u] = v[u];
+      if(primero){ nums[u].textContent = v[u]; return; }   // primer pintado: sin volteo ni petalo
+      voltea(nums[u], v[u]);
+      destella(u);
+      soltar(u, u !== 's');                                 // el segundo suelta petalo chico; el resto, uno grande y lento
     });
-    tl.fromTo(row, {opacity:0, x:-24}, {opacity:1, x:0, duration:.55, ease:'power3.out'})
-      .fromTo(timeEl, {scale:.55, opacity:0, rotate:-200},
-              {scale:1, opacity:1, rotate:0, duration:.7, ease:'back.out(1.5)'}, '-=.25')
-      .to(fill, {strokeDashoffset:0, duration:.85, ease:'power2.out'}, '-=.45')
-      .fromTo(row.querySelector('.program-detail'),
-              {opacity:0, y:12}, {opacity:1, y:0, duration:.5, ease:'power2.out'}, '-=.5');
+  }
+  tick();
+  setInterval(tick, 1000);
+  document.addEventListener('visibilitychange', function(){
+    if(document.hidden) return;
+    UNIS.forEach(function(u){
+      var el = nums[u];
+      if(!el) return;
+      if(window.gsap){ gsap.killTweensOf(el); gsap.set(el, {opacity:1, rotateX:0}); }
+      el._volteando = false;
+    });
   });
+})();
+gsap.fromTo('.cd-flower',{opacity:0,y:34,scale:.9},{opacity:1,y:0,scale:1,duration:1.05,stagger:.12,ease:'power3.out',immediateRender:false,scrollTrigger:{trigger:'.countdown-grid',start:'top 86%'}});
+gsap.fromTo('.countdown .eyebrow, .countdown h2, .countdown-sub',{opacity:0,y:14},{opacity:1,y:0,duration:.9,stagger:.1,immediateRender:false,scrollTrigger:{trigger:'.countdown',start:'top 78%'}});
+// ------ ITINERARIO: linea de tiempo compacta ------
+(function initTl(){
+  var rows=document.querySelectorAll('.tl-row');
+  rows.forEach(function(r,i){
+    gsap.fromTo(r,{y:14,opacity:0},{y:0,opacity:1,duration:.7,ease:'power2.out',immediateRender:false,
+      scrollTrigger:{trigger:r,start:'top 94%',once:true}});
+  });
+  setTimeout(function(){rows.forEach(function(r){ if(parseFloat(getComputedStyle(r).opacity)===0){var y=r.getBoundingClientRect().top; if(y<innerHeight*1.2){gsap.to(r,{opacity:1,y:0,duration:.5});}}});},4000);
 })();
 
 // ------ DRESS ------
-gsap.fromTo('.dress .eyebrow, .dress h2, .dress-sub, .dress-cols',{opacity:0,y:14},{opacity:1,y:0,duration:.9,stagger:.08,scrollTrigger:{trigger:'.dress',start:'top 78%'}});
-
-// ------ 3D CAROUSEL (from nelvi-yessica) ------
-(function initWheel(){
-  var cards  = document.querySelectorAll('.wheel-card');
-  var ring   = document.getElementById('wheel-ring');
-  if (!ring || cards.length === 0) return;
-
-  var n       = cards.length;
-  var radius  = 380;
-  var rot     = 0;
-  var vel     = 0;
-  var isDrag  = false;
-  var startX  = 0;
-  var startRot = 0;
-  var lastX   = 0;
-  var rafId   = null;
-
-  cards.forEach(function(card, i){
-    card.style.transform = 'rotateY(' + (360 / n * i) + 'deg) translateZ(' + radius + 'px)';
+gsap.fromTo('.dress .eyebrow, .dress h2, .dc-divider, .dc-note',{opacity:0,y:14},{opacity:1,y:0,duration:.9,stagger:.08,immediateRender:false,scrollTrigger:{trigger:'.dress',start:'top 78%'}});
+gsap.fromTo('.dc-fig',{opacity:0,y:24},{opacity:1,y:0,duration:.9,stagger:.14,ease:'power3.out',immediateRender:false,scrollTrigger:{trigger:'.dc-figures',start:'top 85%'}});
+// Caballero y dama levitando (ritmos distintos para que no vayan sincronizados)
+(function levitar(){
+  if(prefersReduced) return;
+  var figs = document.querySelectorAll('.dc-figwrap');
+  var dur = [4.8, 6.1], dly = [0, 1.15];
+  figs.forEach(function(w, i){
+    var im = w.querySelector('img'), sh = w.querySelector('.dc-shadow');
+    var d = dur[i % dur.length], t = dly[i % dly.length];
+    gsap.to(im, {y:-11, duration:d, delay:t, ease:'sine.inOut', repeat:-1, yoyo:true});
+    gsap.to(sh, {scaleX:.82, scaleY:.9, opacity:.34, duration:d, delay:t, ease:'sine.inOut', repeat:-1, yoyo:true});
   });
-
-  function setRot(r){
-    rot = r;
-    gsap.set(ring, { rotateY: rot });
-  }
-
-  function inertia(){
-    if (Math.abs(vel) < 0.05){ vel = 0; return; }
-    vel *= 0.94;
-    setRot(rot + vel);
-    rafId = requestAnimationFrame(inertia);
-  }
-
-  ring.addEventListener('mousedown', function(e){
-    cancelAnimationFrame(rafId);
-    isDrag = true; vel = 0;
-    startX = e.clientX; startRot = rot; lastX = e.clientX;
-    ring.classList.add('dragging');
-  });
-  window.addEventListener('mousemove', function(e){
-    if (!isDrag) return;
-    var dx = e.clientX - startX;
-    vel = (e.clientX - lastX) * 0.5;
-    lastX = e.clientX;
-    setRot(startRot + dx * 0.45);
-  });
-  window.addEventListener('mouseup', function(){
-    if (!isDrag) return;
-    isDrag = false;
-    ring.classList.remove('dragging');
-    rafId = requestAnimationFrame(inertia);
-  });
-
-  ring.addEventListener('touchstart', function(e){
-    cancelAnimationFrame(rafId);
-    isDrag = true; vel = 0;
-    startX = e.touches[0].clientX; startRot = rot; lastX = startX;
-  }, { passive: true });
-  window.addEventListener('touchmove', function(e){
-    if (!isDrag) return;
-    var dx = e.touches[0].clientX - startX;
-    vel = (e.touches[0].clientX - lastX) * 0.5;
-    lastX = e.touches[0].clientX;
-    setRot(startRot + dx * 0.45);
-  }, { passive: true });
-  window.addEventListener('touchend', function(){
-    if (!isDrag) return;
-    isDrag = false;
-    rafId = requestAnimationFrame(inertia);
-  });
-
-  // Entrance animation
-  gsap.fromTo(cards,{opacity:0,scale:.4},{opacity:1,scale:1,duration:1.2,stagger:.06,ease:'back.out(1.3)',scrollTrigger:{trigger:'.wheel-scene',start:'top 78%'}});
 })();
-gsap.fromTo('.gallery-head > *',{opacity:0,y:18},{opacity:1,y:0,duration:1,stagger:.1,scrollTrigger:{trigger:'.gallery-head',start:'top 80%'}});
+gsap.fromTo('.dc-avoid, .dc-swatch',{opacity:0,scale:.5,y:22},{opacity:1,scale:1,y:0,duration:1,stagger:.12,ease:'back.out(1.7)',immediateRender:false,scrollTrigger:{trigger:'.dc-avoid-block',start:'top 88%'}});
 
+// ------ GALERIA — EL ESPEJO MAGICO ------
+(function initMirror(){
+  var hit = document.getElementById('mirror');
+  var wrap = document.getElementById('m-photos');
+  if(!hit || !wrap) return;
+
+  var SRC = ['img/f1.jpg','img/f2.jpg','img/f3.jpg','img/f4.jpg','img/f5.jpg','img/f6.jpg','img/f7.jpg'];
+  var dotsEl  = document.getElementById('mirror-dots');
+  var countEl = document.getElementById('mirror-count');
+  var sparkEl = document.getElementById('m-spark');
+  var fogs = hit.querySelectorAll('.m-fog');
+
+  // Fotos: se precargan todas (nada de loading="lazy" dentro de un contenedor enmascarado)
+  var imgs = SRC.map(function(src, i){
+    var im = new Image();
+    im.src = src;
+    im.alt = 'Shelsy Arabella, recuerdo ' + (i+1);
+    im.decoding = 'async';
+    im.style.opacity = (i === 0 ? '1' : '0');
+    wrap.appendChild(im);
+    return im;
+  });
+  gsap.set(imgs, {scale:1.04});
+  gsap.set(imgs[0], {opacity:1, scale:1});
+
+  // Indicador
+  var dots = SRC.map(function(_, i){
+    var d = document.createElement('i');
+    if(i === 0) d.className = 'on';
+    dotsEl.appendChild(d);
+    return d;
+  });
+
+  // Chispas de oro
+  var sparks = [];
+  for(var k = 0; k < 12; k++){
+    var sp = document.createElement('i');
+    sp.style.left = (10 + Math.random()*78) + '%';
+    sp.style.top  = (14 + Math.random()*70) + '%';
+    sparkEl.appendChild(sp);
+    sparks.push(sp);
+  }
+
+  var idx = 0, busy = false;
+
+  function pintaIndicador(){
+    dots.forEach(function(d, i){ d.className = (i === idx ? 'on' : ''); });
+    countEl.textContent = (idx + 1) + ' de ' + SRC.length;
+  }
+
+  function revelar(dir){
+    if(busy) return;
+    var next = (idx + dir + SRC.length) % SRC.length;
+    if(next === idx) return;
+    busy = true;
+    var actual = imgs[idx], siguiente = imgs[next];
+
+    if(prefersReduced){
+      gsap.to(actual,   {opacity:0, duration:.3});
+      gsap.to(siguiente,{opacity:1, scale:1, duration:.3, onComplete:function(){ busy = false; }});
+      idx = next; pintaIndicador(); return;
+    }
+
+    var tl = gsap.timeline({onComplete:function(){ busy = false; }});
+
+    // 1) el humo sube, en capas desfasadas
+    tl.fromTo(fogs,
+        {opacity:0, scale:.62, yPercent:26, rotation:function(i){ return -10 + i*9; }},
+        {opacity:1, scale:1.06, yPercent:2,  rotation:function(i){ return -3 + i*4; },
+         duration:.62, stagger:.09, ease:'power2.out'}, 0);
+
+    // 2) chispas
+    tl.fromTo(sparks,
+        {opacity:0, y:10, scale:.4},
+        {opacity:1, y:-16, scale:1.1, duration:.5, stagger:.035, ease:'power1.out'}, .1);
+    tl.to(sparks, {opacity:0, y:-34, scale:.4, duration:.55, stagger:.03, ease:'power1.in'}, .72);
+
+    // 3) el cristal cambia de recuerdo dentro del humo
+    tl.to(actual,    {opacity:0, scale:1.09, duration:.55, ease:'power2.inOut'}, .46);
+    tl.fromTo(siguiente, {opacity:0, scale:1.14},
+        {opacity:1, scale:1, duration:.95, ease:'power2.out'}, .52);
+
+    // 4) el humo se disipa hacia arriba
+    tl.to(fogs, {opacity:0, scale:1.5, yPercent:-24, duration:.85, stagger:.07, ease:'power1.inOut'}, .95);
+
+    idx = next;
+    pintaIndicador();
+  }
+
+  hit.addEventListener('click', function(){ revelar(1); });
+  hit.addEventListener('keydown', function(e){
+    if(e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar'){ e.preventDefault(); revelar(1); }
+    else if(e.key === 'ArrowRight'){ e.preventDefault(); revelar(1); }
+    else if(e.key === 'ArrowLeft'){ e.preventDefault(); revelar(-1); }
+  });
+
+  // Swipe / arrastre
+  var x0 = null, y0 = null;
+  hit.addEventListener('pointerdown', function(e){ x0 = e.clientX; y0 = e.clientY; });
+  hit.addEventListener('pointercancel', function(){ x0 = null; });
+  hit.addEventListener('pointerup', function(e){
+    if(x0 === null) return;
+    var dx = e.clientX - x0, dy = e.clientY - y0;
+    x0 = null;
+    if(Math.abs(dy) > 30 && Math.abs(dy) > Math.abs(dx)) return;   // estaba haciendo scroll
+    if(Math.abs(dx) > 34){ e.preventDefault(); revelar(dx < 0 ? 1 : -1); }
+  });
+
+  pintaIndicador();
+
+  // Entrada (fromTo + immediateRender:false: si el ScrollTrigger no dispara, nada queda invisible)
+  gsap.fromTo('.mirror-stage', {opacity:0, y:26},
+    {opacity:1, y:0, duration:1.1, ease:'power3.out', immediateRender:false,
+     scrollTrigger:{trigger:'.mirror-stage', start:'top 88%'}});
+})();
+gsap.fromTo('.gallery-head > *',{opacity:0,y:18},{opacity:1,y:0,duration:1,stagger:.1,immediateRender:false,scrollTrigger:{trigger:'.gallery-head',start:'top 80%'}});
 // ------ LIGHTBOX ------
 (function(){
   const lb    = document.getElementById('lightbox');
@@ -2384,7 +2989,89 @@ gsap.fromTo('.kids-policy .eyebrow, .kids-policy h2, .kids-text',{opacity:0,y:18
 
 // ------ GIFTS ------
 gsap.fromTo('.gifts-head > *',{opacity:0,y:18},{opacity:1,y:0,duration:1,stagger:.1,scrollTrigger:{trigger:'.gifts-head',start:'top 80%'}});
-gsap.fromTo('.gift-card',{opacity:0,y:60,rotateY:-15,scale:.95},{opacity:1,y:0,rotateY:0,scale:1,duration:1.2,stagger:.15,ease:'power4.out',scrollTrigger:{trigger:'.gifts-grid',start:'top 82%'}});
+/* ---- Lluvia de sobres: llueve hasta que la seccion se centra y aterriza uno ---- */
+(function(){
+  var zone = document.getElementById('env-zone'),
+      rain = document.getElementById('envRain'),
+      btn  = document.getElementById('envGift'),
+      body = document.getElementById('envGiftBody'),
+      hint = document.getElementById('envGiftHint');
+  if(!zone || !rain || !btn) return;
+
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var raining = true, landed = false, spawnCall = null, alive = 0, MAX_ALIVE = 16;
+
+  function makeEnvelope(){
+    if(alive >= MAX_ALIVE) return;
+    alive++;
+    var el = document.createElementNS('http://www.w3.org/2000/svg','svg');
+    el.setAttribute('viewBox','0 0 34 24');
+    el.setAttribute('class','env-rain-item');
+    var w = 15 + Math.random()*15;
+    el.style.width = w + 'px'; el.style.height = (w*24/34) + 'px';
+    el.style.left = (Math.random()*100) + '%';
+    el.innerHTML = '<rect x="1" y="1" width="32" height="22" rx="2.5" fill="#F8FAE9" stroke="#C9A24B" stroke-width="1.2"/>' +
+                   '<path d="M1 1 L17 13 L33 1" fill="none" stroke="#C9A24B" stroke-width="1.2" stroke-linejoin="round"/>';
+    rain.appendChild(el);
+    var H = zone.offsetHeight + 80, dur = 5 + Math.random()*4;
+    function kill(){ if(el.parentNode){ el.remove(); alive--; } }
+    gsap.timeline({onComplete:kill})
+      .fromTo(el,{y:-46,x:0,rotation:(Math.random()-.5)*50,opacity:0},
+                 {y:H,x:(Math.random()-.5)*70,rotation:(Math.random()-.5)*160,duration:dur,ease:'none'},0)
+      .fromTo(el,{opacity:0},{opacity:.8,duration:dur*.18,ease:'power1.out'},0)
+      .to(el,{opacity:0,duration:dur*.25,ease:'power1.in'},dur*.75);
+  }
+  function scheduleSpawn(){
+    spawnCall = gsap.delayedCall(.52, function(){
+      if(!raining) return;
+      makeEnvelope(); scheduleSpawn();
+    });
+  }
+  function stopRain(){
+    raining = false;
+    if(spawnCall) spawnCall.kill();
+    gsap.to(rain,{opacity:0,duration:1.1,ease:'power2.out',
+      onComplete:function(){ rain.innerHTML=''; alive=0; }});
+  }
+  function land(){
+    if(landed) return; landed = true;
+    stopRain();
+    var cush = document.getElementById('envCushion');
+    if(cush) gsap.timeline({delay:.5})
+      .to(cush,{scaleY:.955,scaleX:1.012,duration:.16,ease:'power2.out'})
+      .to(cush,{scaleY:1,scaleX:1,duration:.7,ease:'elastic.out(1,.55)'});
+    gsap.fromTo(btn,{opacity:0,y:-150,rotation:-12,scale:.82},
+      {opacity:1,y:0,rotation:0,scale:1,duration:1.15,ease:'back.out(1.5)',immediateRender:false,
+       onComplete:function(){
+         if(body) body.classList.add('landed');
+         if(hint) hint.classList.add('show');
+       }});
+  }
+
+  if(reduce){
+    /* Sin animacion: el sobre debe verse igual */
+    gsap.set(btn,{opacity:1});
+    landed = true; raining = false;
+    if(hint) hint.classList.add('show');
+  }else{
+    for(var i=0;i<6;i++) gsap.delayedCall(i*.26, makeEnvelope);
+    scheduleSpawn();
+    /* 'top 75%' y no 'center center': el reveal generico desplaza 28px las
+       secciones aun no visibles y un umbral exacto nunca se alcanza. */
+    ScrollTrigger.create({trigger:zone,start:'top 75%',once:true,onEnter:land,onEnterBack:land});
+    /* Red de seguridad: si el ScrollTrigger no dispara (preview/IO), aterriza igual */
+    gsap.delayedCall(4.5, land);
+  }
+
+  btn.addEventListener('click', function(e){
+    e.preventDefault();
+    if(!landed) return;
+    var open = btn.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if(open && body) body.classList.remove('landed');
+    if(window.ScrollTrigger) ScrollTrigger.refresh();
+  });
+})();
 
 // ------ QR scan line ------
 const qrWrap = document.getElementById('qr-wrap');
@@ -2615,6 +3302,133 @@ function startParticles(){
 })();
 
 window.addEventListener('resize',()=>ScrollTrigger.refresh());
+
+// ===== La Bella y la Bestia: brillo cayendo + musica + poses =====
+// ===== La Bella y la Bestia: brillo cayendo + musica + poses =====
+(function(){
+  var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var root = document.documentElement;
+  var boost = 0; // 0 normal, 1 con musica
+
+  // --- Musica: etiqueta "Nuestra cancion" + intensificar brillo ---
+  var aud = document.getElementById('bg-music');
+  var song = document.getElementById('bb-song');
+  var btn = document.getElementById('music-btn');
+  var songTimer = null;
+  function flashSong(ms){
+    if(!song) return;
+    song.classList.add('is-on');
+    clearTimeout(songTimer);
+    songTimer = setTimeout(function(){ song.classList.remove('is-on'); }, ms);
+  }
+  if(btn && window.MutationObserver){
+    new MutationObserver(function(){
+      if(btn.classList.contains('is-ready') && !btn.dataset.bbSeen){ btn.dataset.bbSeen='1'; flashSong(7000); }
+    }).observe(btn,{attributes:true,attributeFilter:['class']});
+  }
+  if(aud){
+    aud.addEventListener('play', function(){ boost = 1; root.classList.add('bb-music'); flashSong(5000); });
+    aud.addEventListener('pause', function(){ boost = 0; root.classList.remove('bb-music'); });
+  }
+
+  // --- Brillo dorado cayendo (canvas) ---
+  var cv = document.getElementById('bb-glitter');
+  if(cv && !reduced){
+    var ctx = cv.getContext('2d');
+    var dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    var W = 0, H = 0, parts = [];
+    var mobile = window.innerWidth < 768;
+    var BASE = mobile ? 16 : 34;
+    var cols = ['255,244,210','230,203,133','201,162,75'];
+    function size(){
+      W = window.innerWidth; H = window.innerHeight;
+      cv.width = W * dpr; cv.height = H * dpr;
+      ctx.setTransform(dpr,0,0,dpr,0,0);
+    }
+    function mk(top){
+      return {
+        x: Math.random()*W, y: top ? -10 - Math.random()*40 : Math.random()*H,
+        r: .7 + Math.random()*(mobile ? 1.6 : 2.1),
+        vy: .11 + Math.random()*.24, sw: Math.random()*6.28, sws: .0026 + Math.random()*.0052,
+        tw: Math.random()*6.28, star: Math.random() < .28, c: cols[(Math.random()*3)|0]
+      };
+    }
+    size();
+    for(var i=0;i<BASE*2;i++){ var p=mk(false); p.extra = i>=BASE; parts.push(p); }
+    window.addEventListener('resize', size);
+    var running = true, last = 0;
+    document.addEventListener('visibilitychange', function(){ running = !document.hidden; if(running) requestAnimationFrame(loop); });
+    function draw(p, a){
+      ctx.globalAlpha = a;
+      ctx.fillStyle = 'rgba('+p.c+',1)';
+      if(p.star){
+        var s = p.r*3.2;
+        ctx.beginPath();
+        ctx.moveTo(p.x, p.y - s); ctx.quadraticCurveTo(p.x, p.y, p.x + s, p.y);
+        ctx.quadraticCurveTo(p.x, p.y, p.x, p.y + s); ctx.quadraticCurveTo(p.x, p.y, p.x - s, p.y);
+        ctx.quadraticCurveTo(p.x, p.y, p.x, p.y - s); ctx.fill();
+      } else {
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.2832); ctx.fill();
+      }
+    }
+    function loop(t){
+      if(!running) return;
+      var dt = Math.min(3, (t - last) / 16.7 || 1); last = t;
+      ctx.clearRect(0,0,W,H);
+      var speed = 1 + boost*.20;
+      for(var i=0;i<parts.length;i++){
+        var p = parts[i];
+        if(p.extra && !boost && p.y < 0) continue;
+        p.y += p.vy*speed*dt; p.sw += p.sws*dt; p.tw += .022*dt;
+        p.x += Math.sin(p.sw)*.16*dt;
+        if(p.y > H + 12){
+          if(p.extra && !boost){ p.y = -20; continue; }
+          var n = mk(true); n.extra = p.extra; parts[i] = p = n;
+        }
+        var a = (.35 + .45*Math.abs(Math.sin(p.tw))) * (p.star ? 1 : .85);
+        draw(p, a);
+      }
+      ctx.globalAlpha = 1;
+      requestAnimationFrame(loop);
+    }
+    requestAnimationFrame(loop);
+  }
+
+  // --- Fotos en poses: aparecen girando (fromTo + immediateRender:false => nunca quedan invisibles) ---
+  if(window.gsap && window.ScrollTrigger && !reduced){
+    gsap.utils.toArray('.bb-pose').forEach(function(el, i){
+      var fin = getComputedStyle(el).getPropertyValue('--r').trim() || '0deg';
+      gsap.fromTo(el,
+        {opacity:0, y:70, scale:.82, rotation: (i%2 ? 24 : -24)},
+        {opacity:1, y:0, scale:1, rotation: parseFloat(fin), duration:1.3, delay:i*.14, ease:'back.out(1.5)',
+         immediateRender:false, clearProps:'transform',
+         scrollTrigger:{trigger:'.bb-poses', start:'top 88%', once:true}});
+    });
+    gsap.fromTo('.bb-rose',{opacity:0,y:30,scale:.9},{opacity:1,y:0,scale:1,duration:1.4,ease:'power3.out',immediateRender:false,
+      scrollTrigger:{trigger:'.bb-rose',start:'top 90%',once:true}});
+    gsap.fromTo('.bb-candle',{opacity:0},{opacity:.92,duration:1.6,stagger:.15,ease:'power2.out',immediateRender:false,
+      scrollTrigger:{trigger:'.itinerary',start:'top 80%',once:true}});
+  }
+})();
+// --- Botón rosa: estados is-ready / is-playing con el reproductor de la plantilla ---
+(function(){
+  var b = document.getElementById('music-btn'), a = document.getElementById('bg-music');
+  if(!b || !a) return;
+  function ready(){ if(!b.hasAttribute('hidden')) b.classList.add('is-ready'); }
+  new MutationObserver(ready).observe(b,{attributes:true,attributeFilter:['hidden']});
+  a.addEventListener('play', function(){ b.classList.add('is-playing','is-ready'); b.removeAttribute('hidden'); });
+  a.addEventListener('pause', function(){ b.classList.remove('is-playing'); });
+})();
+// --- Nombres del hero con barrido de oro: se des-splitean al terminar la entrada ---
+window.__bbShineHero = function(){
+  document.querySelectorAll('.hero-name-p,.hero-name-l').forEach(function(el){
+    if(el.classList.contains('bb-shine-light')) return;
+    if(window.gsap) gsap.killTweensOf(el.querySelectorAll('span'));
+    el.textContent = el.dataset.split || el.textContent;
+    el.classList.add('bb-shine-light');
+  });
+};
+
 </script>
 <script>
 /* ELYSIUM AUDIO v2 — el invitado entra y escucha la cancion.
