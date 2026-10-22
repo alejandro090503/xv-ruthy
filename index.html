@@ -19,7 +19,7 @@
 <meta name="twitter:description" content="Los invitamos a celebrar los XV años de Shelsy · Domingo 20 de diciembre de 2026 · San Miguel, El Salvador.">
 <meta name="twitter:image" content="https://xv-shelsy-arabella.vercel.app/og.jpg?v=2">
 <link rel="preload" as="image" href="libro.jpg?v=3">
-<link rel="preload" as="image" href="img/f2.jpg">
+<link rel="preload" as="image" href="img/f1.jpg">
 <link rel="preload" as="video" href="libro.mp4?v=2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1915,8 +1915,11 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
 @media(max-width:420px){.rsvp-inner .rsvp-toggle-btn{font-size:17px!important}}
 
 /* ===== Rosa pálido + portada con 2 fotos + nombre resaltado ===== */
-.hero-bg-2{opacity:0;animation:heroSwap 16s ease-in-out infinite}
-@keyframes heroSwap{0%,38%{opacity:0}50%,88%{opacity:1}100%{opacity:0}}
+.hero-bg-2,.hero-bg-3{opacity:0}
+.hero-bg-2{animation:heroB 24s ease-in-out infinite}
+.hero-bg-3{animation:heroC 24s ease-in-out infinite}
+@keyframes heroB{0%,27%{opacity:0}34%,60%{opacity:1}67%,100%{opacity:0}}
+@keyframes heroC{0%,60%{opacity:0}67%,93%{opacity:1}100%{opacity:0}}
 .hero-bg-overlay{background:
   linear-gradient(180deg,rgba(255,220,230,.16),rgba(255,220,230,.06) 50%,rgba(255,220,230,0)),
   linear-gradient(180deg,rgba(110,36,64,.42) 0%,rgba(110,36,64,.06) 32%,rgba(110,36,64,.08) 55%,rgba(90,28,52,.62) 100%)!important}
@@ -1929,7 +1932,7 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
 .hero-name .bb-shine-light,.hero-name-c{filter:drop-shadow(0 3px 14px rgba(60,15,32,.55)) drop-shadow(0 0 22px rgba(255,226,170,.35))!important}
 .cv-name{font-size:5.6cqw!important}
 .story-initials,.footer-names{font-weight:600!important}
-@media (prefers-reduced-motion:reduce){.hero-bg-2{animation:none}}
+@media (prefers-reduced-motion:reduce){.hero-bg-2,.hero-bg-3{animation:none}}
 
 /* ===== Portada v2: jardín del castillo con llave y etiqueta ===== */
 .cv-top{left:43%!important;right:27%!important;top:51.4%!important;height:15.6%;display:flex;flex-direction:column;align-items:center;justify-content:center}
@@ -1946,6 +1949,7 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
 .story-firma{font-family:var(--display);font-style:italic;font-size:clamp(20px,5vw,24px);line-height:1.5;color:var(--accent-deep);margin-top:22px;text-align:center}
 .story-firma b{font-weight:600;color:var(--gold-deep)}
 
+.loc-place{font-family:var(--serif);font-style:italic;font-weight:600;font-size:19px;line-height:1.4;color:var(--accent-deep);margin:6px 0 2px}
 /* ===== PORTADA LIBRO · Bella y Bestia (imagen + video a pantalla completa) ===== */
 #envelope-screen{background:#F6EEEE!important;overflow:hidden}
 .cv-stage{position:absolute;left:50%;top:50%;aspect-ratio:672/1216;width:max(100vw,calc(100vh*.5526));
@@ -2043,8 +2047,9 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
   <!-- HERO -->
   <section class="hero">
     <div class="hero-bg-wrap">
-      <img class="hero-bg" src="img/f2.jpg" alt="" style="object-position:64% 50%">
-      <img class="hero-bg hero-bg-2" src="img/f7.jpg" alt="" style="object-position:50% 28%">
+      <img class="hero-bg" src="img/f1.jpg" alt="" style="object-position:50% 18%">
+      <img class="hero-bg hero-bg-2" src="img/f2.jpg" alt="" style="object-position:64% 50%">
+      <img class="hero-bg hero-bg-3" src="img/f7.jpg" alt="" style="object-position:50% 28%">
     </div>
     <div class="hero-bg-overlay"></div>
     <div class="hero-frame"></div>
@@ -2232,6 +2237,7 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
           </svg>
           <div class="loc-type">Recepción</div>
           <div class="loc-name">Hotel<br>Trópico Inn</div>
+          <div class="loc-place">5º nivel · Centro de Convenciones</div>
           <div class="loc-divider" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none"><path d="M4 14 Q12 4 20 14 Q12 16 4 14 Z M12 14 L12 20" stroke="currentColor" stroke-width="1.2" fill="currentColor" fill-opacity=".15"/></svg>
           </div>
@@ -2271,7 +2277,7 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
       
       <ol class="tl" id="itin">
         <li class="tl-row"><time class="tl-time">6:30 <small>pm</small></time><span class="tl-ico"><img src="ico-cocktail.png" alt="" width="30" height="30" decoding="async"></span><div class="tl-txt"><div class="tl-ev">Cóctel</div><div class="tl-sub">Copa de bienvenida</div></div></li>
-        <li class="tl-row"><time class="tl-time">7:00 <small>pm</small></time><span class="tl-ico"><img src="ico-door-opened.png" alt="" width="30" height="30" decoding="async"></span><div class="tl-txt"><div class="tl-ev">Recepción</div><div class="tl-sub">Hotel Trópico Inn</div></div></li>
+        <li class="tl-row"><time class="tl-time">7:00 <small>pm</small></time><span class="tl-ico"><img src="ico-door-opened.png" alt="" width="30" height="30" decoding="async"></span><div class="tl-txt"><div class="tl-ev">Recepción</div><div class="tl-sub">Hotel Trópico Inn · Centro de Convenciones</div></div></li>
         <li class="tl-row"><time class="tl-time">8:00 <small>pm</small></time><span class="tl-ico"><img src="ico-restaurant.png" alt="" width="30" height="30" decoding="async"></span><div class="tl-txt"><div class="tl-ev">Cena</div></div></li>
         <li class="tl-row"><time class="tl-time">10:00 <small>pm</small></time><span class="tl-ico"><img src="ico-disco-ball.png" alt="" width="30" height="30" decoding="async"></span><div class="tl-txt"><div class="tl-ev">Fiesta</div></div></li>
       </ol>
@@ -2386,34 +2392,17 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
   <section class="section-surface gifts">
     <div class="container">
       <div class="gifts-head">
-        <div class="eyebrow">Mesa de regalos</div>
+        <div class="eyebrow">Regalos</div>
         <h2>Lo más <em>importante</em> es tu presencia</h2>
-        <p class="gifts-sub">El mejor regalo es que nos acompañes, pero si deseas tener un detalle con Shelsy, aquí te dejamos las opciones</p>
+        <p class="gifts-sub">El mejor regalo es que nos acompañes, pero si deseas tener un detalle con Shelsy, habrá lluvia de sobres.</p>
       </div>
-      <div class="giftbox-stage">
-        <canvas id="confetti-canvas" aria-hidden="true"></canvas>
-        <div class="giftbox-holder">
-          <button class="giftbox banq" id="giftbox" type="button" aria-label="Levantar la tapa: mesa de regalos de la recepción" aria-expanded="false" aria-controls="gift-reveal">
-            <span class="banq-ground" aria-hidden="true"></span>
-            <span class="banq-inside" aria-hidden="true"><span class="banq-glow" id="banq-glow"></span></span>
-            <img class="banq-dish" src="banquete-bandeja.webp" alt="" width="760" height="531" decoding="async">
-            <span class="banq-steam" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-            <span class="banq-lid" id="banq-lid" aria-hidden="true">
-              <img src="banquete-tapa.webp" alt="" width="760" height="531" decoding="async">
-              <span class="banq-shine"><b></b></span>
-            </span>
-          </button>
-          <span class="giftbox-cta" id="giftbox-cta">Toca para descubrir</span>
-        </div>
-      </div>
-
-            <div class="env-zone" id="env-zone">
+      <div class="env-zone" id="env-zone">
         <div class="env-rain" id="envRain" aria-hidden="true"></div>
         <div class="env-stage">
           <div class="eyebrow">Celebra con nosotros</div>
           <h2 class="env-h2">Lluvia <em>de</em> sobres</h2>
           <div class="env-rest">
-          <img class="env-cushion" id="envCushion" src="banquete-cojin.webp" alt="" width="760" height="525" decoding="async">
+          <img class="env-cushion" id="envCushion" src="banquete-cojin-rosa.webp" alt="" width="760" height="525" decoding="async">
           <button class="env-interactive" id="envGift" type="button" aria-label="Sobre — toca para abrir" aria-expanded="false">
             <div class="env-body" id="envGiftBody">
               <svg class="env-svg" viewBox="0 0 260 200" preserveAspectRatio="none" aria-hidden="true">
@@ -2623,25 +2612,6 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
     </div>
   </footer>
 
-</div>
-
-<!-- Modal de la mesa de regalos: fuera de .wrap (contain:paint rompe el position:fixed) -->
-<div class="gift-backdrop" id="gift-backdrop" role="dialog" aria-modal="true" aria-label="Mesa de regalos">
-  <div class="gift-reveal" id="gift-reveal">
-    <button class="gift-close" id="gift-close" type="button" aria-label="Cerrar">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
-    </button>
-    <div class="gift-reveal-eyebrow">Mesa de regalos</div>
-    <div class="gr-slide">
-      <svg class="gr-ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <rect x="7" y="19" width="34" height="23" rx="2"/><rect x="4" y="12" width="40" height="8" rx="2"/><path d="M24 12v30"/>
-        <path d="M24 12c-3-6-12-7-12-1 0 3 6 2 12 1zM24 12c3-6 12-7 12-1 0 3-6 2-12 1z"/>
-      </svg>
-      <div class="gr-title">Regalos en la recepción</div>
-      <div class="gr-desc">Si deseas obsequiarle algo a Shelsy, el día de la fiesta habrá una <b>mesa de regalos</b> a la entrada del salón, donde con mucho cariño recibiremos tu detalle.</div>
-      <button class="gr-btn" type="button" id="gr-ok">Entendido</button>
-    </div>
-  </div>
 </div>
 
 <!-- LIGHTBOX -->
