@@ -1950,6 +1950,319 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
 .story-firma b{font-weight:600;color:var(--gold-deep)}
 
 .loc-place{font-family:var(--serif);font-style:italic;font-weight:600;font-size:19px;line-height:1.4;color:var(--accent-deep);margin:6px 0 2px}
+#subic .ubic-tipo,#shosp .ubic-tipo,#subic .ft-name,#shosp .ft-name,#subic .hero-xv,#shosp .hero-xv,#subic .hero-mis,#shosp .hero-mis{
+  background-image:linear-gradient(100deg,
+    #5A1F36 0%, #7A2B48 10%, #8A3A58 20%, #9A4A66 29%,
+    #B0607A 36%, #C07A92 42%, #B0607A 48%, #9A4A66 55%,
+    #8A3A58 64%, #7A2B48 74%, #5A1F36 85%, #7A2B48 94%, #5A1F36 100%);
+  background-size:300% 100%;
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+  animation:goldSweep 14s cubic-bezier(.45,0,.55,1) infinite;
+  padding-left:.34em;padding-right:.34em;
+  margin-left:-.34em;margin-right:-.34em;
+  filter:drop-shadow(0 0 6px rgba(233,185,200,.26));
+}
+#subic .ubic-tipo,#shosp .ubic-tipo,#subic .ft-name,#shosp .ft-name,#subic .hero-xv,#shosp .hero-xv,#subic .hero-mis,#shosp .hero-mis{animation:none;background-position:50% center;}
+#subic .mf-corner,#shosp .mf-corner{position:absolute;width:30px;height:30px;pointer-events:none;z-index:3;}
+#subic .mf-tl,#shosp .mf-tl{top:3px;left:3px;}
+#subic .mf-tr,#shosp .mf-tr{top:3px;right:3px;transform:scaleX(-1);}
+#subic .mf-bl,#shosp .mf-bl{bottom:3px;left:3px;transform:scaleY(-1);}
+#subic .mf-br,#shosp .mf-br{bottom:3px;right:3px;transform:scale(-1,-1);}
+#subic .ubic-card,#shosp .ubic-card{
+  background:linear-gradient(135deg,rgba(252,240,243,0.55),rgba(255,255,255,0.85));
+  border:1.5px solid rgba(176,141,74,0.55);
+  border-radius:5px;
+  padding:30px 22px;margin-bottom:20px;text-align:center;
+  position:relative;overflow:hidden;
+  box-shadow:0 8px 38px rgba(122,43,72,0.09),inset 0 1px 0 rgba(255,255,255,0.58);
+}
+#subic .ubic-card::before,#shosp .ubic-card::before{
+  content:'';position:absolute;inset:8px;
+  border:1px solid rgba(122,43,72,0.22);
+  border-radius:3px;pointer-events:none;z-index:0;
+}
+#subic .ubic-icon,#shosp .ubic-icon{margin-bottom:12px;display:block;position:relative;z-index:1;}
+#subic .ubic-tipo,#shosp .ubic-tipo{font-family:'Great Vibes',cursive;font-size:38px;color:var(--accent-deep);margin-bottom:8px;position:relative;z-index:1;}
+#subic .ubic-name,#shosp .ubic-name{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:var(--ink);margin-bottom:6px;line-height:1.4;position:relative;z-index:1;}
+#subic .ubic-addr,#shosp .ubic-addr{font-family:'Montserrat',sans-serif;font-size:12px;color:var(--ink-soft);line-height:1.8;margin-bottom:6px;position:relative;z-index:1;}
+#subic .ubic-hora,#shosp .ubic-hora{font-family:'Playfair Display',serif;font-size:28px;color:var(--accent-deep);font-weight:700;margin:12px 0;position:relative;z-index:1;}
+#subic .btn-pink,#shosp .btn-pink{
+  display:inline-block;padding:13px 34px;background:var(--accent-deep);color:#fff;
+  border-radius:50px;font-family:'Montserrat',sans-serif;font-size:11px;
+  letter-spacing:5px;text-transform:uppercase;text-decoration:none;
+  border:none;cursor:pointer;margin-top:8px;
+  box-shadow:0 5px 18px rgba(122,43,72,0.32);transition:transform .2s,box-shadow .2s;
+  position:relative;z-index:1;
+}
+#subic .btn-pink:hover,#shosp .btn-pink:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(122,43,72,0.42);}
+#salbum .album-txt{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;font-weight:500;line-height:1.7;color:var(--ink-soft);max-width:320px;margin:6px auto 24px;}
+#salbum .alb-box{position:relative;display:inline-flex;flex-direction:column;align-items:center;gap:16px;}
+#salbum .qr-frame{padding:14px;background:#fff;border:1px solid rgba(176,141,74,.45);border-radius:14px;box-shadow:0 8px 26px rgba(122,43,72,.14);}
+#salbum .qr-frame img{display:block;width:176px;height:176px;border-radius:4px;}
+#salbum .alb-box.bloqueado .qr-frame img{filter:blur(7px);opacity:.75;}
+#salbum .alb-box.bloqueado .album-btn{pointer-events:none;opacity:.45;}
+#salbum .album-btn{margin-top:0;}
+#salbum .album-aviso{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;font-weight:500;line-height:1.7;color:var(--ink-soft);opacity:.85;max-width:300px;margin:22px auto 0;}
+#salbum .alb-box:not(.bloqueado) + .album-aviso{display:none;}
+#subic .hosp-intro,#shosp .hosp-intro{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;
+  font-weight:500;line-height:1.7;color:var(--ink-soft);max-width:330px;margin:4px auto 0;}
+#subic .hosp-carousel,#shosp .hosp-carousel{position:relative;max-width:380px;margin:26px auto 0;}
+#subic .hosp-viewport,#shosp .hosp-viewport{overflow:hidden;}
+#subic .hosp-track,#shosp .hosp-track{display:flex;transition:transform .45s cubic-bezier(.4,0,.2,1);}
+#subic .hosp-slide,#shosp .hosp-slide{flex:0 0 100%;box-sizing:border-box;display:flex;flex-direction:column;
+  align-items:center;text-align:center;padding:8px 14px;}
+#subic .hosp-photo,#shosp .hosp-photo{width:200px;height:200px;border-radius:50%;overflow:hidden;
+  border:3px solid rgba(192,192,192,.75);
+  box-shadow:0 12px 34px rgba(90,31,54,.20),0 0 0 6px rgba(255,255,255,.9);
+  margin-bottom:22px;}
+#subic .hosp-photo img,#shosp .hosp-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+#subic .hosp-arrow,#shosp .hosp-arrow{position:absolute;top:108px;transform:translateY(-50%);width:36px;height:36px;
+  display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.7);
+  border:1px solid rgba(160,80,110,.25);border-radius:50%;cursor:pointer;color:var(--accent-deep);
+  z-index:2;padding:0;backdrop-filter:blur(3px);}
+#subic .hosp-arrow svg,#shosp .hosp-arrow svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;}
+#subic .hosp-arrow.prev,#shosp .hosp-arrow.prev{left:-2px;}
+#subic .hosp-arrow.next,#shosp .hosp-arrow.next{right:-2px;}
+#subic .hosp-dots,#shosp .hosp-dots{display:flex;justify-content:center;gap:8px;margin-top:22px;}
+#subic .hosp-dots button,#shosp .hosp-dots button{width:8px;height:8px;border-radius:50%;border:none;
+  background:rgba(160,80,110,.3);cursor:pointer;padding:0;transition:background .25s,transform .25s;}
+#subic .hosp-dots button.active,#shosp .hosp-dots button.active{background:var(--accent-deep);transform:scale(1.3);}
+#subic .hosp-name,#shosp .hosp-name{font-family:'Playfair Display',serif;font-weight:700;font-size:21px;
+  color:var(--ink);margin-bottom:6px;line-height:1.35;}
+#subic .hosp-city,#shosp .hosp-city{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;letter-spacing:2px;
+  text-transform:uppercase;color:var(--gold-deep);margin-bottom:18px;}
+#subic .hosp-btns,#shosp .hosp-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+#subic .btn-hosp,#shosp .btn-hosp{display:inline-flex;align-items:center;gap:7px;padding:12px 16px;min-height:46px;
+  border:1.5px solid var(--accent-deep);border-radius:50px;color:var(--accent-deep);
+  font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;letter-spacing:.8px;
+  white-space:nowrap;text-decoration:none;background:transparent;transition:background .25s,color .25s;}
+#subic .btn-hosp:hover,#shosp .btn-hosp:hover{background:var(--accent-deep);color:#fff;}
+#subic .btn-hosp svg,#shosp .btn-hosp svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2;
+  stroke-linecap:round;stroke-linejoin:round;}
+#subic .ubic-foto,#shosp .ubic-foto{width:168px;height:168px;margin:4px auto 18px;position:relative;z-index:1;}
+#subic .hosp-carousel:has(.hosp-slide:only-child) .hosp-arrow,#shosp .hosp-carousel:has(.hosp-slide:only-child) .hosp-arrow,#subic .hosp-carousel:has(.hosp-slide:only-child) .hosp-dots,#shosp .hosp-carousel:has(.hosp-slide:only-child) .hosp-dots{display:none;}
+#srsvp .rsvp-outer{position:relative;padding:52px 0 0;}
+#srsvp .rsvp-bow-grande{
+  position:absolute;top:-30px;left:50%;transform:translateX(-50%);
+  width:220px;z-index:2;filter:drop-shadow(0 6px 16px rgba(122,43,72,0.30));
+}
+#srsvp .rsvp-bow-br{
+  position:absolute;bottom:-28px;right:-10px;
+  width:110px;z-index:2;
+  transform:rotate(12deg);
+  filter:drop-shadow(0 4px 10px rgba(122,43,72,0.25));
+}
+#srsvp .rsvp-frame{
+  border:1.5px solid rgba(176,141,74,0.55);
+  border-radius:5px;padding:34px 22px 30px;
+  background:linear-gradient(135deg,rgba(252,240,243,0.72),rgba(255,255,255,0.92));
+  box-shadow:0 8px 38px rgba(122,43,72,0.09),inset 0 1px 0 rgba(255,255,255,0.58);
+  position:relative;overflow:visible;
+}
+#srsvp .rsvp-frame::before{
+  content:'';position:absolute;inset:8px;
+  border:1px solid rgba(122,43,72,0.22);
+  border-radius:3px;pointer-events:none;z-index:0;
+}
+#srsvp .rsvp-frame label{display:block;font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold-deep);margin:16px 0 7px;position:relative;z-index:1;}
+#srsvp .rsvp-frame label:first-of-type{margin-top:0;}
+#srsvp .rsvp-frame input,#srsvp .rsvp-frame select,#srsvp .rsvp-frame textarea{
+  width:100%;padding:13px 16px;min-height:48px;
+  border:1.5px solid rgba(176,141,74,.45);border-radius:10px;
+  background:#fff;font-family:'Montserrat',sans-serif;
+  font-size:13px;color:var(--ink);outline:none;transition:border-color .3s;-webkit-appearance:none;
+  position:relative;z-index:1;
+}
+#srsvp .rsvp-frame input::placeholder,#srsvp .rsvp-frame textarea::placeholder{color:rgba(90,31,54,0.3);}
+#srsvp .rsvp-frame input:focus,#srsvp .rsvp-frame select:focus,#srsvp .rsvp-frame textarea:focus{border-color:var(--accent-deep);}
+#srsvp .rsvp-frame select option{background:#fff;color:#5A1F36;}
+#srsvp .rsvp-hola{text-align:center;margin-top:30px;font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:500;color:var(--ink);margin-bottom:6px;position:relative;z-index:1;}
+#srsvp .rsvp-toggle{display:flex;gap:10px;margin:6px 0 4px;position:relative;z-index:1;}
+#srsvp .rsvp-toggle-btn{flex:1;padding:14px 8px;min-height:48px;border:1.5px solid rgba(176,141,74,.45);background:#fff;border-radius:10px;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;color:var(--ink-soft);transition:all .25s;}
+#srsvp .rsvp-toggle-btn.on{background:var(--accent-deep);border-color:var(--accent-deep);color:#fff;box-shadow:0 6px 18px rgba(122,43,72,0.30);}
+#srsvp .rsvp-fields{margin-top:6px;}
+#srsvp .rsvp-fields input{margin-bottom:8px;}
+#srsvp .rsvp-contador-wrap{display:none;margin:12px auto 10px;position:relative;z-index:1;text-align:center}
+#srsvp .rsvp-contador-nota{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;font-weight:600;line-height:1.5;color:var(--ink-soft);margin:0 auto 10px}
+#srsvp .rsvp-contador{display:flex;align-items:center;justify-content:center;gap:18px;margin:0 auto 8px;padding:10px 16px;background:var(--surface);border:1px solid rgba(176,141,74,.45);border-radius:12px}
+#srsvp .rsvp-contador-btn{width:44px;height:44px;flex-shrink:0;border-radius:50%;border:1.5px solid var(--accent);background:#fff;color:var(--accent-deep);font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .25s,color .25s}
+#srsvp .rsvp-contador-btn:hover:not(:disabled){background:var(--accent-deep);color:#fff}
+#srsvp .rsvp-contador-btn:disabled{opacity:.35;cursor:default}
+#srsvp .rsvp-contador-valor{font-family:'Playfair Display',serif;font-size:34px;font-weight:600;color:var(--ink);line-height:1;min-width:56px;text-align:center}
+#srsvp .rsvp-contador-pie{font-family:'Cormorant Garamond',serif;font-size:14px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-deep);margin:0 auto 2px}
+#srsvp .rsvp-fields input.rsvp-input-falta{border-color:#B3261E!important;box-shadow:0 0 0 3px rgba(179,38,30,.16)}
+#srsvp .rsvp-toggle-btn:disabled,#srsvp .btn-wa:disabled{opacity:.55;cursor:default}
+#srsvp .rsvp-feedback{text-align:center;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:500;line-height:1.5;margin-top:14px;position:relative;z-index:1;}
+#srsvp .rsvp-gracias{padding:26px 18px 22px;text-align:center;position:relative;z-index:1;}
+#srsvp .rsvp-gracias-icon{color:var(--accent-deep);margin:0 auto 10px;display:block;}
+#srsvp .rsvp-gracias-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:600;color:var(--ink);margin-bottom:8px;line-height:1.35;}
+#srsvp .rsvp-gracias-sub{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;color:var(--ink-soft);line-height:1.6;margin-bottom:18px;}
+#srsvp .rsvp-editar-btn{padding:12px 22px;min-height:44px;border:1.5px solid var(--accent-deep);background:transparent;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;color:var(--accent-deep);border-radius:24px;transition:all .25s;}
+#srsvp .rsvp-editar-btn:hover{background:var(--surface);}
+#srsvp .rsvp-editar-btn:disabled{opacity:.45;cursor:not-allowed;}
+#srsvp .rsvp-nokids{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;font-weight:500;color:var(--ink-soft);line-height:1.6;margin:22px auto 0;max-width:420px;}
+#srsvp .btn-wa{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  width:100%;margin-top:20px;padding:17px;
+  background:var(--accent-deep);color:#fff;border-radius:50px;border:none;cursor:pointer;
+  font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:5px;text-transform:uppercase;
+  box-shadow:0 6px 22px rgba(122,43,72,0.38);transition:transform .2s;
+  position:relative;z-index:1;
+}
+#srsvp .btn-wa:hover{transform:translateY(-2px);}
+#srsvp .btn-wa{letter-spacing:3px;font-size:10.5px;padding:17px 10px;}
+#srsvp .pases-wrap{display:none;margin-top:16px;margin-bottom:4px;position:relative;z-index:1;}
+#srsvp .pases-card{
+  border:1.5px solid rgba(176,141,74,0.52);
+  border-radius:6px;padding:22px 18px 18px;text-align:center;
+  background:linear-gradient(135deg,rgba(252,240,243,0.75),rgba(255,255,255,0.95));
+  box-shadow:0 6px 28px rgba(122,43,72,0.08),inset 0 1px 0 rgba(255,255,255,0.6);
+  position:relative;
+}
+#srsvp .pases-card::before{
+  content:'';position:absolute;inset:7px;
+  border:1px solid rgba(122,43,72,0.20);
+  border-radius:3px;pointer-events:none;
+}
+#srsvp .pases-title{
+  font-family:'Playfair Display',serif;font-weight:700;
+  font-size:20px;letter-spacing:8px;color:var(--accent-deep);
+  text-transform:uppercase;margin-bottom:6px;position:relative;z-index:1;
+}
+#srsvp .pases-sub{
+  font-family:'Montserrat',sans-serif;font-size:11px;
+  letter-spacing:5px;text-transform:uppercase;
+  color:var(--gold-deep);margin-bottom:16px;position:relative;z-index:1;
+}
+#srsvp .pases-num{font-family:'Playfair Display',serif;font-size:52px;font-weight:600;line-height:1;color:var(--ink);margin:0 auto 14px;position:relative;z-index:1;}
+#srsvp .pases-circles{
+  display:flex;justify-content:center;gap:10px;
+  margin-bottom:14px;position:relative;z-index:1;
+}
+#srsvp .pases-circle{
+  width:46px;height:46px;border-radius:50%;
+  border:1.5px solid rgba(122,43,72,0.28);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;font-size:15px;font-weight:700;
+  color:rgba(90,31,54,0.32);background:rgba(255,255,255,0.55);
+}
+#srsvp .pases-circle.active{
+  background:var(--accent-deep);border-color:var(--accent-deep);color:#fff;
+  box-shadow:0 4px 14px rgba(122,43,72,0.38);
+}
+#srsvp .pases-honor{
+  font-family:'Montserrat',sans-serif;font-size:11px;
+  letter-spacing:5px;text-transform:uppercase;
+  color:var(--gold-deep);position:relative;z-index:1;
+}
+#subic .ubic-name,#shosp .ubic-name{font-size:18px;line-height:1.45;}
+#subic .ubic-addr,#shosp .ubic-addr{font-size:16px;font-weight:500;line-height:1.75;}
+#srsvp .pases-sub,#srsvp .pases-honor{font-size:13px;font-weight:600;letter-spacing:3px;}
+#srsvp .rsvp-frame label{font-size:13px;font-weight:600;letter-spacing:3px;}
+#srsvp .rsvp-frame input,#srsvp .rsvp-frame select,#srsvp .rsvp-frame textarea{font-size:16px;font-weight:500;}
+#srsvp .rsvp-frame input::placeholder{color:rgba(90,31,54,0.55);}
+#srsvp .rsvp-toggle-btn{font-size:14px;}
+#srsvp .rsvp-editar-btn{font-size:14px;color:#5A1F36;border-color:#5A1F36;}
+#srsvp .rsvp-feedback{font-size:15px;}
+#subic .btn-pink,#shosp .btn-pink{font-size:13px;font-weight:600;letter-spacing:3px;background:var(--accent-deep);}
+#srsvp .btn-wa{font-size:13px;font-weight:600;letter-spacing:2px;background:var(--accent-deep);padding:17px 14px;}
+#srsvp .rsvp-toggle-btn.on{background:var(--accent-deep);border-color:var(--accent-deep);}
+#subic,#shosp,#srsvp,#salbum{text-align:center}
+#subic .ubic-name{font-family:var(--display)!important;font-size:clamp(26px,7vw,32px)!important;color:var(--accent-deep)!important}
+#subic .ubic-addr{font-size:17px!important;font-weight:500!important;color:var(--ink)!important;line-height:1.55!important}
+#subic .ubic-hora{font-family:var(--display)!important;color:var(--accent-deep)!important}
+#subic .ubic-tipo,#salbum .album-aviso,#srsvp label{font-size:13px!important}
+#srsvp .rsvp-frame input{font-size:16px!important}
+#srsvp #rsvp-name-display{font-family:var(--display);font-weight:600;font-size:clamp(28px,8vw,40px);line-height:1.15;color:var(--accent-deep);margin:2px auto 16px;overflow-wrap:anywhere}
+#srsvp #rsvp-name-display:empty{display:none}
+#srsvp .rsvp-hola{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-deep)}
+#srsvp .rsvp-date-j{margin-top:22px;font-family:var(--serif);font-style:italic;font-size:18px;font-weight:500;color:var(--ink)}
+#salbum .alb-box{position:relative;display:inline-flex;flex-direction:column;align-items:center;gap:16px;margin-top:8px}
+#salbum .alb-box.bloqueado .qr-frame img{filter:blur(7px);opacity:.75}
+#salbum .alb-box.bloqueado .album-btn{pointer-events:none;opacity:.45}
+#salbum .alb-box:not(.bloqueado) ~ .album-aviso{display:none}
+#salbum .album-aviso{max-width:420px;margin:18px auto 0;font-family:var(--serif);font-style:italic;font-size:17px!important;font-weight:500;color:var(--ink);line-height:1.6}
+
+#srsvp .mf-corner{position:absolute;width:30px;height:30px;pointer-events:none;z-index:3;}
+#salbum .mf-corner{position:absolute;width:30px;height:30px;pointer-events:none;z-index:3;}
+#srsvp .mf-tl{top:3px;left:3px;}
+#salbum .mf-tl{top:3px;left:3px;}
+#srsvp .mf-tr{top:3px;right:3px;transform:scaleX(-1);}
+#salbum .mf-tr{top:3px;right:3px;transform:scaleX(-1);}
+#srsvp .mf-bl{bottom:3px;left:3px;transform:scaleY(-1);}
+#salbum .mf-bl{bottom:3px;left:3px;transform:scaleY(-1);}
+#srsvp .mf-br{bottom:3px;right:3px;transform:scale(-1,-1);}
+#salbum .mf-br{bottom:3px;right:3px;transform:scale(-1,-1);}
+#srsvp .btn-pink{
+  display:inline-block;padding:13px 34px;background:var(--accent-deep);color:#fff;
+  border-radius:50px;font-family:'Montserrat',sans-serif;font-size:11px;
+  letter-spacing:5px;text-transform:uppercase;text-decoration:none;
+  border:none;cursor:pointer;margin-top:8px;
+  box-shadow:0 5px 18px rgba(122,43,72,0.32);transition:transform .2s,box-shadow .2s;
+  position:relative;z-index:1;
+}
+#salbum .btn-pink{
+  display:inline-block;padding:13px 34px;background:var(--accent-deep);color:#fff;
+  border-radius:50px;font-family:'Montserrat',sans-serif;font-size:11px;
+  letter-spacing:5px;text-transform:uppercase;text-decoration:none;
+  border:none;cursor:pointer;margin-top:8px;
+  box-shadow:0 5px 18px rgba(122,43,72,0.32);transition:transform .2s,box-shadow .2s;
+  position:relative;z-index:1;
+}
+#srsvp .btn-pink:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(122,43,72,0.42);}
+#salbum .btn-pink:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(122,43,72,0.42);}
+#srsvp .btn-pink{font-size:13px;font-weight:600;letter-spacing:3px;background:var(--accent-deep);}
+#salbum .btn-pink{font-size:13px;font-weight:600;letter-spacing:3px;background:var(--accent-deep);}
+#salbum .album-btn{text-decoration:none}
+#srsvp #rsvp-pases-display:not([style*="none"]){display:block!important;opacity:1!important;max-height:none!important}
+.footer-names{font-size:clamp(28px,8.4vw,52px)!important;white-space:normal!important;overflow-wrap:anywhere;max-width:100%}
+/* ===== Barra inferior + menú (estilo valeyandres) ===== */
+.nv-bar{position:fixed;left:50%;bottom:max(14px,env(safe-area-inset-bottom));z-index:60;display:flex;align-items:center;gap:4px;
+  padding:6px 6px 6px 16px;border-radius:999px;background:rgba(255,250,250,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border:1px solid rgba(176,141,74,.35);box-shadow:0 10px 30px -10px rgba(90,31,54,.45);transform:translate(-50%,140%);transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.nv-bar.on{transform:translate(-50%,0)}
+.nv-mono{font-family:var(--display);font-style:italic;font-size:21px;color:var(--accent-deep);padding-right:12px;border-right:1px solid rgba(176,141,74,.4);margin-right:4px}
+.nv-ico{width:42px;height:42px;border:0;background:none;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--accent-deep);cursor:pointer}
+.nv-ico svg{width:19px;height:19px}
+.nv-lang{font-family:var(--sans);font-weight:700;font-size:12px;letter-spacing:.08em}
+.nv-menu{display:flex;align-items:center;gap:8px;height:44px;padding:0 18px 0 14px;border:0;border-radius:999px;background:var(--accent-deep);color:#FFF6F8;
+  font-family:var(--sans);font-weight:700;font-size:12px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer}
+.nv-menu svg{width:18px;height:18px}
+.nv-panel{position:fixed;inset:0;z-index:9000;background:radial-gradient(ellipse at 50% 20%,#FFFAF9 0%,#FBEEF1 60%,#F6E2E8 100%);
+  display:flex;flex-direction:column;padding:28px 32px max(28px,env(safe-area-inset-bottom));opacity:0;pointer-events:none;transition:opacity .45s ease}
+.nv-panel.open{opacity:1;pointer-events:auto}
+.nv-head{display:flex;justify-content:space-between;align-items:center}
+.nv-head .nv-mono{border:0;font-size:30px}
+.nv-close{width:46px;height:46px;border-radius:50%;border:1px solid rgba(122,43,72,.3);background:none;color:var(--accent-deep);font-size:22px;cursor:pointer}
+.nv-list{list-style:none;margin:auto 0;padding:0}
+.nv-list li{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.nv-panel.open .nv-list li{opacity:1;transform:none}
+.nv-list a{display:flex;align-items:baseline;gap:22px;padding:9px 0;text-decoration:none;color:var(--ink)}
+.nv-list small{font-family:var(--sans);font-size:12px;font-weight:600;color:var(--gold-deep);width:22px}
+.nv-list span{font-family:var(--serif);font-size:clamp(28px,8vw,36px);font-weight:500;line-height:1.15}
+.nv-list a:hover span,.nv-list a.cur span{font-style:italic;color:var(--accent-deep)}
+.nv-foot{text-align:center;font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);line-height:1.7}
+#music-btn.vinyl-btn{bottom:86px!important}
+.bb-song{bottom:110px!important}
+
+/* ===== Pantalla de idioma (estilo valeyandres) ===== */
+#lang-screen{position:fixed;inset:0;z-index:10050;display:flex;align-items:center;justify-content:center;overflow:hidden;
+  background:radial-gradient(ellipse at 50% 35%,#FFFAF8 0%,#F8E8EC 55%,#EFD3DC 100%)}
+#lang-screen::before{content:"";position:absolute;inset:-40px;background:url('libro.jpg?v=3') center/cover;filter:blur(22px) saturate(.9);opacity:.32}
+#lang-screen.se-va{opacity:0;transition:opacity .6s ease;pointer-events:none}
+.lg-card{position:relative;text-align:center;padding:0 28px;max-width:420px}
+.lg-date{font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.42em;color:#7A5A1C;padding-left:.42em}
+.lg-rose{width:74px;margin:22px auto 14px;display:block;filter:drop-shadow(0 8px 14px rgba(90,31,54,.25))}
+.lg-title{font-family:var(--display);font-style:italic;font-weight:500;font-size:clamp(26px,7vw,32px);line-height:1.25;color:#5A1F36}
+.lg-sub{font-family:var(--serif);font-style:italic;font-size:19px;font-weight:500;color:#6A3550;margin-top:4px}
+.lg-name{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:#7A5A1C;margin-top:18px}
+.lg-btns{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:34px}
+.lg-btn{min-width:230px;height:52px;border-radius:999px;cursor:pointer;font-family:var(--sans);font-weight:700;font-size:13px;letter-spacing:.22em;text-transform:uppercase;transition:transform .25s ease}
+.lg-btn:active{transform:scale(.96)}
+.lg-es{border:0;background:#7A2B48;color:#FFF6F8;box-shadow:0 10px 24px -10px rgba(90,31,54,.6)}
+.lg-en{border:1px solid rgba(176,141,74,.6);background:rgba(255,250,248,.85);color:#5A1F36}
+
 /* ===== PORTADA LIBRO · Bella y Bestia (imagen + video a pantalla completa) ===== */
 #envelope-screen{background:#F6EEEE!important;overflow:hidden}
 .cv-stage{position:absolute;left:50%;top:50%;aspect-ratio:672/1216;width:max(100vw,calc(100vh*.5526));
@@ -1978,6 +2291,69 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
 </head>
 <body>
 
+<!-- PANTALLA DE IDIOMA -->
+<div id="lang-screen">
+  <div class="lg-card">
+    <div class="lg-date">20 · 12 · 2026</div>
+    <img class="lg-rose" src="bb-rosa.webp" alt="" aria-hidden="true">
+    <div class="lg-title">Tienes una invitación especial</div>
+    <div class="lg-sub">You have a special invitation</div>
+    <div class="lg-name">XV · Shelsy Arabella Cruz</div>
+    <div class="lg-btns">
+      <button class="lg-btn lg-es" type="button" data-lang="es">Español</button>
+      <button class="lg-btn lg-en" type="button" data-lang="en">English</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ── IDIOMA (motor de xv-giselle, por diccionario) ──
+   Traduce elementos "hoja" (solo texto + em/b/br/span sin id). Lo dinámico usa T(). */
+(function(){
+  var D = {"Hoy comienza para ella<br>un nuevo capítulo": "Today a new chapter<br>begins for her", "Mis XV años": "Quinceañera", "<span class=\"cv-tap\">Toca para abrir</span>": "<span class=\"cv-tap\">Tap to open</span>", "<span>Su canción</span> · La Bella y la Bestia": "<span>Her song</span> · Beauty and the Beast", "Mis XV años · 2026": "Quinceañera · 2026", "<span>20</span><span class=\"sep\">·</span><span>Diciembre</span><span class=\"sep\">·</span><span>2026</span>": "<span>20</span><span class=\"sep\">·</span><span>December</span><span class=\"sep\">·</span><span>2026</span>", "Descubre": "Discover", "Cuenta regresiva": "Countdown", "Contamos <em>los</em> días": "Counting <em>the</em> days", "hasta su gran noche": "until her big night", "Días": "Days", "Horas": "Hours", "Minutos": "Minutes", "Segundos": "Seconds", "<span>mis XV años</span>": "<span>her quinceañera</span>", "Shelsy, <em>nuestra</em> pequeña arcoíris": "Shelsy, <em>our</em> little rainbow", "Con la bendición de Dios y el corazón lleno de alegría, celebramos los quince años de nuestra amada hija, una bendición que ilumina nuestras vidas y llena nuestros corazones de orgullo y&nbsp;felicidad.": "With God’s blessing and hearts full of joy, we celebrate the fifteenth birthday of our beloved daughter, a blessing who lights up our lives and fills our hearts with pride and&nbsp;happiness.", "Hoy comienza para ella un nuevo capítulo lleno de sueños, ilusiones y hermosas experiencias. Y no hay mayor felicidad para nosotros que compartir este momento tan especial con las personas que queremos.": "Today a new chapter begins for her, full of dreams, hopes and beautiful experiences. And there is no greater happiness for us than sharing this special moment with the people we love.", "Por eso, nos sentimos honrados de invitarles a celebrar junto a nosotros los XV años de nuestra querida Shelsy, y a ser parte de una noche mágica que quedará para siempre en nuestros corazones.": "That is why we are honored to invite you to celebrate with us the quinceañera of our dear Shelsy, and to be part of a magical night that will stay in our hearts forever.", "<em>Agradecemos de corazón su presencia y cariño en este día tan especial.</em>": "<em>We are deeply grateful for your presence and love on this very special day.</em>", "Con amor,<br><b>Ruth y Moris</b>": "With love,<br><b>Ruth &amp; Moris</b>", "Con amor de": "With love from", "Sus <em>Padres</em>": "Her <em>Parents</em>", "con todo nuestro amor": "with all our love", "Padres de la Quinceañera": "Parents of the Quinceañera", "Acompáñanos": "Join us", "La <em>Recepción</em>": "The <em>Reception</em>", "Recepción": "Reception", "5º nivel · Centro de Convenciones<br>San Miguel, El Salvador": "5th floor · Convention Center<br>San Miguel, El Salvador", "Ver ubicación": "View location", "Para tu estancia": "For your stay", "Hospedaje": "Lodging", "Si vienes de fuera, te recomendamos hospedarte en el mismo hotel de la celebración.": "If you are coming from out of town, we recommend staying at the same hotel where the celebration will be held.", "Reservar": "Book", "Cómo llegar": "Directions", "Programa de la velada": "Evening program", "El <em>recorrido</em> de la noche": "The <em>flow</em> of the night", "una noche para recordar": "a night to remember", "20 · Diciembre · MMXXVI": "20 · December · MMXXVI", "Cóctel": "Cocktail", "Copa de bienvenida": "Welcome drink", "Hotel Trópico Inn · Centro de Convenciones": "Hotel Trópico Inn · Convention Center", "Cena": "Dinner", "Fiesta": "Party", "Código de vestimenta": "Dress code", "Acompáñanos vestido para la ocasión": "Please dress for the occasion", "Caballeros": "Gentlemen", "traje formal": "formal suit", "Damas": "Ladies", "vestido formal": "formal dress", "Momentos": "Moments", "Sus <em>quince</em> años": "Her <em>fifteen</em> years", "el espejo de los recuerdos": "the mirror of memories", "Muéstrame…": "Show me…", "Toca el espejo o desliza": "Tap the mirror or swipe", "Una nota cariñosa": "A loving note", "Una noche <em>para</em> adultos": "An evening <em>for</em> adults", "Con todo el cariño, la celebración será exclusivamente para adultos. Agradecemos profundamente tu comprensión.": "With all our love, the celebration will be for adults only. We deeply appreciate your understanding.", "Regalos": "Gifts", "Lo más <em>importante</em> es tu presencia": "Your presence is what <em>matters</em> most", "El mejor regalo es que nos acompañes, pero si deseas tener un detalle con Shelsy, habrá lluvia de sobres.": "The best gift is having you with us, but if you would like to give Shelsy something, there will be an envelope box.", "Celebra con nosotros": "Celebrate with us", "Lluvia <em>de</em> sobres": "Envelope <em>shower</em>", "Su presencia es nuestro mejor regalo": "Your presence is our best gift", "El día de la celebración habrá un buzón donde podrás depositar tu sobre con todo el cariño.": "On the day of the celebration there will be a box where you can leave your envelope with all your love.", "Toca el sobre": "Tap the envelope", "Comparte tus fotos": "Share your photos", "Álbum <em>de</em> fotos": "Photo <em>album</em>", "Ayúdanos a guardar cada momento: sube aquí las fotos que tomes durante el evento.": "Help us keep every moment: upload here the photos you take during the event.", "Subir mis fotos": "Upload my photos", "El álbum de fotos se habilita el día del evento. Regresa aquí y sube todas tus fotos de la noche ✨": "The photo album opens on the day of the event. Come back here and upload all your photos from the night ✨", "Confirma tu asistencia": "Confirm your attendance", "¡Nos encantaría contar con tu presencia!": "We would love to have you with us!", "Pases": "Passes", "Hemos reservado": "We have reserved", "Lugares en tu honor": "Seats in your honor", "¿Nos acompañarás?": "Will you join us?", "Sí, asistiré": "Yes, I’ll be there", "No podré asistir": "I can’t make it", "Modificar mi respuesta": "Change my response", "Por favor confirma antes del <b>1 de diciembre de 2026</b>.": "Please confirm before <b>December 1st, 2026</b>.", "Invitación diseñada por": "Invitation designed by", "Menú": "Menu", "<a href=\"#inicio\"><small>01</small><span>Inicio</span></a>": "<a href=\"#inicio\"><small>01</small><span>Home</span></a>", "<a href=\"#mensaje\"><small>02</small><span>Mensaje</span></a>": "<a href=\"#mensaje\"><small>02</small><span>Message</span></a>", "<a href=\"#cuenta\"><small>03</small><span>Cuenta regresiva</span></a>": "<a href=\"#cuenta\"><small>03</small><span>Countdown</span></a>", "<a href=\"#subic\"><small>04</small><span>Ubicación</span></a>": "<a href=\"#subic\"><small>04</small><span>Location</span></a>", "<a href=\"#itinerario\"><small>05</small><span>Itinerario</span></a>": "<a href=\"#itinerario\"><small>05</small><span>Schedule</span></a>", "<a href=\"#dresscode\"><small>06</small><span>Vestimenta</span></a>": "<a href=\"#dresscode\"><small>06</small><span>Dress code</span></a>", "<a href=\"#galeria\"><small>07</small><span>Galería</span></a>": "<a href=\"#galeria\"><small>07</small><span>Gallery</span></a>", "<a href=\"#sobres\"><small>08</small><span>Lluvia de sobres</span></a>": "<a href=\"#sobres\"><small>08</small><span>Envelope shower</span></a>", "<a href=\"#salbum\"><small>09</small><span>Álbum de fotos</span></a>": "<a href=\"#salbum\"><small>09</small><span>Photo album</span></a>", "<a href=\"#srsvp\"><small>10</small><span>Confirmar asistencia</span></a>": "<a href=\"#srsvp\"><small>10</small><span>RSVP</span></a>", "Domingo, 20 de diciembre de 2026<br>San Miguel · El Salvador": "Sunday, December 20, 2026<br>San Miguel · El Salvador"};
+  var qs = new URLSearchParams(location.search), guardado = null;
+  try{ guardado = localStorage.getItem('shelsy-lang'); }catch(e){}
+  window.LANG = (qs.get('lang')==='en'||qs.get('lang')==='es') ? qs.get('lang') : (guardado || 'es');
+  window.T = function(es, en){ return window.LANG === 'en' ? en : es; };
+  var INL = {EM:1,B:1,STRONG:1,BR:1,I:1,SMALL:1,SPAN:1,A:1};
+  function hoja(el){
+    if(el.closest('svg,script,style,#lang-screen,.hero-name')) return false;
+    if(el.querySelector('[id]')) return false;
+    var ds = el.querySelectorAll('*');
+    for(var i=0;i<ds.length;i++) if(!INL[ds[i].tagName]) return false;
+    return el.textContent.trim().length > 0;
+  }
+  var nodos = null;
+  function recolectar(){
+    nodos = [];
+    document.body.querySelectorAll('*').forEach(function(el){
+      if(!hoja(el) || (el.parentElement && hoja(el.parentElement))) return;
+      var k = el.innerHTML.replace(/\s+/g,' ').trim();
+      if(D[k] !== undefined) nodos.push({el:el, es:el.innerHTML, en:D[k]});
+    });
+  }
+  window.applyLang = function(l){
+    window.LANG = l;
+    document.documentElement.lang = l;
+    if(!nodos) recolectar();
+    nodos.forEach(function(n){ n.el.innerHTML = (l === 'en') ? n.en : n.es; });
+    var b = document.getElementById('nv-lang'); if(b) b.textContent = (l === 'en') ? 'ES' : 'EN';
+    try{ localStorage.setItem('shelsy-lang', l); }catch(e){}
+    (window.__langHooks || []).forEach(function(f){ try{ f(l); }catch(e){} });
+  };
+  window.onLang = function(f){ (window.__langHooks = window.__langHooks || []).push(f); };
+  var pantalla = document.getElementById('lang-screen');
+  if(pantalla){
+    pantalla.querySelectorAll('.lg-btn').forEach(function(b){
+      b.addEventListener('click', function(){
+        applyLang(b.dataset.lang);
+        pantalla.classList.add('se-va');
+        setTimeout(function(){ pantalla.style.display = 'none'; }, 620);
+      });
+    });
+  }
+})();
+</script>
 <!-- PORTADA LIBRO · PASE DIGITAL -->
 <div id="envelope-screen" role="button" aria-label="Toca para abrir la invitación" tabindex="0">
   <div class="cv-stage">
@@ -2045,7 +2421,7 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
 <div class="wrap">
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" id="inicio">
     <div class="hero-bg-wrap">
       <img class="hero-bg" src="img/f1.jpg" alt="" style="object-position:50% 18%">
       <img class="hero-bg hero-bg-2" src="img/f2.jpg" alt="" style="object-position:64% 50%">
@@ -2086,7 +2462,7 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
   <div class="seam" style="--from:transparent;--to:var(--surface)" aria-hidden="true"></div>
 
   <!-- COUNTDOWN -->
-    <section class="section-surface countdown">
+    <section class="section-surface countdown" id="cuenta">
     <div class="container">
       <div class="eyebrow">Cuenta regresiva</div>
       <h2>Contamos <em>los</em> días</h2>
@@ -2130,7 +2506,7 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
   </section>
 
   <!-- HISTORIA -->
-  <section class="section-surface">
+  <section class="section-surface" id="mensaje">
     <span class="mono-wm" aria-hidden="true">XV</span>
     <div class="container">
       <div class="story">
@@ -2191,69 +2567,38 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
   <div class="seam" style="--from:var(--paper);--to:var(--paper)" aria-hidden="true"></div>
 
   <!-- UBICACIONES -->
-  <section class="section-paper locs">
+  <section class="section-paper locs" id="subic">
     <div class="container">
-      <div style="text-align:center">
-        <div class="eyebrow">Acompáñanos</div>
-        <h2>La <em>Recepción</em></h2>
-        <div class="locs-sub">San Miguel · El Salvador</div>
+      <div class="eyebrow">Acompáñanos</div>
+      <h2>La <em>Recepción</em></h2>
+      <div class="ubic-card">
+      <svg class="mf-corner mf-tl" viewBox="0 0 36 36" fill="none"><path d="M4,24 L4,4 L24,4" stroke="rgba(176,141,74,0.72)" stroke-width="1.6" stroke-linecap="round"/><circle cx="4" cy="4" r="2.8" fill="rgba(176,141,74,0.62)"/><path d="M10,4 Q10,10 4,10" stroke="rgba(176,141,74,0.42)" stroke-width="1" fill="none"/><circle cx="24" cy="4" r="1.6" fill="rgba(122,43,72,0.38)"/><circle cx="4" cy="24" r="1.6" fill="rgba(122,43,72,0.38)"/></svg>
+      <svg class="mf-corner mf-tr" viewBox="0 0 36 36" fill="none"><path d="M4,24 L4,4 L24,4" stroke="rgba(176,141,74,0.72)" stroke-width="1.6" stroke-linecap="round"/><circle cx="4" cy="4" r="2.8" fill="rgba(176,141,74,0.62)"/><path d="M10,4 Q10,10 4,10" stroke="rgba(176,141,74,0.42)" stroke-width="1" fill="none"/><circle cx="24" cy="4" r="1.6" fill="rgba(122,43,72,0.38)"/><circle cx="4" cy="24" r="1.6" fill="rgba(122,43,72,0.38)"/></svg>
+      <svg class="mf-corner mf-bl" viewBox="0 0 36 36" fill="none"><path d="M4,24 L4,4 L24,4" stroke="rgba(176,141,74,0.72)" stroke-width="1.6" stroke-linecap="round"/><circle cx="4" cy="4" r="2.8" fill="rgba(176,141,74,0.62)"/><path d="M10,4 Q10,10 4,10" stroke="rgba(176,141,74,0.42)" stroke-width="1" fill="none"/><circle cx="24" cy="4" r="1.6" fill="rgba(122,43,72,0.38)"/><circle cx="4" cy="24" r="1.6" fill="rgba(122,43,72,0.38)"/></svg>
+      <svg class="mf-corner mf-br" viewBox="0 0 36 36" fill="none"><path d="M4,24 L4,4 L24,4" stroke="rgba(176,141,74,0.72)" stroke-width="1.6" stroke-linecap="round"/><circle cx="4" cy="4" r="2.8" fill="rgba(176,141,74,0.62)"/><path d="M10,4 Q10,10 4,10" stroke="rgba(176,141,74,0.42)" stroke-width="1" fill="none"/><circle cx="24" cy="4" r="1.6" fill="rgba(122,43,72,0.38)"/><circle cx="4" cy="24" r="1.6" fill="rgba(122,43,72,0.38)"/></svg>
+        <div class="hosp-photo ubic-foto"><img src="img/salon.jpg" alt="Hotel Trópico Inn, San Miguel" width="560" height="560" decoding="async"></div>
+        <div class="ubic-tipo">Recepción</div>
+        <div class="ubic-name">Hotel Trópico Inn</div>
+        <div class="ubic-addr">5º nivel · Centro de Convenciones<br>San Miguel, El Salvador</div>
+        <div class="ubic-hora">6:30 p.m.</div>
+        <a class="btn-pink" href="https://maps.app.goo.gl/dUnB8BbTV5SLeRE9A" target="_blank" rel="noopener">Ver ubicación</a>
       </div>
-      <div class="locs-grid" style="grid-template-columns:minmax(0,520px);justify-content:center">
-        <article class="loc-card">
-          <div class="loc-crest">I</div>
-          <svg class="loc-corner loc-corner--tl" viewBox="0 0 46 46" fill="none" aria-hidden="true">
-            <g stroke="currentColor" stroke-width="1" fill="none">
-              <path d="M2 18 L2 2 L18 2"/>
-              <path d="M6 22 L6 6 L22 6" opacity=".55"/>
-              <path d="M14 6 Q10 6 10 10 Q10 14 14 14 Q18 14 18 10 Q18 6 14 6 Z" fill="currentColor" fill-opacity=".18"/>
-              <circle cx="14" cy="10" r="1.6" fill="currentColor"/>
-              <path d="M22 6 Q26 12 22 18" opacity=".5"/>
-              <path d="M6 22 Q12 26 18 22" opacity=".5"/>
-            </g>
-          </svg>
-          <svg class="loc-corner loc-corner--tr" viewBox="0 0 46 46" fill="none" aria-hidden="true">
-            <g stroke="currentColor" stroke-width="1" fill="none">
-              <path d="M2 18 L2 2 L18 2"/>
-              <path d="M6 22 L6 6 L22 6" opacity=".55"/>
-              <path d="M14 6 Q10 6 10 10 Q10 14 14 14 Q18 14 18 10 Q18 6 14 6 Z" fill="currentColor" fill-opacity=".18"/>
-              <circle cx="14" cy="10" r="1.6" fill="currentColor"/>
-            </g>
-          </svg>
-          <svg class="loc-corner loc-corner--bl" viewBox="0 0 46 46" fill="none" aria-hidden="true">
-            <g stroke="currentColor" stroke-width="1" fill="none">
-              <path d="M2 18 L2 2 L18 2"/>
-              <path d="M6 22 L6 6 L22 6" opacity=".55"/>
-              <path d="M14 6 Q10 6 10 10 Q10 14 14 14 Q18 14 18 10 Q18 6 14 6 Z" fill="currentColor" fill-opacity=".18"/>
-              <circle cx="14" cy="10" r="1.6" fill="currentColor"/>
-            </g>
-          </svg>
-          <svg class="loc-corner loc-corner--br" viewBox="0 0 46 46" fill="none" aria-hidden="true">
-            <g stroke="currentColor" stroke-width="1" fill="none">
-              <path d="M2 18 L2 2 L18 2"/>
-              <path d="M6 22 L6 6 L22 6" opacity=".55"/>
-              <path d="M14 6 Q10 6 10 10 Q10 14 14 14 Q18 14 18 10 Q18 6 14 6 Z" fill="currentColor" fill-opacity=".18"/>
-              <circle cx="14" cy="10" r="1.6" fill="currentColor"/>
-            </g>
-          </svg>
-          <div class="loc-type">Recepción</div>
-          <div class="loc-name">Hotel<br>Trópico Inn</div>
-          <div class="loc-place">5º nivel · Centro de Convenciones</div>
-          <div class="loc-divider" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M4 14 Q12 4 20 14 Q12 16 4 14 Z M12 14 L12 20" stroke="currentColor" stroke-width="1.2" fill="currentColor" fill-opacity=".15"/></svg>
-          </div>
-          <div class="loc-time">6:30<small>PM</small></div>
-          <div class="loc-addr">San Miguel · El Salvador</div>
-          <div class="loc-map">
-            <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen
-              src="https://maps.google.com/maps?q=Hotel+Tr%C3%B3pico+Inn+San+Miguel+El+Salvador&t=&z=15&ie=UTF8&iwloc=&output=embed"
-              title="Mapa Hotel Trópico Inn"></iframe>
-            <div class="loc-map-caption">la recepción</div>
-          </div>
-          <a class="loc-btn" href="https://maps.app.goo.gl/dUnB8BbTV5SLeRE9A" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s7-7.5 7-13a7 7 0 1 0-14 0c0 5.5 7 13 7 13z"/><circle cx="12" cy="9" r="2.5"/></svg>
-            Abrir en Google Maps
-          </a>
-        </article>
+    </div>
+  </section>
+
+  <section class="section-paper" id="shosp">
+    <div class="container">
+      <div class="eyebrow">Para tu estancia</div>
+      <h2>Hospedaje</h2>
+      <p class="hosp-intro">Si vienes de fuera, te recomendamos hospedarte en el mismo hotel de la celebración.</p>
+      <div class="ubic-card" style="margin-top:22px">
+        <div class="hosp-photo"><img src="img/salon.jpg" alt="Hotel Trópico Inn" width="560" height="560" decoding="async"></div>
+        <div class="hosp-name ubic-name">Hotel Trópico Inn</div>
+        <div class="hosp-city ubic-addr">San Miguel, El Salvador</div>
+        <div class="hosp-btns" style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px">
+          <a class="btn-hosp" href="https://www.google.com/search?q=Hotel+Tropico+Inn+San+Miguel+reservaciones" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M7 7V5a5 5 0 0110 0v2"/></svg><span>Reservar</span></a>
+          <a class="btn-hosp" href="https://maps.app.goo.gl/dUnB8BbTV5SLeRE9A" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a>
+        </div>
       </div>
     </div>
   </section>
@@ -2262,7 +2607,7 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
   <div class="seam" style="--from:var(--paper);--to:var(--paper)" aria-hidden="true"></div>
 
   <!-- ITINERARIO — PROGRAMA DE LA VELADA -->
-  <section class="section-paper itinerary">
+  <section class="section-paper itinerary" id="itinerario">
     <span class="mono-wm" aria-hidden="true">XV</span>
     <div class="container">
       <div class="eyebrow">Programa de la velada</div>
@@ -2389,7 +2734,7 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
   <div class="seam" style="--from:var(--paper);--to:var(--surface)" aria-hidden="true"></div>
 
   <!-- GIFTS -->
-  <section class="section-surface gifts">
+  <section class="section-surface gifts" id="sobres">
     <div class="container">
       <div class="gifts-head">
         <div class="eyebrow">Regalos</div>
@@ -2456,23 +2801,16 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
   <div class="seam" style="--from:var(--surface);--to:var(--bg)" aria-hidden="true"></div>
 
   <!-- ALBUM QR -->
-  <section class="section-bg album">
+  <section class="section-bg album" id="salbum">
     <div class="container album-inner">
-      <div class="eyebrow">Álbum compartido</div>
-      <h2>Comparte <em>tus</em> fotos con nosotros</h2>
-      <p class="album-text">Escanea el código QR con tu cámara para subir tus fotos al álbum del evento. Queremos vivir la noche desde tus ojos también.</p>
-      <div class="qr-magic" id="qr-magic" role="button" tabindex="0" aria-label="Revelar el código QR del álbum">
-        <img class="qc qc-tl" src="bb-esquina.webp" alt="" aria-hidden="true"><img class="qc qc-tr" src="bb-esquina.webp" alt="" aria-hidden="true">
-        <img class="qc qc-bl" src="bb-esquina.webp" alt="" aria-hidden="true"><img class="qc qc-br" src="bb-esquina.webp" alt="" aria-hidden="true">
-        <div class="album-qr" id="qr-wrap">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&color=10107A&bgcolor=FFFFFF&margin=4&data=https%3A%2F%2Fxv-shelsy-arabella.vercel.app" alt="Código QR para álbum compartido" width="300" height="300" decoding="async">
-        </div>
-        <span class="qr-sheen" aria-hidden="true"></span>
-        <span class="qr-mist" id="qr-mist" aria-hidden="true"></span>
-        <span class="qr-sparks" id="qr-sparks" aria-hidden="true"></span>
+      <div class="eyebrow">Comparte tus fotos</div>
+      <h2>Álbum <em>de</em> fotos</h2>
+      <p class="album-text">Ayúdanos a guardar cada momento: sube aquí las fotos que tomes durante el evento.</p>
+      <div class="alb-box" data-fecha="2026-12-20">
+        <div class="qr-frame" id="qr-wrap"><img src="qr-album.png" alt="Código QR del álbum de fotos" width="200" height="200" decoding="async"></div>
+        <a class="btn-pink album-btn" href="/album">Subir mis fotos</a>
       </div>
-      <br>
-      <a class="album-link" href="https://xv-shelsy-arabella.vercel.app" target="_blank" rel="noopener">Álbum disponible el día del evento</a>
+      <p class="album-aviso">El álbum de fotos se habilita el día del evento. Regresa aquí y sube todas tus fotos de la noche ✨</p>
     </div>
   </section>
 
@@ -2540,48 +2878,67 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
   #rsvp-feedback{font-family:var(--serif);font-size:16px;font-weight:500;min-height:1em}
   #rsvp-feedback.err{color:#9B2C3A}#rsvp-feedback.ok{color:var(--accent-deep)}
   </style>
-  <section class="section-paper rsvp">
-    <div class="container rsvp-inner">
-      <svg class="rsvp-corner rsvp-corner--tl" viewBox="0 0 52 52" fill="none" aria-hidden="true"><path d="M2 50 L2 2 L50 2" stroke="#B08D4A" stroke-width=".9" opacity=".7"/><circle cx="2" cy="2" r="2.5" fill="#B08D4A" opacity=".6"/></svg>
-      <svg class="rsvp-corner rsvp-corner--tr" viewBox="0 0 52 52" fill="none" aria-hidden="true"><path d="M2 50 L2 2 L50 2" stroke="#B08D4A" stroke-width=".9" opacity=".7"/><circle cx="2" cy="2" r="2.5" fill="#B08D4A" opacity=".6"/></svg>
-      <svg class="rsvp-corner rsvp-corner--bl" viewBox="0 0 52 52" fill="none" aria-hidden="true"><path d="M2 50 L2 2 L50 2" stroke="#B08D4A" stroke-width=".9" opacity=".7"/><circle cx="2" cy="2" r="2.5" fill="#B08D4A" opacity=".6"/></svg>
-      <svg class="rsvp-corner rsvp-corner--br" viewBox="0 0 52 52" fill="none" aria-hidden="true"><path d="M2 50 L2 2 L50 2" stroke="#B08D4A" stroke-width=".9" opacity=".7"/><circle cx="2" cy="2" r="2.5" fill="#B08D4A" opacity=".6"/></svg>
-      <svg class="rsvp-ornament" viewBox="0 0 360 80" fill="none" aria-hidden="true">
-        <g stroke="var(--gold)" stroke-width=".9" opacity=".75" fill="none">
-          <path d="M30 40 Q70 18 110 40 Q140 58 170 40"/>
-          <path d="M190 40 Q220 58 250 40 Q290 18 330 40"/>
-          <circle cx="180" cy="40" r="4"/>
-          <circle cx="180" cy="40" r="1.5" fill="var(--gold)" stroke="none"/>
-          <path d="M10 40 L30 40" opacity=".5"/>
-          <path d="M330 40 L350 40" opacity=".5"/>
-        </g>
-      </svg>
+  <section class="section-paper rsvp" id="srsvp">
+    <div class="container">
       <div class="eyebrow">Confirma tu asistencia</div>
-      <h2>Tu presencia <em>lo</em> es todo</h2>
-      <p class="rsvp-text-j">Por favor confírmanos si nos acompañarás antes del <b>1 de diciembre de 2026</b>.</p>
-      <p id="rsvp-pases-note"></p>
-      <p id="rsvp-name-display"></p>
-      <div class="rsvp-divider"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg></div>
-      <div class="rsvp-pases-display" id="rsvp-pases-display" style="display:none">
-        <div class="rsvp-pases-label">Pases</div>
-        <div class="rsvp-pases-num" id="rsvp-pases-num">1</div>
-      </div>
-      <div id="rsvp-bandeja" style="display:none">
-        <div class="rsvp-toggle">
-          <button class="rsvp-toggle-btn" id="btnYes" type="button">Asistiré</button>
-          <button class="rsvp-toggle-btn" id="btnNo" type="button">No podré asistir</button>
+      <h2>R.S.V.P.</h2>
+      <p class="rsvp-text-j" style="font-family:var(--serif);font-style:italic;font-size:19px;font-weight:500;color:var(--ink);margin:6px 0 26px">¡Nos encantaría contar con tu presencia!</p>
+      <div class="rsvp-outer">
+      <svg class="rsvp-bow-grande" viewBox="0 0 240 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="rbl" cx="28%" cy="38%"><stop offset="0%" stop-color="#FFF4F7"/><stop offset="55%" stop-color="#D98AA2"/><stop offset="100%" stop-color="#9A3A5C"/></radialGradient>
+          <radialGradient id="rbr" cx="72%" cy="38%"><stop offset="0%" stop-color="#FFF4F7"/><stop offset="55%" stop-color="#D98AA2"/><stop offset="100%" stop-color="#7A2B48"/></radialGradient>
+          <radialGradient id="rblf" cx="28%" cy="62%"><stop offset="0%" stop-color="#F1C6D3"/><stop offset="100%" stop-color="#5A1F36"/></radialGradient>
+          <radialGradient id="rbrf" cx="72%" cy="62%"><stop offset="0%" stop-color="#F1C6D3"/><stop offset="100%" stop-color="#5A1F36"/></radialGradient>
+        </defs>
+        <path d="M120,75 C108,52 76,28 46,40 C22,50 28,76 56,80 C82,84 112,76 120,75Z" fill="url(#rbl)"/>
+        <path d="M120,79 C106,90 80,98 56,90 C36,83 38,68 58,70 C82,72 112,78 120,79Z" fill="url(#rblf)" opacity="0.75"/>
+        <path d="M120,75 C132,52 164,28 194,40 C218,50 212,76 184,80 C158,84 128,76 120,75Z" fill="url(#rbr)"/>
+        <path d="M120,79 C134,90 160,98 184,90 C204,83 202,68 182,70 C158,72 128,78 120,79Z" fill="url(#rbrf)" opacity="0.75"/>
+        <path d="M110,86 C90,108 64,126 40,140" stroke="#9A3A5C" stroke-width="9" stroke-linecap="round" fill="none"/>
+        <path d="M115,88 C98,110 76,128 54,142" stroke="#F6D7E0" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.7"/>
+        <path d="M130,86 C150,108 176,126 200,140" stroke="#9A3A5C" stroke-width="9" stroke-linecap="round" fill="none"/>
+        <path d="M125,88 C142,110 164,128 186,142" stroke="#F6D7E0" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.7"/>
+        <ellipse cx="120" cy="78" rx="20" ry="16" fill="#5A1F36"/>
+        <ellipse cx="120" cy="78" rx="11" ry="9" fill="#9A3A5C"/>
+        <path d="M58,50 C75,43 96,48 112,60" stroke="rgba(255,255,255,0.32)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        <path d="M182,50 C165,43 144,48 128,60" stroke="rgba(255,255,255,0.32)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        <ellipse cx="114" cy="72" rx="5" ry="3.5" fill="rgba(255,255,255,0.30)"/>
+      </svg>
+      <div class="rsvp-frame">
+      <svg class="mf-corner mf-tl" viewBox="0 0 36 36" fill="none"><path d="M4,24 L4,4 L24,4" stroke="rgba(176,141,74,0.72)" stroke-width="1.6" stroke-linecap="round"/><circle cx="4" cy="4" r="2.8" fill="rgba(176,141,74,0.62)"/><path d="M10,4 Q10,10 4,10" stroke="rgba(176,141,74,0.42)" stroke-width="1" fill="none"/><circle cx="24" cy="4" r="1.6" fill="rgba(122,43,72,0.38)"/><circle cx="4" cy="24" r="1.6" fill="rgba(122,43,72,0.38)"/></svg>
+      <svg class="mf-corner mf-tr" viewBox="0 0 36 36" fill="none"><path d="M4,24 L4,4 L24,4" stroke="rgba(176,141,74,0.72)" stroke-width="1.6" stroke-linecap="round"/><circle cx="4" cy="4" r="2.8" fill="rgba(176,141,74,0.62)"/><path d="M10,4 Q10,10 4,10" stroke="rgba(176,141,74,0.42)" stroke-width="1" fill="none"/><circle cx="24" cy="4" r="1.6" fill="rgba(122,43,72,0.38)"/><circle cx="4" cy="24" r="1.6" fill="rgba(122,43,72,0.38)"/></svg>
+      <svg class="mf-corner mf-bl" viewBox="0 0 36 36" fill="none"><path d="M4,24 L4,4 L24,4" stroke="rgba(176,141,74,0.72)" stroke-width="1.6" stroke-linecap="round"/><circle cx="4" cy="4" r="2.8" fill="rgba(176,141,74,0.62)"/><path d="M10,4 Q10,10 4,10" stroke="rgba(176,141,74,0.42)" stroke-width="1" fill="none"/><circle cx="24" cy="4" r="1.6" fill="rgba(122,43,72,0.38)"/><circle cx="4" cy="24" r="1.6" fill="rgba(122,43,72,0.38)"/></svg>
+      <svg class="mf-corner mf-br" viewBox="0 0 36 36" fill="none"><path d="M4,24 L4,4 L24,4" stroke="rgba(176,141,74,0.72)" stroke-width="1.6" stroke-linecap="round"/><circle cx="4" cy="4" r="2.8" fill="rgba(176,141,74,0.62)"/><path d="M10,4 Q10,10 4,10" stroke="rgba(176,141,74,0.42)" stroke-width="1" fill="none"/><circle cx="24" cy="4" r="1.6" fill="rgba(122,43,72,0.38)"/><circle cx="4" cy="24" r="1.6" fill="rgba(122,43,72,0.38)"/></svg>
+        <p class="rsvp-hola" id="rsvp-pases-note"></p>
+        <p id="rsvp-name-display"></p>
+        <div class="pases-wrap" id="rsvp-pases-display" style="display:none">
+          <div class="pases-card">
+            <div class="pases-title">Pases</div>
+            <div class="pases-sub">Hemos reservado</div>
+            <div class="pases-num" id="rsvp-pases-num">1</div>
+            <div class="pases-honor">Lugares en tu honor</div>
+          </div>
         </div>
-        <div class="rsvp-fields" id="rsvp-fields" style="display:none"></div>
-        <button class="rsvp-btn" id="rsvp-confirm-btn" type="button"><span id="rsvp-btn-text">Confirmar asistencia</span></button>
+        <div id="rsvp-bandeja" style="display:none">
+          <label>¿Nos acompañarás?</label>
+          <div class="rsvp-toggle">
+            <button class="rsvp-toggle-btn" id="btnYes" type="button">Sí, asistiré</button>
+            <button class="rsvp-toggle-btn" id="btnNo" type="button">No podré asistir</button>
+          </div>
+          <div class="rsvp-fields" id="rsvp-fields" style="display:none"></div>
+          <button class="btn-wa" id="rsvp-confirm-btn" type="button"><span id="rsvp-btn-text">Confirmar asistencia</span></button>
+        </div>
+        <div class="rsvp-gracias" id="rsvp-gracias" style="display:none">
+          <svg class="rsvp-gracias-icon" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="8.5 12.5 11 15 16 9.5"/></svg>
+          <p class="rsvp-gracias-title" id="rsvp-gracias-title"></p>
+          <p class="rsvp-gracias-sub" id="rsvp-gracias-sub"></p>
+          <button class="rsvp-editar-btn" id="rsvp-editar-btn" type="button">Modificar mi respuesta</button>
+        </div>
+        <p class="rsvp-feedback" id="rsvp-feedback"></p>
       </div>
-      <div class="rsvp-gracias" id="rsvp-gracias" style="display:none">
-        <svg class="rsvp-gracias-icon" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="8.5 12.5 11 15 16 9.5"/></svg>
-        <p class="rsvp-gracias-title" id="rsvp-gracias-title"></p>
-        <p class="rsvp-gracias-sub" id="rsvp-gracias-sub"></p>
-        <button class="rsvp-editar-btn" id="rsvp-editar-btn" type="button">Modificar mi respuesta</button>
       </div>
-      <p id="rsvp-feedback"></p>
-      <div class="rsvp-date">Fecha límite · Martes 1 Diciembre 2026</div>
+      <p class="rsvp-date-j">Por favor confirma antes del <b>1 de diciembre de 2026</b>.</p>
     </div>
   </section>
 
@@ -2612,6 +2969,31 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
     </div>
   </footer>
 
+</div>
+
+
+<!-- BARRA INFERIOR + MENÚ -->
+<nav class="nv-bar" id="nv-bar" aria-label="Secciones">
+  <span class="nv-mono">XV</span>
+  <button class="nv-ico nv-lang" id="nv-lang" type="button" aria-label="Cambiar idioma">EN</button>
+  <button class="nv-ico" id="nv-share" type="button" aria-label="Compartir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+  <button class="nv-menu" id="nv-open" type="button" aria-label="Abrir menú"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="nv-menu-t">Menú</span></button>
+</nav>
+<div class="nv-panel" id="nv-panel" aria-hidden="true">
+  <div class="nv-head"><span class="nv-mono">XV</span><button class="nv-close" id="nv-close" type="button" aria-label="Cerrar menú">&times;</button></div>
+  <ol class="nv-list" id="nv-list">
+    <li><a href="#inicio"><small>01</small><span>Inicio</span></a></li>
+    <li><a href="#mensaje"><small>02</small><span>Mensaje</span></a></li>
+    <li><a href="#cuenta"><small>03</small><span>Cuenta regresiva</span></a></li>
+    <li><a href="#subic"><small>04</small><span>Ubicación</span></a></li>
+    <li><a href="#itinerario"><small>05</small><span>Itinerario</span></a></li>
+    <li><a href="#dresscode"><small>06</small><span>Vestimenta</span></a></li>
+    <li><a href="#galeria"><small>07</small><span>Galería</span></a></li>
+    <li><a href="#sobres"><small>08</small><span>Lluvia de sobres</span></a></li>
+    <li><a href="#salbum"><small>09</small><span>Álbum de fotos</span></a></li>
+    <li><a href="#srsvp"><small>10</small><span>Confirmar asistencia</span></a></li>
+  </ol>
+  <div class="nv-foot">Domingo, 20 de diciembre de 2026<br>San Miguel · El Salvador</div>
 </div>
 
 <!-- LIGHTBOX -->
@@ -2742,13 +3124,14 @@ document.body.style.overflow = 'hidden';
   const pases = parseInt(q.get('pases')) || 0;
   if(para){
     document.getElementById('bk-guest').textContent = para;
+    var pv = function(){ document.getElementById('bk-for').textContent = T('Pase válido para','Valid pass for'); }; pv(); window.onLang && onLang(pv);
     if(pases > 0){
       document.getElementById('bk-pases-n').textContent = pases;
-      document.getElementById('bk-pases-l').textContent = pases === 1 ? 'pase' : 'pases';
+      var pl = function(){ document.getElementById('bk-pases-l').textContent = pases === 1 ? T('pase','pass') : T('pases','passes'); }; pl(); window.onLang && onLang(pl);
       document.getElementById('bk-pases').style.display = '';
     }
   } else {
-    document.getElementById('bk-for').textContent = 'Pase digital';
+    var pf = function(){ document.getElementById('bk-for').textContent = T('Pase digital','Digital pass'); }; pf(); window.onLang && onLang(pf);
   }
 
   let opened = false, flashed = false, failsafe = null;
@@ -2759,7 +3142,7 @@ document.body.style.overflow = 'hidden';
     if(opened) return;
     opened = true;
     const music = document.getElementById('bg-music');
-    if(music){
+    if(music && music.paused){
       try{ music.currentTime = 0; }catch(e){}
       music.volume = 0;
       const mp = music.play();
@@ -3119,7 +3502,7 @@ gsap.fromTo('.dc-avoid, .dc-swatch',{opacity:0,scale:.5,y:22},{opacity:1,scale:1
 
   function pintaIndicador(){
     dots.forEach(function(d, i){ d.className = (i === idx ? 'on' : ''); });
-    countEl.textContent = (idx + 1) + ' de ' + SRC.length;
+    countEl.textContent = (idx + 1) + T(' de ',' of ') + SRC.length;
   }
 
   function revelar(dir){
@@ -3181,6 +3564,7 @@ gsap.fromTo('.dc-avoid, .dc-swatch',{opacity:0,scale:.5,y:22},{opacity:1,scale:1
   });
 
   pintaIndicador();
+  window.onLang && onLang(pintaIndicador);
 
   // Entrada (fromTo + immediateRender:false: si el ScrollTrigger no dispara, nada queda invisible)
   gsap.fromTo('.mirror-stage', {opacity:0, y:26},
@@ -3477,10 +3861,10 @@ gsap.fromTo('.album-link',{opacity:0,y:10},{opacity:1,y:0,duration:.9,scrollTrig
   var estadoSel = null;
   function setFeedback(t, c){ fb.textContent = t; fb.className = c || ''; }
   if(!para){
-    note.textContent = 'Esta invitación es personal. Abre el link que recibiste para confirmar tu asistencia.';
+    var pn = function(){ note.textContent = T('Esta invitación es personal. Abre el link que recibiste para confirmar tu asistencia.','This invitation is personal. Please open the link you received to confirm your attendance.'); }; pn(); window.onLang && onLang(pn);
     return;
   }
-  note.textContent = 'Esta invitación es para';
+  var pn2 = function(){ note.textContent = T('Esta invitación es para','This invitation is for'); }; pn2(); window.onLang && onLang(pn2);
   var nameEl = document.getElementById('rsvp-name-display');
   if(nameEl) nameEl.textContent = para;
   document.getElementById('rsvp-pases-num').textContent = pases;
@@ -3488,10 +3872,16 @@ gsap.fromTo('.album-link',{opacity:0,y:10},{opacity:1,y:0,duration:.9,scrollTrig
   for(var i = 1; i <= pases; i++){
     var inp = document.createElement('input');
     inp.className = 'rsvp-input rsvp-name'; inp.type = 'text'; inp.autocomplete = 'off';
-    inp.placeholder = 'Nombre completo del invitado ' + i;
+    inp.dataset.n = i; inp.placeholder = T('Nombre completo del invitado ','Full name of guest ') + i;
     fields.appendChild(inp);
   }
   var inputs = fields.querySelectorAll('input');
+  window.onLang && onLang(function(){
+    inputs.forEach(function(x){ x.placeholder = T('Nombre completo del invitado ','Full name of guest ') + x.dataset.n; });
+    if(btnText.textContent === 'Actualizar respuesta' || btnText.textContent === 'Update response') btnText.textContent = T('Actualizar respuesta','Update response');
+    else btnText.textContent = T('Confirmar asistencia','Confirm attendance');
+    if(graciasEl.style.display !== 'none' && estadoSel) mostrarGracias(estadoSel, [].map.call(inputs, function(x){ return x.value.trim(); }).filter(Boolean));
+  });
   function selectRsvp(e){
     estadoSel = e;
     btnYes.classList.toggle('on', e === 'confirmado');
@@ -3503,11 +3893,11 @@ gsap.fromTo('.album-link',{opacity:0,y:10},{opacity:1,y:0,duration:.9,scrollTrig
   btnNo.addEventListener('click', function(){ selectRsvp('declino'); });
   function mostrarGracias(estado, nombres){
     if(estado === 'confirmado'){
-      gTitleEl.textContent = '¡Gracias por confirmar!';
-      gSubEl.textContent = nombres.length === 1 ? 'Te esperamos, ' + nombres[0] + '.' : 'Confirmamos ' + nombres.length + ' lugares: ' + nombres.join(', ') + '.';
+      gTitleEl.textContent = T('¡Gracias por confirmar!','Thank you for confirming!');
+      gSubEl.textContent = nombres.length === 1 ? T('Te esperamos, ','We look forward to seeing you, ') + nombres[0] + '.' : T('Confirmamos ','We confirmed ') + nombres.length + T(' lugares: ',' seats: ') + nombres.join(', ') + '.';
     } else {
-      gTitleEl.textContent = 'Gracias por avisarnos';
-      gSubEl.textContent = 'Lamentamos que no puedas acompañarnos. Te vamos a extrañar.';
+      gTitleEl.textContent = T('Gracias por avisarnos','Thank you for letting us know');
+      gSubEl.textContent = T('Lamentamos que no puedas acompañarnos. Te vamos a extrañar.','We are sorry you can’t join us. We will miss you.');
     }
     bandejaEl.style.display = 'none'; graciasEl.style.display = '';
     if(frozen) editarBtn.disabled = true;
@@ -3516,7 +3906,7 @@ gsap.fromTo('.album-link',{opacity:0,y:10},{opacity:1,y:0,duration:.9,scrollTrig
   editarBtn.addEventListener('click', function(){ if(!frozen) abrirBandeja(); });
   if(frozen){
     btn.disabled = true; btnYes.disabled = true; btnNo.disabled = true;
-    setFeedback('La fecha límite para confirmar ya pasó.', 'err');
+    setFeedback(T('La fecha límite para confirmar ya pasó.','The deadline to confirm has passed.'), 'err');
   }
   bandejaEl.style.display = '';
   fetch(API + '?nombre=' + encodeURIComponent(para) + '&url_boda=' + encodeURIComponent(URL_BODA))
@@ -3526,18 +3916,18 @@ gsap.fromTo('.album-link',{opacity:0,y:10},{opacity:1,y:0,duration:.9,scrollTrig
       if(!inv || !inv.estado || inv.estado === 'pendiente') return;
       selectRsvp(inv.estado);
       (inv.nombres_confirmados || []).forEach(function(n, k){ if(inputs[k]) inputs[k].value = n; });
-      btnText.textContent = 'Actualizar respuesta';
+      btnText.textContent = T('Actualizar respuesta','Update response');
       mostrarGracias(inv.estado, inv.nombres_confirmados || []);
     }).catch(function(){});
   btn.addEventListener('click', function(){
     if(frozen) return;
-    if(!estadoSel){ setFeedback('Elige si asistirás o no.', 'err'); return; }
+    if(!estadoSel){ setFeedback(T('Elige si asistirás o no.','Please choose whether you will attend.'), 'err'); return; }
     var nombres = [];
     if(estadoSel === 'confirmado'){
       inputs.forEach(function(x){ if(x.value.trim()) nombres.push(x.value.trim()); });
-      if(!nombres.length){ setFeedback('Escribe al menos un nombre.', 'err'); return; }
+      if(!nombres.length){ setFeedback(T('Escribe al menos un nombre.','Please write at least one name.'), 'err'); return; }
     }
-    btn.disabled = true; setFeedback('Enviando…', '');
+    btn.disabled = true; setFeedback(T('Enviando…','Sending…'), '');
     fetch(API, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({
       nombre: para, url_boda: URL_BODA, estado: estadoSel,
       pases_confirmados: estadoSel === 'confirmado' ? nombres.length : 0,
@@ -3545,15 +3935,15 @@ gsap.fromTo('.album-link',{opacity:0,y:10},{opacity:1,y:0,duration:.9,scrollTrig
     .then(function(r){ return r.json().then(function(j){ return {ok: r.ok, j: j}; }); })
     .then(function(res){
       btn.disabled = false;
-      if(!res.ok || (res.j && res.j.ok === false)){ setFeedback('No pudimos registrar tu respuesta. Intenta de nuevo.', 'err'); return; }
-      btnText.textContent = 'Actualizar respuesta';
+      if(!res.ok || (res.j && res.j.ok === false)){ setFeedback(T('No pudimos registrar tu respuesta. Intenta de nuevo.','We could not save your response. Please try again.'), 'err'); return; }
+      btnText.textContent = T('Actualizar respuesta','Update response');
       mostrarGracias(estadoSel, nombres);
-    }).catch(function(){ btn.disabled = false; setFeedback('Sin conexión. Intenta de nuevo.', 'err'); });
+    }).catch(function(){ btn.disabled = false; setFeedback(T('Sin conexión. Intenta de nuevo.','No connection. Please try again.'), 'err'); });
   });
 })();
 gsap.fromTo('.rsvp-ornament',{opacity:0,scaleX:0},{opacity:1,scaleX:1,duration:1.2,ease:'power3.out',scrollTrigger:{trigger:'.rsvp-ornament',start:'top 85%'}});
 gsap.fromTo('.rsvp .eyebrow, .rsvp h2, .rsvp-text',{opacity:0,y:16},{opacity:1,y:0,duration:1.1,stagger:.12,ease:'power3.out',scrollTrigger:{trigger:'.rsvp',start:'top 78%'}});
-gsap.fromTo('.rsvp-inner',{opacity:0,y:40},{opacity:1,y:0,duration:1.1,ease:'power3.out',immediateRender:false,scrollTrigger:{trigger:'.rsvp',start:'top 82%'}});
+
 gsap.fromTo('.rsvp-date',{opacity:0,letterSpacing:'1em'},{opacity:1,letterSpacing:'.45em',duration:1,scrollTrigger:{trigger:'.rsvp-date',start:'top 90%'}});
 
 // ------ FOOTER ------
@@ -3820,6 +4210,39 @@ window.addEventListener('resize',()=>ScrollTrigger.refresh());
     var r = box.getBoundingClientRect();
     if(r.top < innerHeight*.55 && r.bottom > 0 && document.querySelector('.wrap').style.visibility === 'visible'){ setTimeout(reveal, 900); clearInterval(iv); }
   }, 400);
+})();
+
+// --- Álbum: el QR se desbloquea el día del evento ---
+(function(){
+  var box = document.querySelector('.alb-box'); if(!box) return;
+  var p = box.dataset.fecha.split('-'); var abre = new Date(+p[0], +p[1]-1, +p[2], 0, 0, 0);
+  if(new Date() < abre) box.classList.add('bloqueado');
+})();
+// --- Barra inferior + menú ---
+(function(){
+  var bar = document.getElementById('nv-bar'), panel = document.getElementById('nv-panel');
+  if(!bar || !panel) return;
+  var mostrar = function(){ if(document.querySelector('.wrap').style.visibility === 'visible') bar.classList.add('on'); };
+  var iv = setInterval(function(){ mostrar(); if(bar.classList.contains('on')) clearInterval(iv); }, 500);
+  function abrir(){ panel.classList.add('open'); panel.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden';
+    panel.querySelectorAll('.nv-list li').forEach(function(li,i){ li.style.transitionDelay = (.06 + i*.05) + 's'; }); }
+  function cerrar(){ panel.classList.remove('open'); panel.setAttribute('aria-hidden','true'); document.body.style.overflow='';
+    panel.querySelectorAll('.nv-list li').forEach(function(li){ li.style.transitionDelay = '0s'; }); }
+  document.getElementById('nv-open').addEventListener('click', abrir);
+  document.getElementById('nv-close').addEventListener('click', cerrar);
+  panel.querySelectorAll('.nv-list a').forEach(function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault(); var t = document.querySelector(a.getAttribute('href')); cerrar();
+      if(t) setTimeout(function(){ window.scrollTo({top: t.getBoundingClientRect().top + scrollY - 10, behavior:'smooth'}); }, 260);
+    });
+  });
+  document.getElementById('nv-share').addEventListener('click', function(){
+    var url = location.origin + '/';
+    var d = {title: document.title, url: url};
+    if(navigator.share) navigator.share(d).catch(function(){});
+    else if(navigator.clipboard) navigator.clipboard.writeText(url);
+  });
+  document.getElementById('nv-lang').addEventListener('click', function(){ if(window.applyLang) applyLang(window.LANG === 'en' ? 'es' : 'en'); });
 })();
 // --- Botón rosa: estados is-ready / is-playing con el reproductor de la plantilla ---
 (function(){
