@@ -3976,7 +3976,7 @@ gsap.fromTo('.album-link',{opacity:0,y:10},{opacity:1,y:0,duration:.9,scrollTrig
   var estadoSel = null;
   function setFeedback(t, c){ fb.textContent = t; fb.className = c || ''; }
   if(!para){
-    var pn = function(){ note.textContent = T('Esta invitación es personal. Abre el link que recibiste para confirmar tu asistencia.','This invitation is personal. Please open the link you received to confirm your attendance.'); }; pn(); window.onLang && onLang(pn);
+    note.textContent = '';
     return;
   }
   var pn2 = function(){ note.textContent = T('Esta invitación es para','This invitation is for'); }; pn2(); window.onLang && onLang(pn2);
