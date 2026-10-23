@@ -1531,7 +1531,8 @@ body{font-weight:500}
 .bb-candle{position:absolute;top:-190px;width:clamp(62px,15vw,120px);height:auto;opacity:.92;
   filter:drop-shadow(0 10px 16px rgba(90,31,54,.18))}
 .bb-candle--l{left:0}
-.bb-candle--r{right:0;transform:scaleX(-1)}
+.bb-candle--r{right:0}
+@media (prefers-reduced-motion:reduce){.bb-candle--r{transform:scaleX(-1)}}
 .itv3-item{padding:34px 16px 6px}
 .itv3-card{position:relative;width:min(100%,420px);padding:26px 22px 24px;border-radius:22px;
   background:linear-gradient(180deg,#fff 0%,#fbfcf1 100%);
@@ -2217,6 +2218,66 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
 #salbum .album-btn{text-decoration:none}
 #srsvp #rsvp-pases-display:not([style*="none"]){display:block!important;opacity:1!important;max-height:none!important}
 .footer-names{font-size:clamp(28px,8.4vw,52px)!important;white-space:normal!important;overflow-wrap:anywhere;max-width:100%}
+#shosp .ubic-card{box-sizing:border-box;width:100%;max-width:400px;margin-left:auto!important;margin-right:auto!important;padding:30px 22px!important;display:flex;flex-direction:column;align-items:center}
+#shosp .hosp-photo{margin:0 auto 18px!important;float:none!important;left:auto!important;transform:none!important}
+#shosp .hosp-name{margin-top:0}
+#shosp .hosp-city{text-transform:none!important;letter-spacing:.02em!important;font-size:17px!important}
+#shosp .hosp-btns{width:100%;display:grid!important;grid-template-columns:1fr 1fr;gap:10px}
+#shosp .btn-hosp{justify-content:center;width:100%;box-sizing:border-box}
+/* ===== RSVP — diseño de boda-jennifer (paleta rosa) ===== */
+#srsvp.section-bg.rsvp{position:relative;overflow:hidden}
+#srsvp.section-bg.rsvp::before{content:"";position:absolute;inset:-2px;background:url('img/bg-flores-rsvp.jpeg') center/cover no-repeat;opacity:.42;pointer-events:none;z-index:0;mask-image:linear-gradient(to right,transparent 0%,black 18%,black 82%,transparent 100%),linear-gradient(to bottom,transparent 0%,black 16%,black 84%,transparent 100%);mask-composite:intersect;-webkit-mask-image:linear-gradient(to right,transparent 0%,black 18%,black 82%,transparent 100%),linear-gradient(to bottom,transparent 0%,black 16%,black 84%,transparent 100%);-webkit-mask-composite:destination-in}
+#srsvp > .container{position:relative;z-index:1}
+#srsvp .rsvp-card{max-width:580px;margin:0 auto;background:rgba(255,255,255,.84);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(201,160,68,.38);padding:clamp(44px,6vw,76px) clamp(22px,5vw,68px);position:relative;box-shadow:0 24px 64px rgba(90,31,54,.10),0 4px 20px rgba(201,160,68,.14)}
+#srsvp .rsvp-card::before{content:"";position:absolute;inset:10px;border:1px solid rgba(201,160,68,.20);pointer-events:none}
+#srsvp .rsvp-corner{position:absolute;width:52px;height:52px;pointer-events:none}
+#srsvp .rsvp-corner--tl{top:0;left:0}#srsvp .rsvp-corner--tr{top:0;right:0;transform:scaleX(-1)}
+#srsvp .rsvp-corner--bl{bottom:0;left:0;transform:scaleY(-1)}#srsvp .rsvp-corner--br{bottom:0;right:0;transform:scale(-1,-1)}
+#srsvp .rsvp-inner{text-align:center}
+#srsvp .rsvp-ornament{display:block;margin:0 auto 28px;width:min(280px,75vw);height:auto}
+#srsvp .rsvp-title{font-family:var(--display);font-style:italic;font-size:clamp(32px,4.2vw,52px);color:var(--ink);margin-bottom:18px;line-height:1.15}
+#srsvp .rsvp-title em{color:var(--gold-deep);font-style:italic}
+#srsvp .rsvp-text{font-family:var(--serif);font-size:18px;color:var(--ink);line-height:1.75;margin:0 auto 30px;font-weight:500;max-width:420px}
+#srsvp #rsvp-pases-note{display:block;font-family:var(--serif);font-style:italic;font-size:18px;font-weight:500;color:var(--ink-soft);margin:0 auto 4px;max-width:420px;letter-spacing:0;text-transform:none}
+#srsvp #rsvp-pases-note:empty{display:none}
+#srsvp #rsvp-name-display{font-family:var(--display);font-style:italic;font-weight:600;font-size:clamp(30px,7vw,44px);color:var(--gold-deep);line-height:1.2;margin:6px auto 8px;overflow-wrap:anywhere}
+#srsvp #rsvp-name-display:empty{display:none}
+#srsvp .rsvp-divider{display:flex;align-items:center;gap:14px;margin:0 auto 30px;max-width:320px}
+#srsvp .rsvp-divider::before,#srsvp .rsvp-divider::after{content:"";flex:1;height:1px;background:linear-gradient(to right,transparent,rgba(201,160,68,.45),transparent)}
+#srsvp .rsvp-divider-heart{color:var(--rose);flex-shrink:0;opacity:.85}
+#srsvp .rsvp-fields{display:flex;flex-direction:column;gap:10px;max-width:420px;margin:0 auto 20px}
+#srsvp .rsvp-input{width:100%;padding:15px 20px;border:1.5px solid rgba(201,160,68,.28);border-radius:12px;background:rgba(255,255,255,.78);font-family:var(--sans);font-size:16px!important;font-weight:500;color:var(--ink);letter-spacing:.03em;outline:none;transition:border-color .3s,box-shadow .3s,background .3s;-webkit-appearance:none;min-height:52px;box-sizing:border-box}
+#srsvp .rsvp-input:focus{border-color:var(--gold-deep);box-shadow:0 0 0 3px rgba(201,160,68,.15);background:rgba(255,255,255,.96)}
+#srsvp .rsvp-input::placeholder{color:var(--ink-soft);opacity:.7;font-weight:400;font-style:normal}
+#srsvp .rsvp-btn{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;max-width:420px;margin:0 auto;padding:18px 36px;border-radius:50px;border:1.5px solid rgba(201,160,68,.5);background:linear-gradient(135deg,#F7CFDB 0%,#FCE6ED 100%);font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.35em;text-transform:uppercase;color:var(--ink);cursor:pointer;min-height:56px;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s;box-shadow:0 6px 20px rgba(240,170,190,.45),0 2px 8px rgba(201,160,68,.18)}
+#srsvp .rsvp-btn::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,var(--gold) 0%,#f5dfa0 50%,var(--gold) 100%);opacity:0;transition:opacity .4s;border-radius:50px}
+#srsvp .rsvp-btn:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(201,160,68,.3)}
+#srsvp .rsvp-btn:hover::after{opacity:1}
+#srsvp .rsvp-btn > *{position:relative;z-index:1}
+#srsvp .rsvp-pases-display:not([style*="none"]){max-width:420px;margin:0 auto 28px;padding:20px 32px;background:rgba(240,170,190,.18);border:1px solid rgba(201,160,68,.28);border-radius:14px;display:flex!important;align-items:center;justify-content:space-between;gap:16px;box-sizing:border-box}
+#srsvp .rsvp-pases-label{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft);text-align:left}
+#srsvp .rsvp-pases-num{font-family:var(--display);font-style:italic;font-size:clamp(36px,5vw,52px);color:var(--gold-deep);line-height:1}
+#srsvp .rsvp-deadline{display:inline-flex;align-items:center;gap:8px;margin-top:26px;font-family:var(--sans);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);padding-left:.24em;font-weight:600}
+#srsvp .rsvp-toggle{display:flex;gap:10px;max-width:420px;margin:0 auto 20px;border:0;overflow:visible}
+#srsvp .rsvp-toggle-btn{flex:1;padding:14px 8px;border:1.5px solid rgba(201,160,68,.28);background:rgba(255,255,255,.6);cursor:pointer;font-family:var(--serif);font-style:italic;font-size:18px;font-weight:600;letter-spacing:0;text-transform:none;color:var(--ink);border-radius:8px;transition:all .25s;min-height:54px}
+#srsvp .rsvp-toggle-btn:disabled{opacity:.45;cursor:not-allowed}
+#srsvp #btnYes.on{background:rgba(176,96,122,.14);border-color:var(--accent);color:var(--accent-deep)}
+#srsvp #btnNo.on{background:rgba(138,97,32,.09);border-color:var(--gold-deep);color:var(--gold-deep)}
+#srsvp #rsvp-feedback{font-family:var(--serif);font-style:italic;font-size:17px;text-align:center;margin:14px auto 0;max-width:420px}
+#srsvp #rsvp-feedback:empty{display:none}
+
+@keyframes tlSway{0%,100%{translate:-3px 0;rotate:-.5deg}50%{translate:3px 0;rotate:.5deg}}
+#itin .tl-row{animation:tlSway 5.2s ease-in-out infinite;transform-origin:50% 50%}
+#itin .tl-row:nth-child(2){animation-duration:6s;animation-delay:-1.4s}
+#itin .tl-row:nth-child(3){animation-duration:5.6s;animation-delay:-2.9s}
+#itin .tl-row:nth-child(4){animation-duration:6.4s;animation-delay:-4.1s}
+#itin .tl-ico{animation:tlIco 5.2s ease-in-out infinite}
+@keyframes tlIco{0%,100%{box-shadow:0 0 0 4px rgba(255,255,255,.9),0 0 0 5px rgba(201,162,75,.3),0 8px 18px rgba(90,31,54,.10)}50%{box-shadow:0 0 0 4px rgba(255,255,255,.9),0 0 0 6px rgba(201,162,75,.55),0 0 18px 2px rgba(230,203,133,.45)}}
+@media (prefers-reduced-motion:reduce){#itin .tl-row,#itin .tl-ico{animation:none}}
+#srsvp .rsvp-inner{width:auto!important;max-width:none!important;margin:0!important;background:none!important;border:0!important;padding:0!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:none!important}
+#srsvp .rsvp-inner::before{display:none!important}
+#srsvp .rsvp-card{display:block!important;gap:0!important}
+@media (max-width:480px){#srsvp .rsvp-card{padding:44px 20px!important}#srsvp>.container{padding-left:14px;padding-right:14px}}
 /* ===== Barra inferior + menú (estilo valeyandres) ===== */
 .nv-bar{position:fixed;left:50%;bottom:max(14px,env(safe-area-inset-bottom));z-index:60;display:flex;align-items:center;gap:4px;
   padding:6px 6px 6px 16px;border-radius:999px;background:rgba(255,250,250,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
@@ -2263,6 +2324,44 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
 .lg-es{border:0;background:#7A2B48;color:#FFF6F8;box-shadow:0 10px 24px -10px rgba(90,31,54,.6)}
 .lg-en{border:1px solid rgba(176,141,74,.6);background:rgba(255,250,248,.85);color:#5A1F36}
 
+/* ===== Pantalla de idioma: movimiento ===== */
+#lang-screen::before{animation:lgKen 18s ease-in-out infinite alternate}
+@keyframes lgKen{0%{transform:scale(1.05) translate(0,0)}100%{transform:scale(1.18) translate(-2%,-3%)}}
+#lang-screen::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(circle at 50% 38%,rgba(255,236,200,.55) 0%,rgba(255,236,200,0) 42%);animation:lgHalo 5s ease-in-out infinite}
+@keyframes lgHalo{0%,100%{opacity:.55}50%{opacity:1}}
+.lg-dust{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.lg-dust i{position:absolute;bottom:-12px;width:4px;height:4px;border-radius:50%;background:#FFF1C9;
+  box-shadow:0 0 8px 2px rgba(230,190,110,.75);opacity:0;animation:lgRise linear infinite}
+@keyframes lgRise{0%{opacity:0;transform:translate(0,0) scale(.6)}12%{opacity:1}80%{opacity:.8}100%{opacity:0;transform:translate(var(--dx),-105vh) scale(1.1)}}
+.lg-petal{position:absolute;top:-20px;width:12px;height:15px;border-radius:70% 0 70% 0;pointer-events:none;opacity:0;
+  background:radial-gradient(circle at 35% 30%,#f3a3b4,#c43a55 60%,#8a1a33);animation:lgFall linear infinite}
+@keyframes lgFall{0%{opacity:0;transform:translate(0,0) rotate(0)}10%{opacity:.9}90%{opacity:.85}100%{opacity:0;transform:translate(var(--dx),105vh) rotate(540deg)}}
+.lg-card>*{opacity:0;transform:translateY(18px);animation:lgIn 1s cubic-bezier(.2,.8,.2,1) forwards}
+.lg-card>.lg-date{animation-delay:.25s}.lg-card>.lg-rose{animation-delay:.45s}.lg-card>.lg-title{animation-delay:.75s}
+.lg-card>.lg-sub{animation-delay:.95s}.lg-card>.lg-name{animation-delay:1.15s}.lg-card>.lg-btns{animation-delay:1.4s}
+@keyframes lgIn{to{opacity:1;transform:none}}
+.lg-rose-wrap{position:relative;width:96px;margin:18px auto 10px}
+.lg-rose-wrap .lg-rose{margin:0 auto;animation:lgFloat 4.6s ease-in-out infinite}
+.lg-rose-wrap::before{content:"";position:absolute;left:50%;top:46%;width:150px;height:150px;transform:translate(-50%,-50%);border-radius:50%;
+  background:radial-gradient(circle,rgba(255,226,170,.85) 0%,rgba(226,140,160,.25) 45%,transparent 70%);animation:lgGlow 3.6s ease-in-out infinite}
+@keyframes lgFloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-8px) rotate(1deg)}}
+@keyframes lgGlow{0%,100%{opacity:.55;transform:translate(-50%,-50%) scale(.9)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.08)}}
+.lg-title{background:linear-gradient(100deg,#5A1F36 0%,#7A2B48 30%,#B8892E 46%,#E9C878 50%,#B8892E 54%,#7A2B48 70%,#5A1F36 100%);
+  background-size:260% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;
+  animation:lgIn 1s cubic-bezier(.2,.8,.2,1) .75s forwards,lgShine 7s linear 1.8s infinite}
+@keyframes lgShine{0%{background-position:130% 0}100%{background-position:-130% 0}}
+.lg-btn{position:relative;overflow:hidden}
+.lg-btn::after{content:"";position:absolute;top:0;bottom:0;left:0;width:40%;transform:translateX(-170%) skewX(-18deg);
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);animation:cvShine 4.2s ease-in-out 2.2s infinite}
+.lg-en::after{background:linear-gradient(100deg,transparent,rgba(230,200,130,.55),transparent);animation-delay:3.1s}
+.lg-es{animation:lgPulse 2.8s ease-in-out 2.4s infinite}
+@keyframes lgPulse{0%,100%{box-shadow:0 10px 24px -10px rgba(90,31,54,.6),0 0 0 0 rgba(122,43,72,.35)}50%{box-shadow:0 10px 24px -10px rgba(90,31,54,.6),0 0 0 10px rgba(122,43,72,0)}}
+.lg-btn .rip{position:absolute;border-radius:50%;transform:scale(0);background:rgba(255,255,255,.5);animation:lgRip .6s ease-out forwards;pointer-events:none}
+@keyframes lgRip{to{transform:scale(4);opacity:0}}
+#lang-screen.se-va{opacity:0;transform:scale(1.06);filter:blur(6px);transition:opacity .7s ease,transform .7s ease,filter .7s ease}
+@media (prefers-reduced-motion:reduce){#lang-screen *,#lang-screen::before,#lang-screen::after{animation:none!important;opacity:1!important;transform:none!important}}
+
 /* ===== PORTADA LIBRO · Bella y Bestia (imagen + video a pantalla completa) ===== */
 #envelope-screen{background:#F6EEEE!important;overflow:hidden}
 .cv-stage{position:absolute;left:50%;top:50%;aspect-ratio:672/1216;width:max(100vw,calc(100vh*.5526));
@@ -2293,9 +2392,10 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
 
 <!-- PANTALLA DE IDIOMA -->
 <div id="lang-screen">
+  <div class="lg-dust" id="lg-dust" aria-hidden="true"></div>
   <div class="lg-card">
     <div class="lg-date">20 · 12 · 2026</div>
-    <img class="lg-rose" src="bb-rosa.webp" alt="" aria-hidden="true">
+    <div class="lg-rose-wrap"><img class="lg-rose" src="bb-rosa.webp" alt="" aria-hidden="true"></div>
     <div class="lg-title">Tienes una invitación especial</div>
     <div class="lg-sub">You have a special invitation</div>
     <div class="lg-name">XV · Shelsy Arabella Cruz</div>
@@ -2310,7 +2410,7 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
 /* ── IDIOMA (motor de xv-giselle, por diccionario) ──
    Traduce elementos "hoja" (solo texto + em/b/br/span sin id). Lo dinámico usa T(). */
 (function(){
-  var D = {"Hoy comienza para ella<br>un nuevo capítulo": "Today a new chapter<br>begins for her", "Mis XV años": "Quinceañera", "<span class=\"cv-tap\">Toca para abrir</span>": "<span class=\"cv-tap\">Tap to open</span>", "<span>Su canción</span> · La Bella y la Bestia": "<span>Her song</span> · Beauty and the Beast", "Mis XV años · 2026": "Quinceañera · 2026", "<span>20</span><span class=\"sep\">·</span><span>Diciembre</span><span class=\"sep\">·</span><span>2026</span>": "<span>20</span><span class=\"sep\">·</span><span>December</span><span class=\"sep\">·</span><span>2026</span>", "Descubre": "Discover", "Cuenta regresiva": "Countdown", "Contamos <em>los</em> días": "Counting <em>the</em> days", "hasta su gran noche": "until her big night", "Días": "Days", "Horas": "Hours", "Minutos": "Minutes", "Segundos": "Seconds", "<span>mis XV años</span>": "<span>her quinceañera</span>", "Shelsy, <em>nuestra</em> pequeña arcoíris": "Shelsy, <em>our</em> little rainbow", "Con la bendición de Dios y el corazón lleno de alegría, celebramos los quince años de nuestra amada hija, una bendición que ilumina nuestras vidas y llena nuestros corazones de orgullo y&nbsp;felicidad.": "With God’s blessing and hearts full of joy, we celebrate the fifteenth birthday of our beloved daughter, a blessing who lights up our lives and fills our hearts with pride and&nbsp;happiness.", "Hoy comienza para ella un nuevo capítulo lleno de sueños, ilusiones y hermosas experiencias. Y no hay mayor felicidad para nosotros que compartir este momento tan especial con las personas que queremos.": "Today a new chapter begins for her, full of dreams, hopes and beautiful experiences. And there is no greater happiness for us than sharing this special moment with the people we love.", "Por eso, nos sentimos honrados de invitarles a celebrar junto a nosotros los XV años de nuestra querida Shelsy, y a ser parte de una noche mágica que quedará para siempre en nuestros corazones.": "That is why we are honored to invite you to celebrate with us the quinceañera of our dear Shelsy, and to be part of a magical night that will stay in our hearts forever.", "<em>Agradecemos de corazón su presencia y cariño en este día tan especial.</em>": "<em>We are deeply grateful for your presence and love on this very special day.</em>", "Con amor,<br><b>Ruth y Moris</b>": "With love,<br><b>Ruth &amp; Moris</b>", "Con amor de": "With love from", "Sus <em>Padres</em>": "Her <em>Parents</em>", "con todo nuestro amor": "with all our love", "Padres de la Quinceañera": "Parents of the Quinceañera", "Acompáñanos": "Join us", "La <em>Recepción</em>": "The <em>Reception</em>", "Recepción": "Reception", "5º nivel · Centro de Convenciones<br>San Miguel, El Salvador": "5th floor · Convention Center<br>San Miguel, El Salvador", "Ver ubicación": "View location", "Para tu estancia": "For your stay", "Hospedaje": "Lodging", "Si vienes de fuera, te recomendamos hospedarte en el mismo hotel de la celebración.": "If you are coming from out of town, we recommend staying at the same hotel where the celebration will be held.", "Reservar": "Book", "Cómo llegar": "Directions", "Programa de la velada": "Evening program", "El <em>recorrido</em> de la noche": "The <em>flow</em> of the night", "una noche para recordar": "a night to remember", "20 · Diciembre · MMXXVI": "20 · December · MMXXVI", "Cóctel": "Cocktail", "Copa de bienvenida": "Welcome drink", "Hotel Trópico Inn · Centro de Convenciones": "Hotel Trópico Inn · Convention Center", "Cena": "Dinner", "Fiesta": "Party", "Código de vestimenta": "Dress code", "Acompáñanos vestido para la ocasión": "Please dress for the occasion", "Caballeros": "Gentlemen", "traje formal": "formal suit", "Damas": "Ladies", "vestido formal": "formal dress", "Momentos": "Moments", "Sus <em>quince</em> años": "Her <em>fifteen</em> years", "el espejo de los recuerdos": "the mirror of memories", "Muéstrame…": "Show me…", "Toca el espejo o desliza": "Tap the mirror or swipe", "Una nota cariñosa": "A loving note", "Una noche <em>para</em> adultos": "An evening <em>for</em> adults", "Con todo el cariño, la celebración será exclusivamente para adultos. Agradecemos profundamente tu comprensión.": "With all our love, the celebration will be for adults only. We deeply appreciate your understanding.", "Regalos": "Gifts", "Lo más <em>importante</em> es tu presencia": "Your presence is what <em>matters</em> most", "El mejor regalo es que nos acompañes, pero si deseas tener un detalle con Shelsy, habrá lluvia de sobres.": "The best gift is having you with us, but if you would like to give Shelsy something, there will be an envelope box.", "Celebra con nosotros": "Celebrate with us", "Lluvia <em>de</em> sobres": "Envelope <em>shower</em>", "Su presencia es nuestro mejor regalo": "Your presence is our best gift", "El día de la celebración habrá un buzón donde podrás depositar tu sobre con todo el cariño.": "On the day of the celebration there will be a box where you can leave your envelope with all your love.", "Toca el sobre": "Tap the envelope", "Comparte tus fotos": "Share your photos", "Álbum <em>de</em> fotos": "Photo <em>album</em>", "Ayúdanos a guardar cada momento: sube aquí las fotos que tomes durante el evento.": "Help us keep every moment: upload here the photos you take during the event.", "Subir mis fotos": "Upload my photos", "El álbum de fotos se habilita el día del evento. Regresa aquí y sube todas tus fotos de la noche ✨": "The photo album opens on the day of the event. Come back here and upload all your photos from the night ✨", "Confirma tu asistencia": "Confirm your attendance", "¡Nos encantaría contar con tu presencia!": "We would love to have you with us!", "Pases": "Passes", "Hemos reservado": "We have reserved", "Lugares en tu honor": "Seats in your honor", "¿Nos acompañarás?": "Will you join us?", "Sí, asistiré": "Yes, I’ll be there", "No podré asistir": "I can’t make it", "Modificar mi respuesta": "Change my response", "Por favor confirma antes del <b>1 de diciembre de 2026</b>.": "Please confirm before <b>December 1st, 2026</b>.", "Invitación diseñada por": "Invitation designed by", "Menú": "Menu", "<a href=\"#inicio\"><small>01</small><span>Inicio</span></a>": "<a href=\"#inicio\"><small>01</small><span>Home</span></a>", "<a href=\"#mensaje\"><small>02</small><span>Mensaje</span></a>": "<a href=\"#mensaje\"><small>02</small><span>Message</span></a>", "<a href=\"#cuenta\"><small>03</small><span>Cuenta regresiva</span></a>": "<a href=\"#cuenta\"><small>03</small><span>Countdown</span></a>", "<a href=\"#subic\"><small>04</small><span>Ubicación</span></a>": "<a href=\"#subic\"><small>04</small><span>Location</span></a>", "<a href=\"#itinerario\"><small>05</small><span>Itinerario</span></a>": "<a href=\"#itinerario\"><small>05</small><span>Schedule</span></a>", "<a href=\"#dresscode\"><small>06</small><span>Vestimenta</span></a>": "<a href=\"#dresscode\"><small>06</small><span>Dress code</span></a>", "<a href=\"#galeria\"><small>07</small><span>Galería</span></a>": "<a href=\"#galeria\"><small>07</small><span>Gallery</span></a>", "<a href=\"#sobres\"><small>08</small><span>Lluvia de sobres</span></a>": "<a href=\"#sobres\"><small>08</small><span>Envelope shower</span></a>", "<a href=\"#salbum\"><small>09</small><span>Álbum de fotos</span></a>": "<a href=\"#salbum\"><small>09</small><span>Photo album</span></a>", "<a href=\"#srsvp\"><small>10</small><span>Confirmar asistencia</span></a>": "<a href=\"#srsvp\"><small>10</small><span>RSVP</span></a>", "Domingo, 20 de diciembre de 2026<br>San Miguel · El Salvador": "Sunday, December 20, 2026<br>San Miguel · El Salvador"};
+  var D = {"Hoy comienza para ella<br>un nuevo capítulo": "Today a new chapter<br>begins for her", "Mis XV años": "Quinceañera", "<span class=\"cv-tap\">Toca para abrir</span>": "<span class=\"cv-tap\">Tap to open</span>", "<span>Su canción</span> · La Bella y la Bestia": "<span>Her song</span> · Beauty and the Beast", "Mis XV años · 2026": "Quinceañera · 2026", "<span>20</span><span class=\"sep\">·</span><span>Diciembre</span><span class=\"sep\">·</span><span>2026</span>": "<span>20</span><span class=\"sep\">·</span><span>December</span><span class=\"sep\">·</span><span>2026</span>", "Descubre": "Discover", "Cuenta regresiva": "Countdown", "Contamos <em>los</em> días": "Counting <em>the</em> days", "hasta su gran noche": "until her big night", "Días": "Days", "Horas": "Hours", "Minutos": "Minutes", "Segundos": "Seconds", "<span>mis XV años</span>": "<span>her quinceañera</span>", "Shelsy, <em>nuestra</em> pequeña arcoíris": "Shelsy, <em>our</em> little rainbow", "Con la bendición de Dios y el corazón lleno de alegría, celebramos los quince años de nuestra amada hija, una bendición que ilumina nuestras vidas y llena nuestros corazones de orgullo y&nbsp;felicidad.": "With God’s blessing and hearts full of joy, we celebrate the fifteenth birthday of our beloved daughter, a blessing who lights up our lives and fills our hearts with pride and&nbsp;happiness.", "Hoy comienza para ella un nuevo capítulo lleno de sueños, ilusiones y hermosas experiencias. Y no hay mayor felicidad para nosotros que compartir este momento tan especial con las personas que queremos.": "Today a new chapter begins for her, full of dreams, hopes and beautiful experiences. And there is no greater happiness for us than sharing this special moment with the people we love.", "Por eso, nos sentimos honrados de invitarles a celebrar junto a nosotros los XV años de nuestra querida Shelsy, y a ser parte de una noche mágica que quedará para siempre en nuestros corazones.": "That is why we are honored to invite you to celebrate with us the quinceañera of our dear Shelsy, and to be part of a magical night that will stay in our hearts forever.", "<em>Agradecemos de corazón su presencia y cariño en este día tan especial.</em>": "<em>We are deeply grateful for your presence and love on this very special day.</em>", "Con amor,<br><b>Ruth y Moris</b>": "With love,<br><b>Ruth &amp; Moris</b>", "Con amor de": "With love from", "Sus <em>Padres</em>": "Her <em>Parents</em>", "con todo nuestro amor": "with all our love", "Padres de la Quinceañera": "Parents of the Quinceañera", "Acompáñanos": "Join us", "La <em>Recepción</em>": "The <em>Reception</em>", "Recepción": "Reception", "5º nivel · Centro de Convenciones<br>San Miguel, El Salvador": "5th floor · Convention Center<br>San Miguel, El Salvador", "Ver ubicación": "View location", "Para tu estancia": "For your stay", "Hospedaje": "Lodging", "Si vienes de fuera, te recomendamos hospedarte en el mismo hotel de la celebración.": "If you are coming from out of town, we recommend staying at the same hotel where the celebration will be held.", "Reservar": "Book", "Cómo llegar": "Directions", "Programa de la velada": "Evening program", "El <em>recorrido</em> de la noche": "The <em>flow</em> of the night", "una noche para recordar": "a night to remember", "20 · Diciembre · MMXXVI": "20 · December · MMXXVI", "Cóctel": "Cocktail", "Copa de bienvenida": "Welcome drink", "Hotel Trópico Inn · Centro de Convenciones": "Hotel Trópico Inn · Convention Center", "Cena": "Dinner", "Fiesta": "Party", "Código de vestimenta": "Dress code", "Acompáñanos vestido para la ocasión": "Please dress for the occasion", "Caballeros": "Gentlemen", "traje formal": "formal suit", "Damas": "Ladies", "vestido formal": "formal dress", "Momentos": "Moments", "Sus <em>quince</em> años": "Her <em>fifteen</em> years", "el espejo de los recuerdos": "the mirror of memories", "Muéstrame…": "Show me…", "Toca el espejo o desliza": "Tap the mirror or swipe", "Una nota cariñosa": "A loving note", "Una noche <em>para</em> adultos": "An evening <em>for</em> adults", "Con todo el cariño, la celebración será exclusivamente para adultos. Agradecemos profundamente tu comprensión.": "With all our love, the celebration will be for adults only. We deeply appreciate your understanding.", "Regalos": "Gifts", "Lo más <em>importante</em> es tu presencia": "Your presence is what <em>matters</em> most", "El mejor regalo es que nos acompañes, pero si deseas tener un detalle con Shelsy, habrá lluvia de sobres.": "The best gift is having you with us, but if you would like to give Shelsy something, there will be an envelope box.", "Celebra con nosotros": "Celebrate with us", "Lluvia <em>de</em> sobres": "Envelope <em>shower</em>", "Su presencia es nuestro mejor regalo": "Your presence is our best gift", "El día de la celebración habrá un buzón donde podrás depositar tu sobre con todo el cariño.": "On the day of the celebration there will be a box where you can leave your envelope with all your love.", "Toca el sobre": "Tap the envelope", "Comparte tus fotos": "Share your photos", "Álbum <em>de</em> fotos": "Photo <em>album</em>", "Ayúdanos a guardar cada momento: sube aquí las fotos que tomes durante el evento.": "Help us keep every moment: upload here the photos you take during the event.", "Subir mis fotos": "Upload my photos", "El álbum de fotos se habilita el día del evento. Regresa aquí y sube todas tus fotos de la noche ✨": "The photo album opens on the day of the event. Come back here and upload all your photos from the night ✨", "Confirma tu asistencia": "Confirm your attendance", "¡Nos encantaría contar con tu presencia!": "We would love to have you with us!", "Pases": "Passes", "Hemos reservado": "We have reserved", "Lugares en tu honor": "Seats in your honor", "¿Nos acompañarás?": "Will you join us?", "Sí, asistiré": "Yes, I’ll be there", "No podré asistir": "I can’t make it", "Modificar mi respuesta": "Change my response", "Por favor confirma antes del <b>1 de diciembre de 2026</b>.": "Please confirm before <b>December 1st, 2026</b>.", "Invitación diseñada por": "Invitation designed by", "Menú": "Menu", "<a href=\"#inicio\"><small>01</small><span>Inicio</span></a>": "<a href=\"#inicio\"><small>01</small><span>Home</span></a>", "<a href=\"#mensaje\"><small>02</small><span>Mensaje</span></a>": "<a href=\"#mensaje\"><small>02</small><span>Message</span></a>", "<a href=\"#cuenta\"><small>03</small><span>Cuenta regresiva</span></a>": "<a href=\"#cuenta\"><small>03</small><span>Countdown</span></a>", "<a href=\"#subic\"><small>04</small><span>Ubicación</span></a>": "<a href=\"#subic\"><small>04</small><span>Location</span></a>", "<a href=\"#itinerario\"><small>05</small><span>Itinerario</span></a>": "<a href=\"#itinerario\"><small>05</small><span>Schedule</span></a>", "<a href=\"#dresscode\"><small>06</small><span>Vestimenta</span></a>": "<a href=\"#dresscode\"><small>06</small><span>Dress code</span></a>", "<a href=\"#galeria\"><small>07</small><span>Galería</span></a>": "<a href=\"#galeria\"><small>07</small><span>Gallery</span></a>", "<a href=\"#sobres\"><small>08</small><span>Lluvia de sobres</span></a>": "<a href=\"#sobres\"><small>08</small><span>Envelope shower</span></a>", "<a href=\"#salbum\"><small>09</small><span>Álbum de fotos</span></a>": "<a href=\"#salbum\"><small>09</small><span>Photo album</span></a>", "<a href=\"#srsvp\"><small>10</small><span>Confirmar asistencia</span></a>": "<a href=\"#srsvp\"><small>10</small><span>RSVP</span></a>", "Domingo, 20 de diciembre de 2026<br>San Miguel · El Salvador": "Sunday, December 20, 2026<br>San Miguel · El Salvador", "Tu presencia <em>lo</em> es todo": "Your presence <em>means</em> everything", "Por favor confírmanos tu asistencia antes del <strong>1 de diciembre de 2026</strong>. Nos encantará saber que estarás con nosotros.": "Please confirm your attendance before <strong>December 1st, 2026</strong>. We would love to know you will be with us.", "Número de invitados": "Number of guests", "¡Con gusto asistiré!": "I’ll gladly attend!", "Fecha límite · 1 de diciembre de 2026": "Deadline · December 1st, 2026"};
   var qs = new URLSearchParams(location.search), guardado = null;
   try{ guardado = localStorage.getItem('shelsy-lang'); }catch(e){}
   window.LANG = (qs.get('lang')==='en'||qs.get('lang')==='es') ? qs.get('lang') : (guardado || 'es');
@@ -2344,11 +2444,26 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
   window.onLang = function(f){ (window.__langHooks = window.__langHooks || []).push(f); };
   var pantalla = document.getElementById('lang-screen');
   if(pantalla){
+    var dust = document.getElementById('lg-dust');
+    if(dust && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+      for(var k=0;k<26;k++){ var d=document.createElement('i'); var z=2+Math.random()*3;
+        d.style.cssText='left:'+(Math.random()*100)+'%;width:'+z+'px;height:'+z+'px;--dx:'+((Math.random()-.5)*80)+'px;animation-duration:'+(7+Math.random()*8)+'s;animation-delay:'+(-Math.random()*12)+'s';
+        dust.appendChild(d); }
+      for(var q=0;q<7;q++){ var pe=document.createElement('span'); pe.className='lg-petal';
+        pe.style.cssText='left:'+(5+Math.random()*90)+'%;--dx:'+((Math.random()-.5)*160)+'px;animation-duration:'+(9+Math.random()*7)+'s;animation-delay:'+(-Math.random()*14)+'s;transform:scale('+(.6+Math.random()*.6)+')';
+        dust.appendChild(pe); }
+    }
+    pantalla.querySelectorAll('.lg-btn').forEach(function(b){
+      b.addEventListener('pointerdown', function(e){ var r=b.getBoundingClientRect(), s=Math.max(r.width,r.height), o=document.createElement('span');
+        o.className='rip'; o.style.cssText='width:'+s+'px;height:'+s+'px;left:'+(e.clientX-r.left-s/2)+'px;top:'+(e.clientY-r.top-s/2)+'px'; b.appendChild(o); setTimeout(function(){o.remove()},650); });
+    });
+  }
+  if(pantalla){
     pantalla.querySelectorAll('.lg-btn').forEach(function(b){
       b.addEventListener('click', function(){
         applyLang(b.dataset.lang);
-        pantalla.classList.add('se-va');
-        setTimeout(function(){ pantalla.style.display = 'none'; }, 620);
+        setTimeout(function(){ pantalla.classList.add('se-va'); }, 260);
+        setTimeout(function(){ pantalla.style.display = 'none'; }, 260+460);
       });
     });
   }
@@ -2878,67 +2993,68 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
   #rsvp-feedback{font-family:var(--serif);font-size:16px;font-weight:500;min-height:1em}
   #rsvp-feedback.err{color:#9B2C3A}#rsvp-feedback.ok{color:var(--accent-deep)}
   </style>
-  <section class="section-paper rsvp" id="srsvp">
+  <section class="section-bg rsvp" id="srsvp">
     <div class="container">
-      <div class="eyebrow">Confirma tu asistencia</div>
-      <h2>R.S.V.P.</h2>
-      <p class="rsvp-text-j" style="font-family:var(--serif);font-style:italic;font-size:19px;font-weight:500;color:var(--ink);margin:6px 0 26px">¡Nos encantaría contar con tu presencia!</p>
-      <div class="rsvp-outer">
-      <svg class="rsvp-bow-grande" viewBox="0 0 240 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <radialGradient id="rbl" cx="28%" cy="38%"><stop offset="0%" stop-color="#FFF4F7"/><stop offset="55%" stop-color="#D98AA2"/><stop offset="100%" stop-color="#9A3A5C"/></radialGradient>
-          <radialGradient id="rbr" cx="72%" cy="38%"><stop offset="0%" stop-color="#FFF4F7"/><stop offset="55%" stop-color="#D98AA2"/><stop offset="100%" stop-color="#7A2B48"/></radialGradient>
-          <radialGradient id="rblf" cx="28%" cy="62%"><stop offset="0%" stop-color="#F1C6D3"/><stop offset="100%" stop-color="#5A1F36"/></radialGradient>
-          <radialGradient id="rbrf" cx="72%" cy="62%"><stop offset="0%" stop-color="#F1C6D3"/><stop offset="100%" stop-color="#5A1F36"/></radialGradient>
-        </defs>
-        <path d="M120,75 C108,52 76,28 46,40 C22,50 28,76 56,80 C82,84 112,76 120,75Z" fill="url(#rbl)"/>
-        <path d="M120,79 C106,90 80,98 56,90 C36,83 38,68 58,70 C82,72 112,78 120,79Z" fill="url(#rblf)" opacity="0.75"/>
-        <path d="M120,75 C132,52 164,28 194,40 C218,50 212,76 184,80 C158,84 128,76 120,75Z" fill="url(#rbr)"/>
-        <path d="M120,79 C134,90 160,98 184,90 C204,83 202,68 182,70 C158,72 128,78 120,79Z" fill="url(#rbrf)" opacity="0.75"/>
-        <path d="M110,86 C90,108 64,126 40,140" stroke="#9A3A5C" stroke-width="9" stroke-linecap="round" fill="none"/>
-        <path d="M115,88 C98,110 76,128 54,142" stroke="#F6D7E0" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.7"/>
-        <path d="M130,86 C150,108 176,126 200,140" stroke="#9A3A5C" stroke-width="9" stroke-linecap="round" fill="none"/>
-        <path d="M125,88 C142,110 164,128 186,142" stroke="#F6D7E0" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.7"/>
-        <ellipse cx="120" cy="78" rx="20" ry="16" fill="#5A1F36"/>
-        <ellipse cx="120" cy="78" rx="11" ry="9" fill="#9A3A5C"/>
-        <path d="M58,50 C75,43 96,48 112,60" stroke="rgba(255,255,255,0.32)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-        <path d="M182,50 C165,43 144,48 128,60" stroke="rgba(255,255,255,0.32)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-        <ellipse cx="114" cy="72" rx="5" ry="3.5" fill="rgba(255,255,255,0.30)"/>
-      </svg>
-      <div class="rsvp-frame">
-      <svg class="mf-corner mf-tl" viewBox="0 0 36 36" fill="none"><path d="M4,24 L4,4 L24,4" stroke="rgba(176,141,74,0.72)" stroke-width="1.6" stroke-linecap="round"/><circle cx="4" cy="4" r="2.8" fill="rgba(176,141,74,0.62)"/><path d="M10,4 Q10,10 4,10" stroke="rgba(176,141,74,0.42)" stroke-width="1" fill="none"/><circle cx="24" cy="4" r="1.6" fill="rgba(122,43,72,0.38)"/><circle cx="4" cy="24" r="1.6" fill="rgba(122,43,72,0.38)"/></svg>
-      <svg class="mf-corner mf-tr" viewBox="0 0 36 36" fill="none"><path d="M4,24 L4,4 L24,4" stroke="rgba(176,141,74,0.72)" stroke-width="1.6" stroke-linecap="round"/><circle cx="4" cy="4" r="2.8" fill="rgba(176,141,74,0.62)"/><path d="M10,4 Q10,10 4,10" stroke="rgba(176,141,74,0.42)" stroke-width="1" fill="none"/><circle cx="24" cy="4" r="1.6" fill="rgba(122,43,72,0.38)"/><circle cx="4" cy="24" r="1.6" fill="rgba(122,43,72,0.38)"/></svg>
-      <svg class="mf-corner mf-bl" viewBox="0 0 36 36" fill="none"><path d="M4,24 L4,4 L24,4" stroke="rgba(176,141,74,0.72)" stroke-width="1.6" stroke-linecap="round"/><circle cx="4" cy="4" r="2.8" fill="rgba(176,141,74,0.62)"/><path d="M10,4 Q10,10 4,10" stroke="rgba(176,141,74,0.42)" stroke-width="1" fill="none"/><circle cx="24" cy="4" r="1.6" fill="rgba(122,43,72,0.38)"/><circle cx="4" cy="24" r="1.6" fill="rgba(122,43,72,0.38)"/></svg>
-      <svg class="mf-corner mf-br" viewBox="0 0 36 36" fill="none"><path d="M4,24 L4,4 L24,4" stroke="rgba(176,141,74,0.72)" stroke-width="1.6" stroke-linecap="round"/><circle cx="4" cy="4" r="2.8" fill="rgba(176,141,74,0.62)"/><path d="M10,4 Q10,10 4,10" stroke="rgba(176,141,74,0.42)" stroke-width="1" fill="none"/><circle cx="24" cy="4" r="1.6" fill="rgba(122,43,72,0.38)"/><circle cx="4" cy="24" r="1.6" fill="rgba(122,43,72,0.38)"/></svg>
-        <p class="rsvp-hola" id="rsvp-pases-note"></p>
-        <p id="rsvp-name-display"></p>
-        <div class="pases-wrap" id="rsvp-pases-display" style="display:none">
-          <div class="pases-card">
-            <div class="pases-title">Pases</div>
-            <div class="pases-sub">Hemos reservado</div>
-            <div class="pases-num" id="rsvp-pases-num">1</div>
-            <div class="pases-honor">Lugares en tu honor</div>
+      <div class="rsvp-card">
+        <svg class="rsvp-corner rsvp-corner--tl" viewBox="0 0 52 52" fill="none" aria-hidden="true"><path d="M2 50 L2 2 L50 2" stroke="var(--gold)" stroke-width=".9" opacity=".6"/><circle cx="2" cy="2" r="2.5" fill="var(--gold)" opacity=".5"/></svg>
+        <svg class="rsvp-corner rsvp-corner--tr" viewBox="0 0 52 52" fill="none" aria-hidden="true"><path d="M2 50 L2 2 L50 2" stroke="var(--gold)" stroke-width=".9" opacity=".6"/><circle cx="2" cy="2" r="2.5" fill="var(--gold)" opacity=".5"/></svg>
+        <svg class="rsvp-corner rsvp-corner--bl" viewBox="0 0 52 52" fill="none" aria-hidden="true"><path d="M2 50 L2 2 L50 2" stroke="var(--gold)" stroke-width=".9" opacity=".6"/><circle cx="2" cy="2" r="2.5" fill="var(--gold)" opacity=".5"/></svg>
+        <svg class="rsvp-corner rsvp-corner--br" viewBox="0 0 52 52" fill="none" aria-hidden="true"><path d="M2 50 L2 2 L50 2" stroke="var(--gold)" stroke-width=".9" opacity=".6"/><circle cx="2" cy="2" r="2.5" fill="var(--gold)" opacity=".5"/></svg>
+
+        <div class="rsvp-inner">
+          <svg class="rsvp-ornament" viewBox="0 0 320 56" fill="none" aria-hidden="true">
+            <g stroke="var(--gold)" stroke-width=".9" opacity=".8" fill="none">
+              <path d="M18 28 Q50 10 82 28 Q106 42 130 28"/>
+              <path d="M190 28 Q214 42 238 28 Q270 10 302 28"/>
+              <circle cx="160" cy="28" r="5.5"/>
+              <circle cx="160" cy="28" r="2" fill="var(--gold)" stroke="none"/>
+              <path d="M148 28 L154 28" opacity=".5"/>
+              <path d="M166 28 L172 28" opacity=".5"/>
+              <path d="M154 20 Q160 13 166 20" opacity=".55"/>
+              <path d="M154 36 Q160 43 166 36" opacity=".55"/>
+            </g>
+          </svg>
+
+          <div class="eyebrow">Confirma tu asistencia</div>
+          <h2 class="rsvp-title">Tu presencia <em>lo</em> es todo</h2>
+          <p class="rsvp-text">Por favor confírmanos tu asistencia antes del <strong>1 de diciembre de 2026</strong>. Nos encantará saber que estarás con nosotros.</p>
+
+          <p id="rsvp-pases-note"></p>
+          <p id="rsvp-name-display"></p>
+
+          <div class="rsvp-divider">
+            <svg class="rsvp-divider-heart" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+          </div>
+
+          <div class="rsvp-pases-display" id="rsvp-pases-display" style="display:none">
+            <div class="rsvp-pases-label">Número de invitados</div>
+            <div class="rsvp-pases-num" id="rsvp-pases-num">1</div>
+          </div>
+
+          <div id="rsvp-bandeja" style="display:none">
+            <div class="rsvp-toggle">
+              <button class="rsvp-toggle-btn" id="btnYes" type="button">¡Con gusto asistiré!</button>
+              <button class="rsvp-toggle-btn" id="btnNo" type="button">No podré asistir</button>
+            </div>
+            <div class="rsvp-fields" id="rsvp-fields" style="display:none"></div>
+            <button class="rsvp-btn" id="rsvp-confirm-btn" type="button"><span id="rsvp-btn-text">Confirmar asistencia</span></button>
+          </div>
+
+          <div class="rsvp-gracias" id="rsvp-gracias" style="display:none">
+            <svg class="rsvp-gracias-icon" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="8.5 12.5 11 15 16 9.5"/></svg>
+            <p class="rsvp-gracias-title" id="rsvp-gracias-title"></p>
+            <p class="rsvp-gracias-sub" id="rsvp-gracias-sub"></p>
+            <button class="rsvp-editar-btn" id="rsvp-editar-btn" type="button">Modificar mi respuesta</button>
+          </div>
+
+          <p id="rsvp-feedback"></p>
+
+          <div class="rsvp-deadline">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5z"/></svg>
+            <span>Fecha límite · 1 de diciembre de 2026</span>
           </div>
         </div>
-        <div id="rsvp-bandeja" style="display:none">
-          <label>¿Nos acompañarás?</label>
-          <div class="rsvp-toggle">
-            <button class="rsvp-toggle-btn" id="btnYes" type="button">Sí, asistiré</button>
-            <button class="rsvp-toggle-btn" id="btnNo" type="button">No podré asistir</button>
-          </div>
-          <div class="rsvp-fields" id="rsvp-fields" style="display:none"></div>
-          <button class="btn-wa" id="rsvp-confirm-btn" type="button"><span id="rsvp-btn-text">Confirmar asistencia</span></button>
-        </div>
-        <div class="rsvp-gracias" id="rsvp-gracias" style="display:none">
-          <svg class="rsvp-gracias-icon" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="8.5 12.5 11 15 16 9.5"/></svg>
-          <p class="rsvp-gracias-title" id="rsvp-gracias-title"></p>
-          <p class="rsvp-gracias-sub" id="rsvp-gracias-sub"></p>
-          <button class="rsvp-editar-btn" id="rsvp-editar-btn" type="button">Modificar mi respuesta</button>
-        </div>
-        <p class="rsvp-feedback" id="rsvp-feedback"></p>
       </div>
-      </div>
-      <p class="rsvp-date-j">Por favor confirma antes del <b>1 de diciembre de 2026</b>.</p>
     </div>
   </section>
 
@@ -2976,8 +3092,7 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
 <nav class="nv-bar" id="nv-bar" aria-label="Secciones">
   <span class="nv-mono">XV</span>
   <button class="nv-ico nv-lang" id="nv-lang" type="button" aria-label="Cambiar idioma">EN</button>
-  <button class="nv-ico" id="nv-share" type="button" aria-label="Compartir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
-  <button class="nv-menu" id="nv-open" type="button" aria-label="Abrir menú"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="nv-menu-t">Menú</span></button>
+    <button class="nv-menu" id="nv-open" type="button" aria-label="Abrir menú"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="nv-menu-t">Menú</span></button>
 </nav>
 <div class="nv-panel" id="nv-panel" aria-hidden="true">
   <div class="nv-head"><span class="nv-mono">XV</span><button class="nv-close" id="nv-close" type="button" aria-label="Cerrar menú">&times;</button></div>
@@ -4180,7 +4295,7 @@ window.addEventListener('resize',()=>ScrollTrigger.refresh());
   if(prefersReduced || !window.gsap) return;
   var l = document.querySelector('.bb-candle--l'), r = document.querySelector('.bb-candle--r');
   if(l) gsap.fromTo(l,{rotation:-2.6,x:-2},{rotation:2.6,x:3,y:-4,duration:4.2,ease:'sine.inOut',repeat:-1,yoyo:true,transformOrigin:'50% 92%'});
-  if(r){ gsap.set(r,{scaleX:-1}); gsap.fromTo(r,{rotation:2.4,x:2},{rotation:-2.4,x:-3,y:-4,duration:5.1,delay:.9,ease:'sine.inOut',repeat:-1,yoyo:true,transformOrigin:'50% 92%'}); }
+  if(r){ gsap.set(r,{rotation:0,scaleX:-1,scaleY:1,x:0,y:0}); gsap.fromTo(r,{rotation:2.4,x:2},{rotation:-2.4,x:-3,y:-4,duration:5.1,delay:.9,ease:'sine.inOut',repeat:-1,yoyo:true,transformOrigin:'50% 92%'}); }
 })();
 // --- QR encantado: la niebla dorada con la rosa se disipa y revela el código ---
 (function(){
@@ -4236,7 +4351,7 @@ window.addEventListener('resize',()=>ScrollTrigger.refresh());
       if(t) setTimeout(function(){ window.scrollTo({top: t.getBoundingClientRect().top + scrollY - 10, behavior:'smooth'}); }, 260);
     });
   });
-  document.getElementById('nv-share').addEventListener('click', function(){
+  var shareBtn = document.getElementById('nv-share'); if(shareBtn) shareBtn.addEventListener('click', function(){
     var url = location.origin + '/';
     var d = {title: document.title, url: url};
     if(navigator.share) navigator.share(d).catch(function(){});
