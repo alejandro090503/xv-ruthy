@@ -846,6 +846,35 @@ h1 em,h2 em,h3 em{font-style:italic;font-weight:500;color:var(--accent)}
 .gift-btn:hover::before{transform:translateY(0)}
 
 /* ============ ALBUM QR ============ */
+.rsvp-msg{max-width:360px;margin:0 auto 22px;text-align:left}
+.rsvp-msg label{display:block;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:8px}
+.rsvp-msg label span{letter-spacing:.06em;text-transform:none;font-weight:500;opacity:.8}
+.rsvp-msg textarea{min-height:92px;resize:vertical;line-height:1.5}
+/* Códigos de acceso: carrusel, un pase a la vez */
+.mqr{max-width:380px;margin:26px auto 0;text-align:center}
+.mqr-title{font-family:var(--display);font-size:26px;color:var(--accent-deep);margin-bottom:4px}
+.mqr-hint{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--ink-soft);line-height:1.5;margin:0 auto 14px;max-width:320px}
+.mqr-carousel{position:relative}
+.mqr-track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:6px 11% 12px;overscroll-behavior-x:contain}
+.mqr-track::-webkit-scrollbar{display:none}
+.mqr-card{flex:0 0 78%;scroll-snap-align:center;background:#fff;border:1.5px solid var(--hair-gold);padding:16px 12px 14px;box-shadow:0 8px 24px rgba(122,43,72,.10);transition:transform .35s ease,opacity .35s ease;transform:scale(.92);opacity:.55}
+.mqr-card.is-active{transform:none;opacity:1}
+.mqr-img{display:block;width:150px;height:150px;margin:0 auto}
+.mqr-name{font-family:var(--display);font-size:21px;line-height:1.25;color:var(--ink);margin-top:10px}
+.mqr-mesa{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-deep);margin-top:3px}
+.mqr-code{font-family:var(--sans);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-top:10px}
+.mqr-code span{display:block;margin-top:3px;font-family:'Courier New',monospace;font-size:14px;letter-spacing:.12em;text-transform:none;color:var(--ink);user-select:all;-webkit-user-select:all}
+.mqr-dl{display:inline-block;margin-top:12px;padding:8px 20px;border:1.5px solid var(--hair-gold);font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-deep);text-decoration:none;background:#fff}
+.mqr-nav{position:absolute;top:40%;transform:translateY(-50%);z-index:2;width:32px;height:32px;border-radius:50%;border:1px solid var(--hair-gold);background:#fff;color:var(--ink);font-size:21px;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.08);transition:opacity .25s}
+.mqr-nav--prev{left:-6px}.mqr-nav--next{right:-6px}
+.mqr-nav:disabled{opacity:0;pointer-events:none}
+.mqr-dots{display:flex;justify-content:center;gap:7px}
+.mqr-dots button{width:7px;height:7px;padding:0;border:0;border-radius:4px;background:var(--hair-gold);cursor:pointer;transition:width .3s,background .3s}
+.mqr-dots button.is-active{width:20px;background:var(--accent-deep)}
+.mqr-count{font-family:var(--sans);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);margin-top:9px}
+.mqr-carousel.is-single .mqr-nav,.mqr-foot.is-single{display:none}
+.mqr-carousel.is-single .mqr-card{flex-basis:84%;transform:none;opacity:1}
+.rsvp-msg textarea{width:100%;box-sizing:border-box;padding:12px 14px;border:1.5px solid var(--hair-gold);background:#fff;font-family:var(--serif);font-size:17px;color:var(--ink)}
 .album{text-align:center}
 .album-inner{max-width:700px;margin:0 auto}
 .album h2{font-size:clamp(32px,4.5vw,50px);margin-bottom:28px}
@@ -3037,6 +3066,10 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
               <button class="rsvp-toggle-btn" id="btnNo" type="button">No podré asistir</button>
             </div>
             <div class="rsvp-fields" id="rsvp-fields" style="display:none"></div>
+            <div class="rsvp-msg" id="rsvp-msg-wrap" style="display:none">
+              <label for="rsvp-mensaje" id="rsvp-msg-lbl">Mensaje para Shelsy <span>(opcional)</span></label>
+              <textarea class="rsvp-input" id="rsvp-mensaje" rows="3" maxlength="1000"></textarea>
+            </div>
             <button class="rsvp-btn" id="rsvp-confirm-btn" type="button"><span id="rsvp-btn-text">Confirmar asistencia</span></button>
           </div>
 
@@ -3045,6 +3078,18 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
             <p class="rsvp-gracias-title" id="rsvp-gracias-title"></p>
             <p class="rsvp-gracias-sub" id="rsvp-gracias-sub"></p>
             <button class="rsvp-editar-btn" id="rsvp-editar-btn" type="button">Modificar mi respuesta</button>
+          </div>
+
+          <!-- Códigos de acceso (panel QR) -->
+          <div class="mqr" id="mqrSec" style="display:none">
+            <p class="mqr-title">Tus códigos de acceso</p>
+            <p class="mqr-hint" id="mqrHint"></p>
+            <div class="mqr-carousel" id="mqrCarousel">
+              <button type="button" class="mqr-nav mqr-nav--prev" id="mqrPrev" aria-label="Código anterior">&#8249;</button>
+              <div class="mqr-track" id="mqrTrack"></div>
+              <button type="button" class="mqr-nav mqr-nav--next" id="mqrNext" aria-label="Código siguiente">&#8250;</button>
+            </div>
+            <div class="mqr-foot" id="mqrFoot"><div class="mqr-dots" id="mqrDots"></div><p class="mqr-count" id="mqrCount"></p></div>
           </div>
 
           <p id="rsvp-feedback"></p>
@@ -3952,11 +3997,13 @@ gsap.fromTo('.album .eyebrow, .album h2, .album-text',{opacity:0,y:18},{opacity:
 gsap.fromTo('#qr-wrap',{opacity:0,y:30,scale:.94},{opacity:1,y:0,scale:1,duration:1.2,ease:'power3.out',scrollTrigger:{trigger:'#qr-wrap',start:'top 82%'}});
 gsap.fromTo('.album-link',{opacity:0,y:10},{opacity:1,y:0,duration:.9,scrollTrigger:{trigger:'.album-link',start:'top 90%'}});
 
-// ------ RSVP — Panel de Invitados (X pases) ------
+// ------ RSVP — Panel Celestial / QR (X pases) ------
 (function(){
-  var API = 'https://panel-invitados.vercel.app/api/confirmar';
+  var API = 'https://panel-invitados-qr.vercel.app/api/confirmar';
   var URL_BODA = 'https://xv-shelsy-arabella.vercel.app';
-  var DEADLINE = new Date('2026-12-01T23:59:59-06:00');
+  /* La fecha límite la manda el panel; este respaldo solo si no responde */
+  var RESPALDO = new Date('2026-12-01T23:59:59-06:00').getTime();
+  var QR_LIB = 'https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js';
   var params = new URLSearchParams(location.search);
   var para = (params.get('para') || '').trim();
   var pases = Math.max(1, Math.min(20, parseInt(params.get('pases')) || 1));
@@ -3971,89 +4018,190 @@ gsap.fromTo('.album-link',{opacity:0,y:10},{opacity:1,y:0,duration:.9,scrollTrig
   var btnYes = document.getElementById('btnYes'), btnNo = document.getElementById('btnNo');
   var btn = document.getElementById('rsvp-confirm-btn'), btnText = document.getElementById('rsvp-btn-text');
   var fb = document.getElementById('rsvp-feedback');
+  var msgWrap = document.getElementById('rsvp-msg-wrap'), msgEl = document.getElementById('rsvp-mensaje'), msgLbl = document.getElementById('rsvp-msg-lbl');
   if(!note) return;
-  var frozen = Date.now() > DEADLINE.getTime();
-  var estadoSel = null;
-  function setFeedback(t, c){ fb.textContent = t; fb.className = c || ''; }
-  if(!para){
-    note.textContent = '';
-    return;
-  }
-  var pn2 = function(){ note.textContent = T('Esta invitación es para','This invitation is for'); }; pn2(); window.onLang && onLang(pn2);
+  var frozen = false, listo = false, anulada = false, respondido = false;
+  var estadoSel = null, ultimoGracias = null, ultimosQrs = null, fbPar = null;
+  function cerrado(){ return frozen || !listo || anulada; }
+  function setFeedback(es, en, c){ fbPar = es ? [es, en, c] : null; fb.textContent = es ? T(es, en) : ''; fb.className = c || ''; }
+  function setDis(d){ btn.disabled = d; btnYes.disabled = d; btnNo.disabled = d; msgEl.disabled = d; fields.querySelectorAll('input').forEach(function(x){ x.disabled = d; }); }
+  function pintaBtn(){ btnText.textContent = frozen ? T('Fecha límite alcanzada','Deadline reached') : respondido ? T('Actualizar respuesta','Update response') : T('Confirmar asistencia','Confirm attendance'); }
+  if(!para){ note.textContent = ''; return; }
+  var pn2 = function(){ note.textContent = T('Esta invitación es para','This invitation is for'); }; pn2();
   var nameEl = document.getElementById('rsvp-name-display');
   if(nameEl) nameEl.textContent = para;
-  document.getElementById('rsvp-pases-num').textContent = pases;
-  disp.style.display = '';
-  for(var i = 1; i <= pases; i++){
-    var inp = document.createElement('input');
-    inp.className = 'rsvp-input rsvp-name'; inp.type = 'text'; inp.autocomplete = 'off';
-    inp.dataset.n = i; inp.placeholder = T('Nombre completo del invitado ','Full name of guest ') + i;
-    fields.appendChild(inp);
+  var inputs = [];
+  function armarCampos(guardados){
+    fields.innerHTML = '';
+    for(var i = 1; i <= pases; i++){
+      var inp = document.createElement('input');
+      inp.className = 'rsvp-input rsvp-name'; inp.type = 'text'; inp.autocomplete = 'off'; inp.maxLength = 60;
+      inp.dataset.n = i; inp.placeholder = T('Nombre completo del invitado ','Full name of guest ') + i;
+      if(guardados && guardados[i-1]) inp.value = guardados[i-1];
+      inp.disabled = cerrado();
+      fields.appendChild(inp);
+    }
+    inputs = [].slice.call(fields.querySelectorAll('input'));
+    document.getElementById('rsvp-pases-num').textContent = pases;
+    disp.style.display = '';
   }
-  var inputs = fields.querySelectorAll('input');
+  armarCampos();
+  function pintaMsg(){
+    msgLbl.innerHTML = T('Mensaje para Shelsy','Message for Shelsy') + ' <span>' + T('(opcional)','(optional)') + '</span>';
+    msgEl.placeholder = T('Déjale unas palabras bonitas a Shelsy…','Leave Shelsy a few kind words…');
+  }
+  pintaMsg();
   window.onLang && onLang(function(){
+    pn2(); pintaBtn(); pintaMsg();
     inputs.forEach(function(x){ x.placeholder = T('Nombre completo del invitado ','Full name of guest ') + x.dataset.n; });
-    if(btnText.textContent === 'Actualizar respuesta' || btnText.textContent === 'Update response') btnText.textContent = T('Actualizar respuesta','Update response');
-    else btnText.textContent = T('Confirmar asistencia','Confirm attendance');
-    if(graciasEl.style.display !== 'none' && estadoSel) mostrarGracias(estadoSel, [].map.call(inputs, function(x){ return x.value.trim(); }).filter(Boolean));
+    if(ultimoGracias && graciasEl.style.display !== 'none') mostrarGracias.apply(null, ultimoGracias);
+    if(fbPar) setFeedback(fbPar[0], fbPar[1], fbPar[2]);
   });
   function selectRsvp(e){
     estadoSel = e;
     btnYes.classList.toggle('on', e === 'confirmado');
     btnNo.classList.toggle('on', e === 'declino');
-    if(e === 'confirmado'){ fields.style.display = ''; }
-    else { fields.style.display = 'none'; inputs.forEach(function(x){ x.value = ''; }); }
+    fields.style.display = e === 'confirmado' ? '' : 'none';
   }
-  btnYes.addEventListener('click', function(){ selectRsvp('confirmado'); });
-  btnNo.addEventListener('click', function(){ selectRsvp('declino'); });
-  function mostrarGracias(estado, nombres){
+  btnYes.addEventListener('click', function(){ if(!cerrado()) selectRsvp('confirmado'); });
+  btnNo.addEventListener('click', function(){ if(!cerrado()) selectRsvp('declino'); });
+
+  /* ---- Códigos QR (aparecen cuando la familia los genera en el panel) ---- */
+  var qrSec = document.getElementById('mqrSec'), qrTrack = document.getElementById('mqrTrack'), qrDots = document.getElementById('mqrDots');
+  var qrCards = [], qrIdx = 0, qrGen = 0;
+  function conQrLib(cb){
+    if(window.QRCode) return cb();
+    var sc = document.getElementById('qrcode-lib');
+    if(!sc){ sc = document.createElement('script'); sc.id = 'qrcode-lib'; sc.src = QR_LIB; document.head.appendChild(sc); }
+    sc.addEventListener('load', function(){ if(window.QRCode) cb(); });
+  }
+  function qrIrA(i, suave){ var c = qrCards[i]; if(c) qrTrack.scrollTo({ left: c.offsetLeft - (qrTrack.clientWidth - c.clientWidth) / 2, behavior: suave === false ? 'auto' : 'smooth' }); }
+  function qrMarcar(){
+    if(!qrCards.length) return;
+    var centro = qrTrack.scrollLeft + qrTrack.clientWidth / 2, mejor = 0, dist = Infinity;
+    qrCards.forEach(function(c, i){ var d = Math.abs(c.offsetLeft + c.clientWidth / 2 - centro); if(d < dist){ dist = d; mejor = i; } });
+    qrIdx = mejor;
+    qrCards.forEach(function(c, i){ c.classList.toggle('is-active', i === mejor); });
+    Array.prototype.forEach.call(qrDots.children, function(d, k){ d.classList.toggle('is-active', k === mejor); });
+    document.getElementById('mqrCount').textContent = T('Pase ','Pass ') + (mejor + 1) + T(' de ',' of ') + qrCards.length;
+    document.getElementById('mqrPrev').disabled = mejor === 0;
+    document.getElementById('mqrNext').disabled = mejor === qrCards.length - 1;
+  }
+  (function(){
+    var raf = 0;
+    qrTrack.addEventListener('scroll', function(){ if(raf) return; raf = requestAnimationFrame(function(){ raf = 0; qrMarcar(); }); }, { passive: true });
+    document.getElementById('mqrPrev').addEventListener('click', function(){ qrIrA(Math.max(0, qrIdx - 1)); });
+    document.getElementById('mqrNext').addEventListener('click', function(){ qrIrA(Math.min(qrCards.length - 1, qrIdx + 1)); });
+  })();
+  function ocultaQrs(){ qrGen++; qrSec.style.display = 'none'; }
+  function pintaQrs(qrs, pendientes){
+    var g = ++qrGen;
+    qrSec.querySelector('.mqr-title').textContent = T('Tus códigos de acceso','Your access codes');
+    var hint = document.getElementById('mqrHint'), car = document.getElementById('mqrCarousel'), foot = document.getElementById('mqrFoot');
+    qrTrack.innerHTML = ''; qrDots.innerHTML = ''; qrCards = [];
+    if(!qrs || !qrs.length){
+      if(!pendientes){ qrSec.style.display = 'none'; return; }
+      hint.textContent = T('Tus códigos de acceso aparecerán aquí cuando se acerque la fiesta. Vuelve a abrir tu invitación unos días antes.','Your access codes will appear here closer to the party. Open your invitation again a few days before.');
+      car.style.display = 'none'; foot.style.display = 'none'; qrSec.style.display = 'block'; return;
+    }
+    hint.textContent = qrs.length === 1 ? T('Presenta este código en la entrada.','Show this code at the entrance.') : T('Presenta un código por persona en la entrada.','Show one code per person at the entrance.');
+    car.style.display = ''; foot.style.display = ''; qrSec.style.display = 'block';
+    var single = qrs.length < 2; car.classList.toggle('is-single', single); foot.classList.toggle('is-single', single);
+    conQrLib(function(){
+      if(g !== qrGen) return;
+      qrs.forEach(function(q, i){
+        var card = document.createElement('div'); card.className = 'mqr-card';
+        var img = document.createElement('img'); img.className = 'mqr-img'; img.alt = 'QR ' + q.nombre_persona; img.width = 150; img.height = 150; card.appendChild(img);
+        var nm = document.createElement('p'); nm.className = 'mqr-name'; nm.textContent = q.nombre_persona; card.appendChild(nm);
+        if(q.mesa){ var me = document.createElement('p'); me.className = 'mqr-mesa'; me.textContent = T('Mesa ','Table ') + q.mesa; card.appendChild(me); }
+        var cod = document.createElement('p'); cod.className = 'mqr-code'; cod.textContent = T('Código de respaldo','Backup code');
+        var sp = document.createElement('span'); sp.textContent = q.codigo; cod.appendChild(sp); card.appendChild(cod);
+        var dl = document.createElement('a'); dl.className = 'mqr-dl'; dl.textContent = T('Descargar','Download'); dl.download = 'Pase XV Shelsy - ' + q.nombre_persona + '.png'; card.appendChild(dl);
+        window.QRCode.toDataURL(q.codigo, { width: 480, margin: 2, errorCorrectionLevel: 'M', color: { dark: '#3A1526', light: '#FFFFFF' } }, function(err, url){ if(err) return; img.src = url; dl.href = url; });
+        card.addEventListener('click', function(e){ if(i !== qrIdx && e.target !== dl) qrIrA(i); });
+        qrTrack.appendChild(card); qrCards.push(card);
+        var dot = document.createElement('button'); dot.type = 'button'; dot.setAttribute('aria-label', String(i + 1));
+        dot.addEventListener('click', function(){ qrIrA(i); }); qrDots.appendChild(dot);
+      });
+      qrIdx = 0; requestAnimationFrame(function(){ qrIrA(0, false); qrMarcar(); });
+    });
+  }
+
+  function mostrarGracias(estado, nombres, qrs, pend){
+    ultimoGracias = [estado, nombres, qrs, pend];
     if(estado === 'confirmado'){
       gTitleEl.textContent = T('¡Gracias por confirmar!','Thank you for confirming!');
       gSubEl.textContent = nombres.length === 1 ? T('Te esperamos, ','We look forward to seeing you, ') + nombres[0] + '.' : T('Confirmamos ','We confirmed ') + nombres.length + T(' lugares: ',' seats: ') + nombres.join(', ') + '.';
+      pintaQrs(qrs || [], pend);
     } else {
       gTitleEl.textContent = T('Gracias por avisarnos','Thank you for letting us know');
       gSubEl.textContent = T('Lamentamos que no puedas acompañarnos. Te vamos a extrañar.','We are sorry you can’t join us. We will miss you.');
+      ocultaQrs();
     }
     bandejaEl.style.display = 'none'; graciasEl.style.display = '';
-    if(frozen) editarBtn.disabled = true;
+    editarBtn.disabled = cerrado();
+    editarBtn.style.display = anulada ? 'none' : '';
   }
-  function abrirBandeja(){ graciasEl.style.display = 'none'; bandejaEl.style.display = ''; setFeedback('', ''); }
-  editarBtn.addEventListener('click', function(){ if(!frozen) abrirBandeja(); });
-  if(frozen){
-    btn.disabled = true; btnYes.disabled = true; btnNo.disabled = true;
-    setFeedback(T('La fecha límite para confirmar ya pasó.','The deadline to confirm has passed.'), 'err');
+  editarBtn.addEventListener('click', function(){ if(cerrado()) return; graciasEl.style.display = 'none'; qrSec.style.display = 'none'; bandejaEl.style.display = ''; setFeedback(''); });
+  function anular(){ anulada = true; setDis(true); editarBtn.style.display = 'none'; setFeedback('Esta invitación ya no está disponible. Contacta a la familia.', 'This invitation is no longer available. Please contact the family.', 'err'); }
+  function aplicarPlazo(){
+    if(anulada) return;
+    if(frozen){ setDis(true); editarBtn.disabled = true; setFeedback('La fecha límite para confirmar ya pasó.', 'The deadline to confirm has passed.', 'err'); }
+    else { setDis(false); editarBtn.disabled = false; msgWrap.style.display = 'block'; }
+    pintaBtn();
   }
+
+  setDis(true);
   bandejaEl.style.display = '';
   fetch(API + '?nombre=' + encodeURIComponent(para) + '&url_boda=' + encodeURIComponent(URL_BODA))
     .then(function(r){ return r.json(); })
     .then(function(d){
+      var boda = d && d.boda;
+      var lim = boda ? (boda.fecha_limite_rsvp ? new Date(boda.fecha_limite_rsvp).getTime() : null) : RESPALDO;
+      frozen = lim !== null && !isNaN(lim) && Date.now() > lim; listo = true;
       var inv = d && d.invitado;
-      if(!inv || !inv.estado || inv.estado === 'pendiente') return;
-      selectRsvp(inv.estado);
-      (inv.nombres_confirmados || []).forEach(function(n, k){ if(inputs[k]) inputs[k].value = n; });
-      btnText.textContent = T('Actualizar respuesta','Update response');
-      mostrarGracias(inv.estado, inv.nombres_confirmados || []);
-    }).catch(function(){});
+      if(!inv){ anular(); return; }
+      if(typeof inv.pases === 'number' && inv.pases > 0 && inv.pases <= 20) pases = inv.pases;
+      if(inv.mensaje) msgEl.value = inv.mensaje;
+      respondido = inv.estado === 'confirmado' || inv.estado === 'declino';
+      armarCampos(inv.nombres_confirmados || []);
+      if(respondido){
+        selectRsvp(inv.estado);
+        var qrs = d.qrs || [];
+        mostrarGracias(inv.estado, inv.nombres_confirmados || [], qrs, inv.estado === 'confirmado' && !qrs.length && !(boda && boda.qrs_generados_en));
+      }
+      aplicarPlazo();
+    }).catch(function(){
+      frozen = Date.now() > RESPALDO; listo = true;
+      setFeedback('No pudimos cargar tu invitación. Recarga la página.', 'We could not load your invitation. Please reload the page.', 'err');
+      aplicarPlazo();
+    });
   btn.addEventListener('click', function(){
-    if(frozen) return;
-    if(!estadoSel){ setFeedback(T('Elige si asistirás o no.','Please choose whether you will attend.'), 'err'); return; }
+    if(cerrado()) return;
+    if(!estadoSel){ setFeedback('Elige si asistirás o no.', 'Please choose whether you will attend.', 'err'); return; }
     var nombres = [];
     if(estadoSel === 'confirmado'){
       inputs.forEach(function(x){ if(x.value.trim()) nombres.push(x.value.trim()); });
-      if(!nombres.length){ setFeedback(T('Escribe al menos un nombre.','Please write at least one name.'), 'err'); return; }
+      if(!nombres.length){ setFeedback('Escribe al menos un nombre.', 'Please write at least one name.', 'err'); return; }
     }
-    btn.disabled = true; setFeedback(T('Enviando…','Sending…'), '');
+    btn.disabled = true; setFeedback('Enviando…', 'Sending…', '');
     fetch(API, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({
       nombre: para, url_boda: URL_BODA, estado: estadoSel,
       pases_confirmados: estadoSel === 'confirmado' ? nombres.length : 0,
-      nombres_confirmados: nombres })})
-    .then(function(r){ return r.json().then(function(j){ return {ok: r.ok, j: j}; }); })
+      nombres_confirmados: nombres, mensaje: msgEl.value })})
+    .then(function(r){ return r.json().catch(function(){ return null; }).then(function(j){ return {ok: r.ok, j: j}; }); })
     .then(function(res){
       btn.disabled = false;
-      if(!res.ok || (res.j && res.j.ok === false)){ setFeedback(T('No pudimos registrar tu respuesta. Intenta de nuevo.','We could not save your response. Please try again.'), 'err'); return; }
-      btnText.textContent = T('Actualizar respuesta','Update response');
-      mostrarGracias(estadoSel, nombres);
-    }).catch(function(){ btn.disabled = false; setFeedback(T('Sin conexión. Intenta de nuevo.','No connection. Please try again.'), 'err'); });
+      if(res.ok && res.j && res.j.ok){
+        respondido = true; setFeedback(''); pintaBtn();
+        mostrarGracias(estadoSel, nombres, res.j.qrs || [], !!res.j.qrs_pendientes);
+        return;
+      }
+      var err = res.j && res.j.error;
+      if(err === 'rsvp_cerrado'){ frozen = true; aplicarPlazo(); return; }
+      if(err === 'invitacion_no_disponible'){ anular(); return; }
+      setFeedback('No pudimos registrar tu respuesta. Intenta de nuevo.', 'We could not save your response. Please try again.', 'err');
+    }).catch(function(){ btn.disabled = false; setFeedback('Sin conexión. Intenta de nuevo.', 'No connection. Please try again.', 'err'); });
   });
 })();
 gsap.fromTo('.rsvp-ornament',{opacity:0,scaleX:0},{opacity:1,scaleX:1,duration:1.2,ease:'power3.out',scrollTrigger:{trigger:'.rsvp-ornament',start:'top 85%'}});
