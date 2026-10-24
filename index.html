@@ -1905,6 +1905,14 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
 .rsvp-pases-label{font-size:12px;font-weight:600;letter-spacing:.3em;opacity:1;color:var(--ink-soft)}
 .rsvp-pases-num{font-size:40px}
 .rsvp-toggle{flex-wrap:nowrap;gap:10px;max-width:420px;margin:0 auto 24px}
+.rsvp-cont{max-width:420px;margin:0 auto 18px;text-align:center}
+.rsvp-cont-nota{font-family:var(--serif);font-style:italic;font-size:18px;font-weight:600;line-height:1.5;color:var(--ink);margin:0 auto 12px}
+.rsvp-cont-row{display:flex;align-items:center;justify-content:center;gap:22px;padding:10px;border:1.5px solid rgba(176,141,74,.4);border-radius:12px;background:rgba(255,255,255,.75)}
+.rsvp-cont-btn{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--gold-deep);background:#fff;color:var(--accent-deep);font-size:24px;line-height:1;cursor:pointer}
+.rsvp-cont-btn:disabled{opacity:.35;cursor:not-allowed}
+.rsvp-cont-val{font-family:var(--display);font-size:36px;color:var(--accent-deep);min-width:40px}
+.rsvp-cont-pie{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);margin-top:10px}
+.rsvp-name.falta{border-color:#B3261E!important;box-shadow:0 0 0 3px rgba(179,38,30,.15)}
 .rsvp-toggle-btn{flex:1;padding:15px 8px;min-height:54px;border:1.5px solid rgba(176,141,74,.5);background:rgba(255,255,255,.75);border-radius:10px;font-family:var(--serif);font-style:italic;font-size:19px;font-weight:600;letter-spacing:0;text-transform:none;color:var(--ink);padding-left:8px;transition:all .3s ease}
 .rsvp-toggle-btn:hover:not(:disabled){border-color:var(--gold-deep);transform:translateY(-1px);box-shadow:0 6px 16px -8px rgba(90,31,54,.35)}
 .rsvp-toggle-btn:focus-visible,.rsvp-btn:focus-visible{outline:2px solid var(--gold-deep);outline-offset:3px}
@@ -3065,6 +3073,15 @@ body.gift-locked{overflow:hidden;overscroll-behavior:none}
               <button class="rsvp-toggle-btn" id="btnYes" type="button">¡Con gusto asistiré!</button>
               <button class="rsvp-toggle-btn" id="btnNo" type="button">No podré asistir</button>
             </div>
+            <div class="rsvp-cont" id="rsvp-cont" style="display:none">
+              <p class="rsvp-cont-nota" id="rsvp-cont-nota"></p>
+              <div class="rsvp-cont-row">
+                <button type="button" class="rsvp-cont-btn" id="rsvp-menos" aria-label="Quitar un pase">&minus;</button>
+                <span class="rsvp-cont-val" id="rsvp-cont-val" aria-live="polite">1</span>
+                <button type="button" class="rsvp-cont-btn" id="rsvp-mas" aria-label="Agregar un pase">+</button>
+              </div>
+              <p class="rsvp-cont-pie" id="rsvp-cont-pie"></p>
+            </div>
             <div class="rsvp-fields" id="rsvp-fields" style="display:none"></div>
             <div class="rsvp-msg" id="rsvp-msg-wrap" style="display:none">
               <label for="rsvp-mensaje" id="rsvp-msg-lbl">Mensaje para Shelsy <span>(opcional)</span></label>
@@ -4022,29 +4039,52 @@ gsap.fromTo('.album-link',{opacity:0,y:10},{opacity:1,y:0,duration:.9,scrollTrig
   if(!note) return;
   var frozen = false, listo = false, anulada = false, respondido = false;
   var estadoSel = null, ultimoGracias = null, ultimosQrs = null, fbPar = null;
+  /* Pases que va a ocupar: arranca en 1 y sube hasta los asignados */
+  var usar = 1, vals = [];
+  var contEl = document.getElementById('rsvp-cont');
   function cerrado(){ return frozen || !listo || anulada; }
   function setFeedback(es, en, c){ fbPar = es ? [es, en, c] : null; fb.textContent = es ? T(es, en) : ''; fb.className = c || ''; }
-  function setDis(d){ btn.disabled = d; btnYes.disabled = d; btnNo.disabled = d; msgEl.disabled = d; fields.querySelectorAll('input').forEach(function(x){ x.disabled = d; }); }
+  function setDis(d){ btn.disabled = d; btnYes.disabled = d; btnNo.disabled = d; msgEl.disabled = d; fields.querySelectorAll('input').forEach(function(x){ x.disabled = d; }); pintaCont(); }
   function pintaBtn(){ btnText.textContent = frozen ? T('Fecha límite alcanzada','Deadline reached') : respondido ? T('Actualizar respuesta','Update response') : T('Confirmar asistencia','Confirm attendance'); }
   if(!para){ note.textContent = ''; return; }
   var pn2 = function(){ note.textContent = T('Esta invitación es para','This invitation is for'); }; pn2();
   var nameEl = document.getElementById('rsvp-name-display');
   if(nameEl) nameEl.textContent = para;
   var inputs = [];
+  function placeholder(n){ return usar === 1 ? T('Tu nombre completo','Your full name') : T('Nombre completo del invitado ','Full name of guest ') + n; }
   function armarCampos(guardados){
+    if(guardados) vals = guardados.slice();
     fields.innerHTML = '';
-    for(var i = 1; i <= pases; i++){
+    for(var i = 1; i <= usar; i++){
       var inp = document.createElement('input');
       inp.className = 'rsvp-input rsvp-name'; inp.type = 'text'; inp.autocomplete = 'off'; inp.maxLength = 60;
-      inp.dataset.n = i; inp.placeholder = T('Nombre completo del invitado ','Full name of guest ') + i;
-      if(guardados && guardados[i-1]) inp.value = guardados[i-1];
+      inp.dataset.n = i; inp.placeholder = placeholder(i);
+      inp.value = vals[i-1] || '';
       inp.disabled = cerrado();
+      (function(k){ inp.addEventListener('input', function(){ vals[k] = this.value; this.classList.remove('falta'); }); })(i-1);
       fields.appendChild(inp);
     }
     inputs = [].slice.call(fields.querySelectorAll('input'));
     document.getElementById('rsvp-pases-num').textContent = pases;
     disp.style.display = '';
   }
+  function pintaCont(){
+    if(!contEl) return;
+    var ver = estadoSel === 'confirmado' && pases > 1;
+    contEl.style.display = ver ? '' : 'none';
+    document.getElementById('rsvp-cont-val').textContent = usar;
+    document.getElementById('rsvp-menos').disabled = cerrado() || usar <= 1;
+    document.getElementById('rsvp-mas').disabled = cerrado() || usar >= pases;
+    document.getElementById('rsvp-cont-nota').textContent = T('Tienes ' + pases + ' pases reservados. Confirma el nombre y número de pases que vayas a ocupar.', 'You have ' + pases + ' passes reserved. Confirm the name and number of passes you will use.');
+    document.getElementById('rsvp-cont-pie').textContent = usar >= pases ? T('Estás usando todos tus pases','You are using all your passes') : usar + T(' de ',' of ') + pases + T(' pases',' passes');
+  }
+  function setUsar(nv){
+    nv = Math.max(1, Math.min(pases, nv));
+    if(nv === usar) return;
+    usar = nv; armarCampos(); pintaCont(); setFeedback('');
+  }
+  document.getElementById('rsvp-menos').addEventListener('click', function(){ if(!cerrado()) setUsar(usar - 1); });
+  document.getElementById('rsvp-mas').addEventListener('click', function(){ if(!cerrado()) setUsar(usar + 1); });
   armarCampos();
   function pintaMsg(){
     msgLbl.innerHTML = T('Mensaje para Shelsy','Message for Shelsy') + ' <span>' + T('(opcional)','(optional)') + '</span>';
@@ -4053,7 +4093,7 @@ gsap.fromTo('.album-link',{opacity:0,y:10},{opacity:1,y:0,duration:.9,scrollTrig
   pintaMsg();
   window.onLang && onLang(function(){
     pn2(); pintaBtn(); pintaMsg();
-    inputs.forEach(function(x){ x.placeholder = T('Nombre completo del invitado ','Full name of guest ') + x.dataset.n; });
+    inputs.forEach(function(x){ x.placeholder = placeholder(x.dataset.n); }); pintaCont();
     if(ultimoGracias && graciasEl.style.display !== 'none') mostrarGracias.apply(null, ultimoGracias);
     if(fbPar) setFeedback(fbPar[0], fbPar[1], fbPar[2]);
   });
@@ -4062,6 +4102,7 @@ gsap.fromTo('.album-link',{opacity:0,y:10},{opacity:1,y:0,duration:.9,scrollTrig
     btnYes.classList.toggle('on', e === 'confirmado');
     btnNo.classList.toggle('on', e === 'declino');
     fields.style.display = e === 'confirmado' ? '' : 'none';
+    pintaCont();
   }
   btnYes.addEventListener('click', function(){ if(!cerrado()) selectRsvp('confirmado'); });
   btnNo.addEventListener('click', function(){ if(!cerrado()) selectRsvp('declino'); });
@@ -4164,6 +4205,7 @@ gsap.fromTo('.album-link',{opacity:0,y:10},{opacity:1,y:0,duration:.9,scrollTrig
       if(typeof inv.pases === 'number' && inv.pases > 0 && inv.pases <= 20) pases = inv.pases;
       if(inv.mensaje) msgEl.value = inv.mensaje;
       respondido = inv.estado === 'confirmado' || inv.estado === 'declino';
+      if(inv.estado === 'confirmado') usar = Math.max(1, Math.min(pases, (inv.nombres_confirmados || []).length));
       armarCampos(inv.nombres_confirmados || []);
       if(respondido){
         selectRsvp(inv.estado);
@@ -4183,6 +4225,17 @@ gsap.fromTo('.album-link',{opacity:0,y:10},{opacity:1,y:0,duration:.9,scrollTrig
     if(estadoSel === 'confirmado'){
       inputs.forEach(function(x){ if(x.value.trim()) nombres.push(x.value.trim()); });
       if(!nombres.length){ setFeedback('Escribe al menos un nombre.', 'Please write at least one name.', 'err'); return; }
+      /* Contador en N pero menos nombres: que escriba el que falta o baje el contador */
+      if(nombres.length < usar){
+        var faltan = usar - nombres.length, primero = null;
+        inputs.forEach(function(x){ var v = !x.value.trim(); x.classList.toggle('falta', v); if(v && !primero) primero = x; });
+        setFeedback(
+          'Elegiste ' + usar + ' pases pero escribiste ' + nombres.length + ' nombre' + (nombres.length === 1 ? '' : 's') + '. Escribe ' + (faltan === 1 ? 'el nombre que falta' : 'los ' + faltan + ' nombres que faltan') + ' o baja el contador a los pases que vas a utilizar.',
+          'You chose ' + usar + ' passes but wrote ' + nombres.length + ' name' + (nombres.length === 1 ? '' : 's') + '. Write ' + (faltan === 1 ? 'the missing name' : 'the ' + faltan + ' missing names') + ' or lower the counter to the passes you will use.',
+          'err');
+        if(primero) primero.focus({ preventScroll: true });
+        return;
+      }
     }
     btn.disabled = true; setFeedback('Enviando…', 'Sending…', '');
     fetch(API, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({
